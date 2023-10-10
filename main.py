@@ -1,6 +1,7 @@
 
 def main():
     print("start")
+    print('test')
 
 
 
