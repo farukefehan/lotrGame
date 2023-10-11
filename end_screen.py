@@ -8,8 +8,9 @@ def clear_page(venster):
 
 
 def goto_splash_screen(venster):
-    from Splash_screen import make_splash_screen
-    make_splash_screen(venster)
+    from main import kill_all_children, generate_background
+    kill_all_children(venster)
+    generate_background(venster)
 
 
 def print_adventure_result(venster, image):

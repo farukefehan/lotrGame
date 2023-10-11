@@ -7,19 +7,16 @@ def goto_adventure_selection_screen(venster):
     make_adventure_selection_screen(venster)
 
 
-def goto_end_screen(venster):
-    from end_screen import make_end_screen
-    make_end_screen(venster, True)
-
-
 def goto_character_creation(venster):
     from character_creation import make_character_creation_screen
     make_character_creation_screen(venster)
 
 
 def make_character_selection_screen(venster):
-    from main import kill_all_children
+    from main import kill_all_children, generate_background
     kill_all_children(venster)
+    generate_background(venster)
+
 
     menu_button_image_proto = Image.open(r"Images/testbutton.png")
     menu_button_image = ImageTk.PhotoImage(menu_button_image_proto)

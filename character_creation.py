@@ -8,8 +8,9 @@ def goto_character_creation(venster):
 
 
 def make_character_creation_screen(venster):
-    from main import kill_all_children
+    from main import kill_all_children, generate_background
     kill_all_children(venster)
+    generate_background(venster)
 
     original_image = Image.open(r"Images/stickman_echt.png")
     voorbeeld_image = ImageTk.PhotoImage(original_image)
@@ -42,5 +43,5 @@ def make_new_character(venster):
 
     entry_text = StringVar()
     start_button = Entry(venster, textvariable=entry_text)
-    entry_text.set("Input race")
+    entry_text.set("Dit wordt een dropdown menu")
     start_button.place(relx=0.35, rely=0.65, anchor="center")

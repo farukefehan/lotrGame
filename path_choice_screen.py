@@ -1,23 +1,22 @@
 import math
 from tkinter import Label, Frame
 from PIL import Image, ImageTk
-from character_selection import goto_adventure_selection_screen
+
 
 def goto_end_screen_alive(venster):
-    from end_screen import make_end_screen
-    make_end_screen(venster, False)
+    from end_screen import make_end_screen_success
+    make_end_screen_success(venster)
 
 
 def goto_end_screen_dead(venster):
-    from end_screen import make_end_screen
-    make_end_screen(venster, True)
-
+    from end_screen import make_end_screen_dead
+    make_end_screen_dead(venster)
 
 
 def make_path_choice_screen(venster):
-    from main import kill_all_children
+    from main import kill_all_children, generate_background
     kill_all_children(venster)
-
+    generate_background(venster)
 
     original_image = Image.open(r"Images/stickman_echt.png")
     resized_image = original_image.resize((400, 600), Image.LANCZOS)
@@ -37,13 +36,12 @@ def make_path_choice_screen(venster):
     resized_image = original_image.resize((400, 600), Image.LANCZOS)
     character_slot_2_image = ImageTk.PhotoImage(resized_image)
 
-    label_choice_1.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster, True))
-    label_choice_2.bind("<Button-1>", lambda click_event: goto_end_screen_alive(venster, True))
-    label_choice_3.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster, False))
+    label_choice_1.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster))
+    label_choice_2.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster))
+    label_choice_3.bind("<Button-1>", lambda click_event: goto_end_screen_alive(venster))
 
     character_slot_2 = Label(venster, image=character_slot_2_image, width=500)
     character_slot_2.image = character_slot_2_image
-
 
     venster.grid()
     character_slot_1.grid(column=0, row=0)
