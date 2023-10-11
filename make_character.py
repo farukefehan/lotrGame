@@ -19,20 +19,15 @@ def load_characters_from_file(file_path):
             else:
                 print(f"Invalid line: {line}")
 
-def show_main_menu():
-    root = tk.Tk()
-    root.title("Character Manager")
-    root.geometry("400x300")
-    img = ImageTk.PhotoImage(file="img.png")
-    logo_frame = tk.Label(image= img)
 
+def show_main_menu(venster):
+    from main import kill_all_children
+    kill_all_children(venster)
 
-    logo_frame.pack()
-    tk.Label(root, text="Main Menu").pack()
-    tk.Button(root, text="Create Character", command=customize_character).pack()
-    tk.Button(root, text="Select Character", command=select_character).pack()
+    tk.Label(venster, text="Main Menu").pack()
+    tk.Button(venster, text="Create Character", command=customize_character).pack()
+    tk.Button(venster, text="Select Character", command=select_character).pack()
 
-    root.mainloop()
 
 def customize_character():
     customize_window = tk.Toplevel()
@@ -46,17 +41,17 @@ def customize_character():
     race_entry = tk.Entry(customize_window)
     race_entry.pack()
 
-    tk.Button(customize_window, text="Save", command=lambda: save_character(name_entry.get(), race_entry.get())).pack()
+    tk.Button(customize_window, text="Save", command=lambda: save_character(name_entry.get(), race_entry.get(), venster)).pack()
 
-def save_character(name, race):
+def save_character(name, race, venster):
     characters.append({"name": name, "race": race})
-    print("Character successfully customized!")
+    tk.Label(venster, text="").pack()
+    # print("Character successfully customized!")
 
 def select_character():
     select_window = tk.Toplevel()
     select_window.title("Select Character")
     title = Label(select_window, text="Available characters:").pack()
-
 
     for i in range(len(characters)):
         character = characters[i]
@@ -69,11 +64,3 @@ def on_character_selected():
     selected_index = int(input("Enter the number of the character you want to select: ")) - 1
     selected_character = characters[selected_index]
     print(f"Character '{selected_character['name']}' selected!")
-
-def main():
-    file_path = "../groep-7-boromir/Documenten/characters.txt"
-    load_characters_from_file(file_path)
-    show_main_menu()
-
-if __name__ == "__main__":
-    main()
