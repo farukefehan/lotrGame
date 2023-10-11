@@ -13,6 +13,7 @@ def main():
     root = Tk()
     root.geometry("1920x1080")
     root.title("Boromir")
+    make_splash_screen(root)
 
     root.mainloop()
 
