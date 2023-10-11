@@ -30,4 +30,3 @@ def make_adventure_selection_screen(venster):
     adventure3_button.image = adventure3_image
     adventure3_button.bind("<Button-1>", lambda click_event: make_path_choice_screen(venster))
     adventure3_button.place(relx=0.8, rely=0.45, anchor="center")
-
