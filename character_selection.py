@@ -11,23 +11,20 @@ def make_character_selection_screen(venster):
     from main import kill_all_children
     kill_all_children(venster)
 
-    label = Label(venster, text="Character 1")
-    label.grid(row=0, column=0)
-
     original_image = Image.open(r"Images/stickman_echt.png")
+    voorbeeld_image = ImageTk.PhotoImage(original_image)
 
-    resized_image = original_image.resize((400, 400), Image.LANCZOS)
-    voorbeeld_image = ImageTk.PhotoImage(resized_image)
-    label_image = Label(venster, image=voorbeeld_image)
-    label_image.image = voorbeeld_image
-    button = Button(venster, image=label_image.image, command=lambda: goto_adventure_selection_screen(venster),
-                    height=400, width=400)
-    button.grid(row=1, column=0)
+    start_button = Label(venster, text="Character 1", image=voorbeeld_image, compound="bottom")
+    start_button.image = voorbeeld_image
+    start_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    start_button.place(relx=0.3, rely=0.4, anchor="center")
 
-    label2 = Label(venster, text="Character 2")
-    label2.grid(row=0, column=4)
-    label_image = Label(venster, image=voorbeeld_image)
-    label_image.image = voorbeeld_image
-    button = Button(venster, image=label_image.image, command=lambda: goto_adventure_selection_screen(venster),
-                    height=400, width=400)
-    button.grid(row=1, column=4)
+    start_button2 = Label(venster, text="Character 2", image=voorbeeld_image, compound="bottom")
+    start_button2.image = voorbeeld_image
+    start_button2.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    start_button2.place(relx=0.5, rely=0.4, anchor="center")
+
+    start_button3 = Label(venster, text="Character 3", image=voorbeeld_image, compound="bottom")
+    start_button3.image = voorbeeld_image
+    start_button3.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    start_button3.place(relx=0.7, rely=0.4, anchor="center")
