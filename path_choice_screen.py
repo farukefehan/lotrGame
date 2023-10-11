@@ -43,6 +43,7 @@ def make_path_choice_screen(venster):
     character_slot_2 = Label(venster, image=character_slot_2_image, width=500)
     character_slot_2.image = character_slot_2_image
 
+
     venster.grid()
     character_slot_1.grid(column=0, row=0)
     label_choice_1.pack(anchor="w")

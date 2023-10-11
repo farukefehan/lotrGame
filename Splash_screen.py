@@ -24,10 +24,10 @@ def make_splash_screen(venster):
 
     voorbeeld_image = make_image("Images/testbutton.png")
 
-    start_button = Label(venster, text="Choose your character", image=voorbeeld_image, compound="center")
+    start_button = Label(venster, text="Choose your character", image=voorbeeld_image, compound="center", bg="#603000", fg="white")
     start_button.image = voorbeeld_image
 
-    admin_button = Label(venster, text="Admin Login", image=voorbeeld_image, compound="center")
+    admin_button = Label(venster, text="Admin Login", image=voorbeeld_image, compound="center", bg="#603000", fg="white")
 
     start_button.bind("<Button-1>", lambda click_event: goto_screen_select_character(venster))
     admin_button.bind("<Button-1>", lambda click_event: goto_screen_admin_login(venster))
