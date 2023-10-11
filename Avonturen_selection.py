@@ -1,6 +1,6 @@
 from tkinter import Label
 from PIL import Image, ImageTk
-
+from path_choice_screen import make_path_choice_screen
 def make_adventure_selection_screen(venster):
     from main import kill_all_children
     kill_all_children(venster)
@@ -19,16 +19,16 @@ def make_adventure_selection_screen(venster):
     adventure3_image = ImageTk.PhotoImage(adventure3_image)
 
     adventure1_button = Label(venster, image=adventure1_image, compound="bottom")
-    adventure1_button.bind("<Button-1>", lambda click_event: (venster))
+    adventure1_button.bind("<Button-1>", lambda click_event: make_path_choice_screen(venster))
     adventure1_button.place(relx=0.3, rely=0.4, anchor="center")
     adventure1_button.image = adventure1_image
 
     adventure2_button = Label(venster, compound="center")
-    adventure1_button.bind("<Button-1>", lambda click_event: (venster))
+    adventure1_button.bind("<Button-1>", lambda click_event:make_path_choice_screen(venster))
     adventure1_button.place(relx=0.5, rely=0.4, anchor="center")
     adventure2_button.image = adventure2_image
     adventure3_button = Label(venster, compound="center")
-    adventure1_button.bind("<Button-1>", lambda click_event: (venster))
+    adventure1_button.bind("<Button-1>", lambda click_event: make_path_choice_screen(venster))
     adventure1_button.place(relx=0.7, rely=0.4, anchor="center")
     adventure3_button.image = adventure3_image
 
@@ -38,5 +38,3 @@ def make_adventure_selection_screen(venster):
     adventure1.pack()
     adventure2.pack()
     adventure3.pack()
-
-    #adventure1_button.bind("<Button-1>", lambda click_event: )
