@@ -15,7 +15,7 @@ def make_adventure_selection_screen(venster):
     adventure1_button = Label(venster, image=adventure1_image,
                          compound="left")
     adventure2_button = Label(venster,
-                         compound="middle")
+                         compound="center")
     adventure3_button = Label(venster,
                          compound="right")
 
