@@ -11,16 +11,6 @@ def make_character_selection_screen(venster):
     from main import kill_all_children
     kill_all_children(venster)
 
-    # label_2 = Label(venster, text="character 1")
-    # original_image = Image.open(r"Images/stickman_echt.png")
-    # voorbeeld_image = ImageTk.PhotoImage(original_image)
-    # start_button = Label(venster, image=voorbeeld_image, compound="center")
-    # start_button.image = voorbeeld_image
-    # start_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen())
-    # start_button.pack(anchor="n")
-    #
-    # label_2.pack()
-
     label = Label(venster, text="Character 1")
     label.grid(row=0, column=0)
 
