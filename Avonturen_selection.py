@@ -33,6 +33,8 @@ def make_adventure_selection_screen(venster):
     adventure3_button.image = adventure3_image
 
     adventure1_button.pack()
+    adventure2_button.pack()
+    adventure3_button.pack()
     adventure1.pack()
     adventure2.pack()
     adventure3.pack()
