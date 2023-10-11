@@ -37,9 +37,9 @@ def make_path_choice_screen(venster):
     resized_image = original_image.resize((400, 600), Image.LANCZOS)
     character_slot_2_image = ImageTk.PhotoImage(resized_image)
 
-    label_choice_1.bind("<Button-1>", lambda click_event: make_end_screen(venster, True))
-    label_choice_2.bind("<Button-1>", lambda click_event: make_end_screen(venster, True))
-    label_choice_3.bind("<Button-1>", lambda click_event: make_end_screen(venster, False))
+    label_choice_1.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster, True))
+    label_choice_2.bind("<Button-1>", lambda click_event: goto_end_screen_alive(venster, True))
+    label_choice_3.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster, False))
 
     character_slot_2 = Label(venster, image=character_slot_2_image, width=500)
     character_slot_2.image = character_slot_2_image
