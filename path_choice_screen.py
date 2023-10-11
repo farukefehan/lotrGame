@@ -1,8 +1,19 @@
 import math
 from tkinter import Label, Frame
 from PIL import Image, ImageTk
-from end_screen import goto_splash_screen, make_end_screen
 from character_selection import goto_adventure_selection_screen
+
+def goto_end_screen_alive(venster):
+    from end_screen import make_end_screen
+    make_end_screen(venster, False)
+
+
+def goto_end_screen_dead(venster):
+    from end_screen import make_end_screen
+    make_end_screen(venster, True)
+
+
+
 def make_path_choice_screen(venster):
     from main import kill_all_children
     kill_all_children(venster)
@@ -26,9 +37,9 @@ def make_path_choice_screen(venster):
     resized_image = original_image.resize((400, 600), Image.LANCZOS)
     character_slot_2_image = ImageTk.PhotoImage(resized_image)
     player_has_died = True
-    label_choice_1.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))
-    label_choice_2.bind("<Button-1>", lambda click_event: make_end_screen(venster))
-    label_choice_3.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))
+    label_choice_1.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster))
+    label_choice_2.bind("<Button-1>", lambda click_event: goto_end_screen_dead(venster))
+    label_choice_3.bind("<Button-1>", lambda click_event: goto_end_screen_alive(venster))
 
     character_slot_2 = Label(venster, image=character_slot_2_image, width=500)
     character_slot_2.image = character_slot_2_image
