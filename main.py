@@ -14,6 +14,7 @@ def main():
     make_splash_screen(root)
 
     root.mainloop()
+    make_character_creation_screen(root)
 
 if __name__ == '__main__':
     main()

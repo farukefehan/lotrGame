@@ -1,61 +1,79 @@
 import tkinter as tk
-from tkinter import Label
-from tkinter.tix import Tk
-from tkinter.ttk import Button, Entry
+from tkinter.ttk import Label
 
-from PIL import ImageTk
+from PIL import Image, ImageTk
 
-characters =[]
+characters = []
 
-def load_characters(file_path):
-
+def load_characters_from_file(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
         for line in lines:
             parts = line.strip().split(',')
-            characters_list ={
-                "name": parts[0],
-                "race": parts[1]
-            }
+            if len(parts) >= 2:
+                character_dict = {
+                    "name": parts[0].strip(),
+                    "race": parts[1].strip()
+                }
+                characters.append(character_dict)
+            else:
+                print(f"Invalid line: {line}")
 
-            characters.append(characters_list)
-
-
-
-def menu():
+def show_main_menu():
     root = tk.Tk()
-    root.title("Character menu")
+    root.title("Character Manager")
     root.geometry("400x300")
     img = ImageTk.PhotoImage(file="img.png")
     logo_frame = tk.Label(image= img)
+
+
     logo_frame.pack()
-    Label(root, text="Main Menu").pack()
-    Button(root, text="Create Character", command=create_character).pack()
-    Button(root, text="Select Character", command=select_character).pack()
+    tk.Label(root, text="Main Menu").pack()
+    tk.Button(root, text="Create Character", command=customize_character).pack()
+    tk.Button(root, text="Select Character", command=select_character).pack()
+
     root.mainloop()
-def create_character():
-    root = Tk()
-    root.title("Create menu")
-    root.geometry("400x300")
-    Label(root, text="Enter character name:").pack()
-    user_character_input = Entry(root)
-    user_character_input.pack()
-    Label(root, text="Enter character race:").pack()
-    user_race_input = Entry(root)
-    user_race_input.pack()
-    Button(root, text="Save", command=lambda: save_character(user_character_input.get(), user_race_input.get())).pack()
-    root.mainloop()
+
+def customize_character():
+    customize_window = tk.Toplevel()
+    customize_window.title("Character Customization")
+
+    tk.Label(customize_window, text="Enter character name:").pack()
+    name_entry = tk.Entry(customize_window)
+    name_entry.pack()
+
+    tk.Label(customize_window, text="Enter character race:").pack()
+    race_entry = tk.Entry(customize_window)
+    race_entry.pack()
+
+    tk.Button(customize_window, text="Save", command=lambda: save_character(name_entry.get(), race_entry.get())).pack()
+
 def save_character(name, race):
     characters.append({"name": name, "race": race})
-    print("Character successfully created!")
+    print("Character successfully customized!")
+
 def select_character():
+    select_window = tk.Toplevel()
+    select_window.title("Select Character")
+    title = Label(select_window, text="Available characters:").pack()
 
 
+    for i in range(len(characters)):
+        character = characters[i]
+        tk.Label(select_window, text=f"{i + 1}. {character['name']} - {character['race']}").pack()
 
-def run():
-    file_path = "characters.txt"
-    load_characters(file_path)
-    menu()
+    select_button = tk.Button(select_window, text="Select", command=on_character_selected)
+    select_button.pack()
 
-if __name__ == '__main__':
-    run()
+def on_character_selected():
+    selected_index = int(input("Enter the number of the character you want to select: ")) - 1
+    selected_character = characters[selected_index]
+    print(f"Character '{selected_character['name']}' selected!")
+
+def main():
+    file_path = "../groep-7-boromir/Documenten/characters.txt"
+    load_characters_from_file(file_path)
+    show_main_menu()
+
+if __name__ == "__main__":
+    main()
