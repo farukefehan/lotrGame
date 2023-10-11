@@ -1,5 +1,7 @@
 from tkinter import Label
 from PIL import Image, ImageTk
+# Hoi Thijs
+
 
 def goto_screen_select_character(venster):
     from character_selection import make_character_selection_screen
