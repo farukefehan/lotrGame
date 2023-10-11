@@ -1,10 +1,15 @@
-from tkinter import Label, Button
+from tkinter import Label
 from PIL import Image, ImageTk
 
 
 def goto_adventure_selection_screen(venster):
     from Avonturen_selection import make_adventure_selection_screen
     make_adventure_selection_screen(venster)
+
+
+def goto_end_screen(venster):
+    from end_screen import make_end_screen
+    make_end_screen(venster, True)
 
 
 def make_character_selection_screen(venster):
@@ -26,5 +31,5 @@ def make_character_selection_screen(venster):
 
     start_button3 = Label(venster, text="Character 3", image=voorbeeld_image, compound="bottom")
     start_button3.image = voorbeeld_image
-    start_button3.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    start_button3.bind("<Button-1>", lambda click_event: goto_end_screen(venster))
     start_button3.place(relx=0.7, rely=0.4, anchor="center")
