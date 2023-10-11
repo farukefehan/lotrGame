@@ -31,5 +31,5 @@ def make_character_selection_screen(venster):
 
     start_button3 = Label(venster, text="Character 3", image=voorbeeld_image, compound="bottom")
     start_button3.image = voorbeeld_image
-    start_button3.bind("<Button-1>", lambda click_event: goto_end_screen(venster))
+    start_button3.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
     start_button3.place(relx=0.7, rely=0.4, anchor="center")
