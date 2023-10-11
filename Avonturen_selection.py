@@ -8,9 +8,9 @@ def make_adventure_selection_screen(venster):
     adventure2 = Label(venster, text="Avontuur 2")
     adventure3 = Label(venster, text="Avontuur 3")
 
-    adventure1_image = Image.open(r"Images/adventure1_proto.jpg")
+    adventure1_image_proto = Image.open(r"Images/adventure1_proto.jpg")
 
-    voorbeeld_image = ImageTk.PhotoImage(adventure1_image)
+    adventure1_image = ImageTk.PhotoImage(adventure1_image_proto)
 
     adventure1_button = Label(venster, image=adventure1_image,
                          compound="left")
