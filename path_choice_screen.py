@@ -25,7 +25,7 @@ def make_path_choice_screen(venster):
     original_image = Image.open(r"Images/stickman_echt.png")
     resized_image = original_image.resize((400, 600), Image.LANCZOS)
     character_slot_2_image = ImageTk.PhotoImage(resized_image)
-
+    player_has_died = True
     label_choice_1.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))
     label_choice_2.bind("<Button-1>", lambda click_event: make_end_screen(venster))
     label_choice_3.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))
