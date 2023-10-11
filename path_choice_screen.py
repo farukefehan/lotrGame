@@ -1,8 +1,19 @@
 import math
 from tkinter import Label, Frame
 from PIL import Image, ImageTk
-from end_screen import goto_splash_screen, make_end_screen
 from character_selection import goto_adventure_selection_screen
+
+def goto_end_screen_alive(venster):
+    from end_screen import make_end_screen
+    make_end_screen(venster, False)
+
+
+def goto_end_screen_dead(venster):
+    from end_screen import make_end_screen
+    make_end_screen(venster, True)
+
+
+
 def make_path_choice_screen(venster):
     from main import kill_all_children
     kill_all_children(venster)
