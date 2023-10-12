@@ -14,6 +14,8 @@ def start_adventure(venster, file_name, dict):
     global character_dict
     global amount_of_checkpoints
     global checkpoints_got
+    amount_of_checkpoints = 0
+    checkpoints_got = 0
     character_dict = dict
     adventure = read_adventure(file_name)
     print(adventure[0])
