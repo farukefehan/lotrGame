@@ -28,7 +28,8 @@ def print_adventure_result(venster, image, deathmessage):
     original_image = end_image.resize((1200, 400), Image.LANCZOS)
     voorbeeld_image = ImageTk.PhotoImage(original_image)
 
-    start_button = Label(venster, text=deathmessage, image=voorbeeld_image, compound="top", bg="#603000", fg="white")
+    start_button = Label(venster, text=deathmessage, image=voorbeeld_image, compound="top",
+                         bg="#603000", fg="white")
     start_button.image = voorbeeld_image
     start_button.place(relx=0.5, rely=0.3, anchor="center")
     make_home_button(venster)

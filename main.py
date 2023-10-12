@@ -13,7 +13,8 @@ def kill_all_children(venster):
 
 def generate_background(zone):
     original_image = Image.open(r"images/background.png")
-    resized_image = original_image.resize((zone.winfo_screenwidth(), zone.winfo_screenheight()), Image.LANCZOS)
+    resized_image = original_image.resize((
+        zone.winfo_screenwidth(), zone.winfo_screenheight()), Image.LANCZOS)
     background_image = ImageTk.PhotoImage(resized_image)
 
     background = Label(zone, image=background_image)
