@@ -4,13 +4,14 @@ from paths_screen import start_adventure
 
 
 def create_adventure_selection_image(venster, image_path, adventure_title, relx, rely, filepath):
+    char_dict = {"image": "images/vincent.png"}
     adventure_image_proto = Image.open(image_path)
     adventure_image = adventure_image_proto.resize((400, 700), Image.LANCZOS)
     adventure_image = ImageTk.PhotoImage(adventure_image)
     adventure_button = Label(venster, text=adventure_title, image=adventure_image, compound="top",
                              bg="#603000", fg="white")
     adventure_button.image = adventure_image
-    adventure_button.bind("<Button-1>", lambda click_event: start_adventure(venster, filepath))
+    adventure_button.bind("<Button-1>", lambda click_event: start_adventure(venster, filepath, char_dict))
     adventure_button.place(relx=relx, rely=rely, anchor="center")
 
 

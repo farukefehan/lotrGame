@@ -58,7 +58,7 @@ def create_buttons(screen_dict, root):
     frame1.pack(anchor="center", pady=100)
     frame1.propagate(False)
 
-    frame2 = Frame(frame1, borderwidth=5, relief="raised", height=400)
+    frame2 = Frame(frame1, borderwidth=5, relief="raised", height=360)
     frame2.pack(side="top", anchor="center", fill="x")
     frame2.propagate(False)
 
@@ -67,7 +67,7 @@ def create_buttons(screen_dict, root):
 
     option_list = screen_dict['options']
     for option in option_list:
-        option_button = Button(frame2, text=option['text'], height=5, pady=1, padx=1,
+        option_button = Button(frame2, text=option['text'], height=4, pady=1, padx=1,
                                borderwidth=1, relief="raised", anchor="w", justify="left",
                                command=lambda x=root, y=option['action'], z=option['death_message']:
                                take_action(x, y, z))
