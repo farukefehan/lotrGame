@@ -20,7 +20,7 @@ opties;
 3:rechtdoor,goto5,O!
 
 screen:2@
-question:"Op de Vlakte zie je drie padden. Welke pad wil je op."@
+question:"Op de Vlakte zie je drie paden. Welke pad wil je op."@
 image:"adventures/goudenhal/screen1.png"@
 opties;
 1:linker pad,goto9,O?
@@ -39,7 +39,7 @@ screen:4@
 question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht. Maar aan de bomen hingen appels, hele harden appels, een daarvan kwam er een hard tegen je achterhoofd aan en breekt je schedel."@
 image:"adventures/goudenhal/screen1.png"@
 opties;
-1:Ga verder,gotoDied,X,"Wow, je bent doodgegaan door een appel!"!
+1:Ga verder,gotoDied,X,"Wow. je bent doodgegaan door een appel!"!
 
 screen:5@
 question:"Een boze Ent valt je aan! Wat doe Je?"@
@@ -83,7 +83,7 @@ screen:10@
 question:"De weg die je nam loopt langs een ravijn. Het sneeuwt hard, maar je kan nergens schuilen. Plotseling breekt een stuk steen boven je. Je ontwijkt de steen maar verloor je evenwicht je valt in het ravijn."@
 image:"adventures/goudenhal/screen1.png"@
 opties;
-1:Ga verder,gotoDied,X,"Je valt in het ravijn, stoot je hoofd 5 keer, totdat je bewusteloos bent en dan zwart."!
+1:Ga verder,gotoDied,X,"Je valt in het ravijn. Stoot je hoofd 5 keer. Totdat je bewusteloos bent en dan zwart."!
 
 screen:11@
 question:"Je loopt op de weg door de bergen. Het begint te sneeuwen. Er is een grot dichtbij. Wil je schuilen in de grot of blijven lopen?"@
