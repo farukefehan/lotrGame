@@ -138,8 +138,8 @@ Je wil ze veilig stellen, hoe ga je dat doen?"@
 image:"adventures/vermistedwergen/dwarf_end.png"@
 opties;
 1:Je juicht omdat je de dwergen gevonden heb,gotoDied,X,"De goblins horen je kreet en nemen je gevangen!"?
-2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,"Goed gedaan"?
-Je heb de eer van de dwergen herstelt.
+2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,Goed gedaan
+Je heb de eer van de dwergen herstelt.?
 3:Je hoort dat er goblins in de andere kamer zitten.
 Je besluit samen met de dwergen ze aan te vallen.,gotoDied,X,"De dwergen zijn fysiek uitgeput.
 Jullie verliezen het gevecht."!

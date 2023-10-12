@@ -9,6 +9,7 @@ def loading_screen():
         (600, 350), Image.LANCZOS)
 
     root = Tk()
+    root.title("Tolkien Estate")
     root.geometry("800x800")
     root.state('zoomed')
 
