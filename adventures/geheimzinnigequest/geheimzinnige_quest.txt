@@ -34,7 +34,7 @@ opties;
 screen:4@
 question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht. Maar aan de bomen hingen appels, hele harden appels, een daarvan kwam er een hard tegen je achterhoofd aan en breekt je schedel."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Wow, je bent doodgegaan door een appel!"!
 
 screen:5@
 question:"Een boze Ent valt je aan! Wat doe Je?"@
@@ -60,7 +60,7 @@ screen:8@
 question:"Het pad dat je gaat eindigt in een maïsveld. Je blijft doorlopen maar raakt verdwaald.
 Het wordt donker, je kan niks zien in het donker en door het maïs. Dan komt een storm aan en neemt jouw mee de lucht in."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je wordt meegenomen in de storm totdat je dood valt."!
 
 screen:9@
 question:"Het pad daalt af. Je reukt een lekkere geur. En je ziet een andere pad dat omhoog gaat naast jouw pad. Wat doe je?"@
@@ -72,7 +72,7 @@ opties;
 screen:10@
 question:"De weg die je nam loopt langs een ravijn. Het sneeuwt hard, maar je kan nergens schuilen. Plotseling breekt een stuk steen boven je. Je ontwijkt de steen maar verloor je evenwicht je valt in het ravijn."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je valt in het ravijn, stoot je hoofd 5 keer, totdat je bewusteloos bent en dan zwart."!
 
 screen:11@
 question:"Je loopt op de weg door de bergen. Het begint te sneeuwen. Er is een grot dichtbij. Wil je schuilen in de grot of blijven lopen?"@
@@ -119,7 +119,7 @@ opties;
 screen:18@
 question:"Het begint donker te worden. Dan zie je iets in de verte. Een Nazgûl! Je rent weg van hem."@
 opties;
-1:Ga verder,goto19,X!
+1:Ga verder,goto19,O!
 
 screen:19@
 question:"Een Nazgûl heeft jouw gezien! Hij komt achter jouw aan. Probeer te overleven tot zonlicht.
@@ -196,7 +196,7 @@ screen:30@
 question:"In de grot ontmoet je Arwen een elf. Zij verteld dat ze een mysterieuze man had ontmoet hij was op zoek naar de heilige koffiebonen.
 Jullie besluiten samen die man op te zoeken."@
 opties;
-1:Ga verder,goto19,X!
+1:Ga verder,goto19,O!
 
 screen:31@
 question:"Je volgt de hoefafdrukken naar een Nazgûl."@
@@ -207,7 +207,7 @@ screen:32@
 question:"Terwijl je door het moeras loopt zit je benen ineens vast. Je probeert je benen lostemaken, maar je zinkt steeds dieper.
 Je blijft zinken totdat je niet meer kan ademen."@
 opties;
-1:Ga verder,gotoDied,X,"Je bent doodgegaan door een drijfmoeras."!
+1:Ga verder,gotoDied,X,"Je bent gestikt in een drijfmoeras."!
 
 screen:33@
 question:"Je loopt omhoog en ziet een Nazgûl. Je probeert te rennen, maar de Nazgûl is sneller"@
@@ -305,9 +305,10 @@ opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:50@
-question:""@
+question:"Je komt erachter dat dit geen Nazgûl is. Deze mysterieuze man heet Jochem. Hij vertelt dat Nazgûl's niet tegen daglicht kunnen.
+Daarom verstoppen we tot daglicht: zegt Jochem. Hij vertelde dat hij een nieuw huis had gekocht en op weg was daar naar toe. Jullie slapen tot daglicht.@
 opties;
-1:links,goto56,O!
+1:Ga verder,goto56,O!
 
 screen:51@
 question:"Je wordt gevangen door een Nazgûl"@
@@ -315,116 +316,120 @@ opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:52@
-question:"Run from nazguls"@
+question:"De zon komt op. Er zitten geen Nazgûl's achter je aan. Er zijn drie paden. Welke neem je?"@
 opties;
 1:links,goto54,O?
 2:rechtdoor,goto55,X?
-3:rechts,goto53,X,CP!
+3:rechts,goto53,O,CP!
 
 screen:53@
-question:"De zon komt op. Er zitten geen Nazgûl's achter je aan"@
+question:"Je komt een ander persoon tegen. Nu zien jullie met zijn drieen. Je krijgt te horen dat de mysterieuze man Jochem hier in de buurt is.
+Maar er zijn monsters om je heen. Welke kant ga je op?"@
 opties;
 1:links,goto57,X?
 2:rechtdoor,goto58,X?
 3:rechts,goto59,O!
 
 screen:54@
-question:"Run from nazguls"@
+question:""Je komt een ander persoon tegen. Nu zien jullie met zijn drieen. Je krijgt te horen dat de mysterieuze man Jochem hier in de buurt is.
+Maar Er zijn monsters om je heen. Welke kant ga je op?"@
 opties;
 1:links,goto61,O?
 2:rechts,goto60,X!
 
 screen:55@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:56@
-question:"Run from nazguls"@
+question:"Je wordt wakker. Jochem heeft koffie gezet. Nadat je de beste koffie ooit hebt gedronken, gaan jullie verder.
+Hij vertelde dat hij een schat had gevonden en opnieuw verstopt in Rivendell, zodat hij altijd in Rivendell meer koffie kan kopen."@
 opties;
 1:je gaat verder,goto65,O!
 
 screen:57@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:58@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:59@
-question:"Run from nazguls"@
+question:"Er zijn monsters om je heen. Welke kant ga je op?"@
 opties;
 1:links,goto64,O?
 2:rechtdoor,goto62,X?
 3:rechts,goto63,X!
 
 screen:60@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:61@
-question:"Run from nazguls"@
+question:"Er zijn monsters om je heen. Welke kant ga je op?."@
 opties;
 1:links,goto66,X?
 2:rechtdoor,goto67,X?
 3:rechts,goto72,O!
 
 screen:62@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:63@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:64@
-question:"Run from nazguls"@
+question:"Er zijn monsters om je heen. Welke kant ga je op?"@
 opties;
 1:links,goto69,O?
 2:rechtdoor,goto74,X!
 
 screen:65@
-question:"Run from nazguls"@
+question:"Jochem verteld dat het wachtwoord Heilige koffiebonen zijn. En zegt dat hij alvast vooruit gaat naar zijn huis.
+Maar er zijn monsters om je heen. Oh, je bent vergeten welke kant Jochem op ging, wat jammer nou. Welke kant ga op?"@
 opties;
 1:links,goto68,X?
-2:rechtdoor,goto69,O?
+2:rechtdoor,goto75,O?
 3:rechts,goto70,X!
 
 screen:66@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:67@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:68@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:69@
-question:"Wat is het Raadsel"@
+question:"Je komt voor een groot huis. Je hoort een diepe stem: Wat is het wachtwoord?"@
 opties;
-1:rechtdoor,goto75,O!
+1:Heilige koffiebonen!,goto75,O!
 
 screen:70@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:71@
 question:"Run from nazguls"@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:72@
 question:"Run from nazguls"@
@@ -434,16 +439,16 @@ opties;
 3:rechts,goto73,X!
 
 screen:73@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:74@
-question:"Run from nazguls"@
+question:"Hier is een monster."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:75@
-question:"Run from nazguls"@
+question:"Je hebt de geheime queeste voltooid en bent veilig in Jochem zijn huis!"@
 opties;
-1:Ga verder,gotoWin,X
+1:Ga verder,gotoWin,O
