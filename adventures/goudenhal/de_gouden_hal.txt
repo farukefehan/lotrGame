@@ -22,7 +22,8 @@ screen:2@
 question:"Vincent de Hobbit wil een biertje met je drinken, accepteer je?"@
 image:"adventures/goudenhal/vincent.png"@
 opties;
-1:Ja!,gotoDied,X,"Je bent dronken geraakt met Vincent en je kunt je avontuur niet vervolgen!"?
+1:Ja!,gotoDied,X,"Je bent dronken geraakt met Vincent.
+Je kunt je avontuur niet vervolgen!"?
 2:Nee!,goto1,O!
 
 screen:3@
@@ -31,9 +32,11 @@ Het is een lange reis, maar het gaat je lukken!
 Je kan op drie manieren bij de grotten komen:"@
 image:"adventures/goudenhal/cave.png"@
 opties;
-1:Via de weg,gotoDied,X,"Je werd beroofd en bent zonder spullen geforceerd terug te keren naar huis."?
+1:Via de weg,gotoDied,X,"Je werd beroofd.
+Je bent geforceerd terug te keren naar huis."?
 2:Door het bos,goto4,O,CP?
-3:Over de bergen,gotoDied,X,"Je stuit perongeluk op een kamp vol Orcs en legt het helaas af in het gevecht dat volgt."!
+3:Over de bergen,gotoDied,X,"Je stuit per ongeluk op een kamp vol orcs.
+Je legt het helaas af in het gevecht dat volgt."!
 
 screen:4@
 question:"Je hebt de grot gevonden: “Beste reiziger, de Gouden Hal is al jaren door niemand meer betreden.
@@ -75,15 +78,18 @@ image:"adventures/goudenhal/orcs.png"@
 opties;
 1:Vecht met de orcs,goto9,O?
 2:Verstop je in de bosjes en wacht tot ze weg zijn,goto10,O,CP?
-3:Zet een val,gotoDied,X,"De orcs doorzien je val en nemen je als gevangene mee naar hun kamp!"!
+3:Zet een val,gotoDied,X,"De orcs doorzien je val.
+je gaat als gevangene mee naar hun kamp!"!
 
 screen:9@
 question:"Hoe vecht je tegen de orcs?"@
 image:"adventures/goudenhal/orcs.png"@
 opties;
-1:Je rent op ze af met je wapen,gotoDied,X,"twee tegen één win je niet, je legt het af in het gevecht@"?
+1:Je rent op ze af met je wapen,gotoDied,X,"twee tegen één win je niet.
+Je legt het af in het gevecht@"?
 2:Houdt je afstand en vecht slim,goto10,O,CP?
-3:Schreeuw heel hard om de orcs af te schrikken,gotoDied,X,"Er komt een trol op het geluid af, zowel jij als de orcs worden vermoord!"!
+3:Schreeuw heel hard om de orcs af te schrikken,gotoDied,X,"Er komt een trol op het geluid af.
+zowel jij als de orcs worden vermoord!"!
 
 screen:10@
 question:“In de verte zie je het verlaten kasteel al liggen.
@@ -93,15 +99,17 @@ Je moet zo snel mogelijk naar het kasteel toe om de schatten veilig te stellen.
 Wat doe je?"@
 image:"adventures/goudenhal/draak.png"@
 opties;
-1:Juich uit blijdschap omdat je het kasteel gevonden hebt,gotoDied,X,"De draak Smaug hoort je kreet en zet je meteen in vuur en vlam!"?
+1:Juich uit blijdschap omdat je het kasteel gevonden hebt,gotoDied,X,"De draak Smaug hoort je kreet.
+Hij zet je meteen in vuur en vlam!"?
 2:Je sneakt voorzichtig naar het kasteel,goto11,O,CP?
-3:Ren zo snel mogelijk naar het kasteel om de draak te vermijden,gotoDied,X,"De draak Smaug hoort je luide stappen en zet je meteen in vuur en vlam!"!
+3:Ren zo snel mogelijk naar het kasteel om de draak te vermijden,gotoDied,X,"De draak Smaug hoort je luide stappen.
+Hij zet je meteen in vuur en vlam!"!
 
 screen:11@
 question:"Je bent in het kasteel, maar je hebt de Gouden Hal nog niet gevonden.
 Waar zoek je eerst?"@
 image:"adventures/goudenhal/castle.png"@
 opties;
-1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn zo fragiel dat het instort nadat je op de muren klopt.
- Je bent geplet!"?
+1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn fragiel.
+Het stort in nadat je op de muren klopt. Je bent geplet!"?
 2:Ga naar de kelder,gotoWin,O,"Je hebt de schat van Thorin gevonden en hem gered!"!

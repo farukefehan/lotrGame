@@ -38,7 +38,8 @@ image:"adventures/goudenhal/cave.png"@
 opties;
 1:Schimmige informatie handelaar,gotoDied,X,"Hij heeft jullie gevangen genomen."?
 2:Een tovenaar,goto4,O,CP?
-3:De kroeg,gotoDied,X,"Je drinkt teveel en raakt in coma. Jullie kunnen hierdoor niet meer jullie zoektocht voltooien."!
+3:De kroeg,gotoDied,X,"Je drinkt teveel en raakt in coma.
+Jullie kunnen hierdoor niet meer jullie zoektocht voltooien."!
 
 screen:4@
 question:"De tovenaar vertelt jou een visioen:
@@ -50,28 +51,32 @@ Maar zeg mij, vriend, wat kent het geheimzinnig bergland? Wat is de plek die lig
  Zijn naam onuitgesproken, alleen gefluisterd in de wind, Als je het wilt ontdekken, dan heb je de sleutel bemind.
 Geduld is jouw bondgenoot in deze zoektocht zo groots, Terwijl je worstelt door de nevels en de grillige kloofs.
 Leer van de oude wijzen die voor jou dit pad bewandelden, Want alleen zij die waardig zijn, zullen het zoeken verhandelen.
-Dus wees vastberaden en laat je niet afgeschrikken, De mistige berg is waar je uiteindelijk kunt blikken.
+Dus wees vastberaden en laat je niet afschrikken, De mistige berg is waar je uiteindelijk kunt blikken.
 En als je de top bereikt, doorzettingsvermogen aan je zij, Zal de geheime plek zich openbaren, als een schat zo vrij.
 Dus, moedige ziel, ga vooruit en neem deze uitdaging aan, Ontdek de mistige berg, waarvan de legende is ontstaan.
 En onthul het geheim, dat diep verborgen ligt, In de eeuwenoude raadsel, dat de avonturiers bezwijgt..
 Hoe ga je naar de mistige berg?"@
 image:"adventures/goudenhal/cave.png"@
 opties;
-1:Je neemt de weg,gotoDied,X,"In de nacht worden je wapens, voetsel en uitrusting gestolen, hierdoor kan je niet meer je zoektocht hervatten."?
+1:Je neemt de weg,gotoDied,X,"In de nacht worden al je spullen gestolen.
+Hierdoor kan je je zoektocht niet meer hervatten."?
 2:Je gaat door het donkere woud,goto5,O,CP?
-3:Je gaat over de rivier met een boot,gotoDied,X,"De boot wordt overvallen door rivier rovers en jullie worden gevangen."!
+3:Je gaat over de rivier met een boot,gotoDied,X,"De boot wordt overvallen door rivierrovers.
+Jullie worden gevangen."!
 
 screen:5@
 question:“Je komt aan op misty mountain, Het pad split en je heb 3 keuzes.
 Welk pad kies je?"@
 image:"adventures/goudenhal/weaponry.png"@
 opties;
-1:Berg op,gotoDied,X,"Je gaat de berg op en komt daar goblins tegen, zij vechten met je en je sterft."?
+1:Berg op,gotoDied,X,"Je gaat de berg op en komt daar goblins tegen.
+Zij vechten met je en je sterft."?
 2:Grot,goto6,O,CP?
-3:Het dal in,gotoDied,X,"Je klimt het dal naar beneden en je valt, hierdoor overlijd je."!
+3:Het dal in,gotoDied,X,"Je klimt het dal naar beneden en je valt.
+Hierdoor overlijd je."!
 
 screen:6@
-question:"Je betreed een eeuwe oude dwergen stad en er staat een raadsel in een oude taal, je probeert het te ontcijferen"
+question:"Je betreed een eeuwenoude dwergen stad en er staat een raadsel in een oude taal, je probeert het te ontcijferen"
 Ic ligge diep verborgen, een scat soe selde, Een mysterie bewaert bi den tijde ende een legendarisch verhael.
  Up soeke natic moet ghi reisen, Naer een plaetse daer heymeliken suyken ende intriguën Risen.
 Over berthene hoghe ende dalen diepe, Lancs outtiden weghe ende duuster steeghe, soe stijts-ful.
@@ -84,15 +89,17 @@ Daelt af int donkere ende laet uwe ghedachten driven, Naer desen onderaerts oase
  Want enich duer hier die raetsel ontsleutelt, Zullen den scat ontdecken.
 Dus moet ghi der uutdaginghe aengane, Moedich ende sterck, ende explorerne den onbekenden, een reise sonder perke.
  Het antwoort wacht up den geene die het can overwinnen.
- Balin zegt van 3 plekken te hebben gehoort die het kunnen zijn. Welke denk jij?@
+ Balin zegt van 3 plekken te hebben gehoord die het kunnen zijn. Welke denk jij?@
 image:"adventures/goudenhal/spinnetje.png"@
 opties;
-1:Ivoorpieken,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat eindigt met jou dood en de dwergen nooit gevonden."?
+1:Ivoorpieken,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat
+eindigt met jouw dood."?
 2:Het Onderwereldse meer,goto7,O,CP?
-3:De Fluisterende Vallei,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat eindigt met jou dood en de dwergen nooit gevonden."!
+3:De Fluisterende Vallei,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat
+eindigt met jouw dood."!
 
 screen:7@
-question:"Je komt een balrog tegen in het Onderwereldse meer, wat doe je?"@
+question:"Je komt een balrog tegen in het Onderwereldse meer. Wat doe je?"@
 Dvalin raad aan om een frontaal gevecht te doen. Maar er zijn meer opties
 image:"adventures/goudenhal/food.png"@
 opties;
@@ -101,7 +108,7 @@ opties;
 3:Je kan een frontaal gevecht doen.,gotoDied,X,"Helaas was de balrog sterker."!
 
 screen:8@
-question:"Nu het onmiddelijke gevaar geweken is kijken jullie om je heen.
+question:"Nu het onmiddellijke gevaar geweken is kijken jullie om je heen.
 Jullie zien 3 mogelijke plekken waar je naartoe kan"@
 image:"adventures/goudenhal/orcs.png"@
 opties;
@@ -109,7 +116,8 @@ opties;
 Maar je zou je uitrusting uit moeten doen om erin te zwemmen.,goto9,O,CP?
 2:Een trap achter het meer die dieper de berg in gaat. Het ziet er verlaten en donker uit.,gotoDied,X,"Je treed de duisternis in en zonder dat je het weet stort het plafond in.
 Er vallen stenen en 1 raakt jou hoofd, je bent op slag dood."?
-3:Je ziet een zwaard in een steen, en denkt als je hem eruit trekt dat er een deur tevoorschijn komt.,gotoDied,X,"Er kwam geen deur tevoorschijn, de grot stort in en jullie overlijden door vallende rotsblokken."!
+3:Je ziet een zwaard in een steen, en denkt als je hem eruit trekt dat er een deur tevoorschijn komt.,gotoDied,X,"Er kwam geen deur tevoorschijn.
+De grot stort in en jullie overlijden door vallende rotsblokken."!
 
 screen:9@
 question:"Je bent net door de onderwater opening gezwommen en je ben drijf nat.
@@ -118,19 +126,19 @@ Je denkt dat de verdwenen dwergen hier waarschijnlijk terecht zijn geraakt terwi
 voor de balrog"@
 image:"adventures/goudenhal/orcs.png"@
 opties;
-1:Je ziet een kleine doorgang achter de troon.,gotoDied,X,"Je gaat erdoor en er sluit een metale deur achter je.
+1:Je ziet een kleine doorgang achter de troon.,gotoDied,X,"Je gaat erdoor en er sluit een metalen deur achter je.
 Je zit gevangen, maar door wie?"?
 2:Je ziet een donkere kamer rechts van je en hoort geritsel ,goto10,O,CP?
-3:Je hoort metaal op metaal uit de kamer links van je.,gotoDied,X,"Er zit een groep goblins,
-ze zien je en nemen je gevangen.!"!
+3:Je hoort metaal op metaal uit de kamer links van je.,gotoDied,X,"Er zit een groep goblins.
+Ze zien je en nemen je gevangen.!"!
 
 screen:10@
-question:“Je komt in de kamer de vermiste dwergen tegen, ze zien er zwak, ondervoed en bang uit.
+question:“Je komt in de kamer de vermiste dwergen tegen. Ze zien er zwak, ondervoed en bang uit.
 Je wil ze veilig stellen, hoe ga je dat doen?"@
 image:"adventures/goudenhal/draak.png"@
 opties;
 1:Je juicht omdat je de dwergen gevonden heb,gotoDied,X,"De goblins horen je kreet en nemen je gevangen!"?
 2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,"WIN MESSAGE"?
 3:Je hoort dat er goblins in de andere kamer zitten.
-Je besluit samen met de dwergen ze aan te vallen.,gotoDied,X,"Jullie verliezen het gevecht.
-Je wist hun nummers niet en de dwergen waren ondervoed, ze waren met 30."!
+Je besluit samen met de dwergen ze aan te vallen.,gotoDied,X,"De dwergen zijn fysiek uitgeput.
+Jullie verliezen het gevecht."!
