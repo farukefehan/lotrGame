@@ -5,8 +5,8 @@ def read_adventure(file):
     data_screens_list = adventure_bestand_name_screens[1:]
     screens_list = []
     for screen in data_screens_list:
-        screen_data = screen.split(".\n")
-        option_data = screen_data[3].replace("opties;\n", "").split("?\n")
+        screen_data = screen.split("@\n")
+        option_data = screen_data[2].replace("opties;\n", "").split("?\n")
         options_list = []
         for option in option_data:
             data = option.split(":")
@@ -23,12 +23,11 @@ def read_adventure(file):
             }
             options_list.append(option_dict)
         question = screen_data[1].replace("question:", "").replace("\"", "")
-        image = screen_data[2].replace("image:", "").replace("\"", "")
+        #image = screen_data[2].replace("image:", "").replace("\"", "")
         screen_dict = {
             "question": question,
-            "image": image,
+            "image": "images/vincent.png",
             "options": options_list
         }
         screens_list.append(screen_dict)
-        print(screens_list)
     return screens_list
