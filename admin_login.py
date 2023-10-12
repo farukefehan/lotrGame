@@ -28,7 +28,7 @@ def admin_login(venster):
 
     original_image = Image.open("images/draakje_schattig.png", mode="r")
     resized_image = original_image.resize(
-        (1000, 500), Image.LANCZOS)
+        (800, 400), Image.LANCZOS)
     final_image = ImageTk.PhotoImage(resized_image)
 
     dragon_image = Label(frame1, image=final_image)
