@@ -12,12 +12,16 @@ def goto_splash_screen(venster):
     make_splash_screen(venster)
 
 
-def print_adventure_result(venster, image):
+def death(venster, deathmessage):
+    print()
+
+
+def print_adventure_result(venster, image, deathmessage):
     end_image = Image.open(image)
     original_image = end_image.resize((1200, 400), Image.LANCZOS)
     voorbeeld_image = ImageTk.PhotoImage(original_image)
 
-    start_button = Label(venster, image=voorbeeld_image, compound="bottom", bg="#603000", fg="white")
+    start_button = Label(venster, text = deathmessage, image=voorbeeld_image, compound="bottom", bg="#603000", fg="white")
     start_button.image = voorbeeld_image
     start_button.place(relx=0.5, rely=0.3, anchor="center")
     make_home_button(venster)
@@ -34,13 +38,13 @@ def make_home_button(venster):
     end_button2.place(relx=0.5, rely=0.7, anchor="center")
 
 
-def make_end_screen_dead(venster):
+def make_end_screen_dead(venster, deathmessage):
     clear_page(venster)
     image_for_result_path = r"Images/you_died.png"
-    print_adventure_result(venster, image_for_result_path)
+    print_adventure_result(venster, image_for_result_path, deathmessage)
 
 
-def make_end_screen_success(venster):
+def make_end_screen_success(venster, deathmessage):
     clear_page(venster)
     image_for_result_path = r"Images/the_end.png"
-    print_adventure_result(venster, image_for_result_path)
+    print_adventure_result(venster, image_for_result_path, deathmessage)
