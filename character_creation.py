@@ -5,9 +5,34 @@ from main import kill_all_children
 
 races = ["Hobbit", "Elf", "Dwarf", "Human", "Wizard"]
 
+
+def get_selected_character_info(selected_index, characters_file_path):
+    characters = []
+
+    try:
+        with open(characters_file_path, 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                character = {
+                    "name": parts[0],
+                    "race": parts[1],
+                    "description": parts[2],
+                    "image": parts[3]
+                }
+                characters.append(character)
+    except FileNotFoundError:
+        pass
+
+    if 0 <= selected_index < len(characters):
+        return characters[selected_index]
+    else:
+        return None
+
+
 class CharacterCreationScreen:
     current_race_index = 0
     character_dropdown = None
+
 
     @staticmethod
     def start_adventure(venster):
@@ -162,7 +187,7 @@ def make_character_creation_screen(venster):
     start_adventure_button = Label(venster, image=voorbeeld_image3, text="Start Adventure", compound="bottom")
     start_adventure_button.image = voorbeeld_image3
     start_adventure_button["state"] = "disabled"
-    start_adventure_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    start_adventure_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster, get_selected_character_info(CharacterCreationScreen.character_dropdown.current(), "documenten/characters.txt")))
     start_adventure_button.place(relx=0.35, rely=0.7, anchor="center")
 
     show_existing_button = Label(venster, text="Show existing characters", image=voorbeeld_image, compound="bottom")
