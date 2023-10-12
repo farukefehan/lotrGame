@@ -122,7 +122,8 @@ opties;
 1:Ga verder,goto19,X!
 
 screen:19@
-question:"Een Nazgûl heeft jouw gezien! Hij komt achter jouw aan. Probeer te overleven tot zonlicht. Kies jouw acties: links, rechts of rechtdoor."@
+question:"Een Nazgûl heeft jouw gezien! Hij komt achter jouw aan. Probeer te overleven tot zonlicht.
+Kies jouw actie: links, rechts of rechtdoor. Er is er meer een goed."@
 opties;
 1:links,goto36,X?
 2:rechts,goto34,X?
@@ -214,114 +215,114 @@ opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:34@
-question:"Tussen de Bergen"@
+question:"Je wordt gevangen door een Nazgûl."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:35@
-question:"Run from nazguls"@
+question:"Het is diep in de nacht. Er zitten Nazgûl's achter je aan"@
 opties;
 1:links,goto39,O?
 2:rechtdoor,goto38,X?
 3:rechts,goto37,X!
 
 screen:36@
-question:"Tussen de Bergen"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:37@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:38@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:39@
-question:"Run from nazguls"@
+question:"Het is diep in de nacht. Er zitten meer Nazgûl's achter je aan"@
 opties;
 1:links,goto40,X?
 2:rechtdoor,goto41,X?
 3:rechts,goto42,O!
 
 screen:40@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:41@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:42@
-question:"Run from nazguls"@
+question:"Je ziet al wat beter. Er komen steeds meer Nazgûl's achter je aan"@
 opties;
 1:links,goto43,X?
 2:rechtdoor,goto44,X?
 3:rechts,goto46,O!
 
 screen:43@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:44@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl, maar je komt erachter dat er iets anders mee is. Hij neemt je mee."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,goto50,O!
 
 screen:45@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:46@
-question:"Run from nazguls"@
+question:"Je ziet het al licht worden. Er zitten zelfs nog meer Nazgûl's achter je aan"@
 opties;
 1:links,goto45,X?
 2:rechtdoor,goto38,O?
 3:rechts,goto47,X!
 
 screen:47@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:48@
-question:"Run from nazguls"@
+question:"Het is bijna zonsopgang. Er zitten negen Nazgûl's achter je aan"@
 opties;
 1:links,goto52,O?
 2:rechtdoor,goto51,X?
 3:rechts,goto49,X!
 
 screen:49@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:50@
-question:"Run from nazguls"@
+question:""@
 opties;
 1:links,goto56,O!
 
 screen:51@
-question:"Run from nazguls"@
+question:"Je wordt gevangen door een Nazgûl"@
 opties;
-1:Ga verder,gotoDied,O!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:52@
 question:"Run from nazguls"@
 opties;
 1:links,goto54,O?
 2:rechtdoor,goto55,X?
-3:rechts,goto53,X!
+3:rechts,goto53,X,CP!
 
 screen:53@
-question:"Run from nazguls"@
+question:"De zon komt op. Er zitten geen Nazgûl's achter je aan"@
 opties;
 1:links,goto57,X?
 2:rechtdoor,goto58,X?
