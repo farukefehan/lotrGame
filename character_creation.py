@@ -3,7 +3,14 @@ from PIL import Image, ImageTk
 from character_selection import goto_adventure_selection_screen
 from main import kill_all_children
 
-races = ["Hobbit Male", "Elf Male", "Dwarf Male", "Human Male", "Hobbit Female", "Elf Female", "Dwarf Female", "Human Female"]
+races = ["Hobbit", "Elf", "Dwarf", "Human"]
+race_images = {
+    "Hobbit": "images/hobbit_male.png",
+    "Elf": "images/elf_male.png",
+    "Dwarf": "images/dwarf_male.png",
+    "Human": "images/human_male.png",
+}
+
 
 
 def get_selected_character_info(selected_index, characters_file_path):
@@ -16,7 +23,7 @@ def get_selected_character_info(selected_index, characters_file_path):
                 character = {
                     "name": parts[0],
                     "race": parts[1],
-                    "description": parts[2],
+                    "sex": parts[2],
                     "image": parts[3]
                 }
                 characters.append(character)
@@ -29,10 +36,12 @@ def get_selected_character_info(selected_index, characters_file_path):
         return None
 
 
+# ... (diğer kodlar)
+
 class CharacterCreationScreen:
     current_race_index = 0
     character_dropdown = None
-
+    character_label = None  # Yeni ekledik
 
     @staticmethod
     def start_adventure(venster):
@@ -40,11 +49,9 @@ class CharacterCreationScreen:
         selected_character_info = get_selected_character_info(selected_index, "documenten/characters.txt")
 
         if selected_character_info:
-
             print("Selected Character Info:", selected_character_info)
         else:
-         print("No character selected.")
-
+            print("No character selected.")
 
     @staticmethod
     def delete_character(character_dropdown):
@@ -65,7 +72,7 @@ class CharacterCreationScreen:
                         file.write(f"{char[0]},{char[1]}\n")
 
                 # update combobox
-                CharacterCreationScreen.show_existing_characters(None, character_dropdown, start_adventure_button)
+                CharacterCreationScreen.show_existing_characters(None, character_dropdown, None)
 
     @staticmethod
     def load_characters_from_file(file_path):
@@ -74,27 +81,41 @@ class CharacterCreationScreen:
             with open(file_path, 'r') as file:
                 for line in file:
                     parts = line.strip().split(',')
-                    characters.append((parts[0], parts[1]))
+                    characters.append((parts[0], parts[1], parts[2], parts[3]))
         except FileNotFoundError:
             pass
         return characters
 
     @staticmethod
-    def next_character(race_label, image_label):
+    def next_character(race_label):
         CharacterCreationScreen.current_race_index = (CharacterCreationScreen.current_race_index + 1) % len(races)
         race_label.config(text=f"Select Race: {races[CharacterCreationScreen.current_race_index]}")
-        set_image(image_label, races[CharacterCreationScreen.current_race_index])
+
+        # update the photo
+        CharacterCreationScreen.update_character_image()
 
     @staticmethod
-    def prev_character(race_label, image_label):
+    def prev_character(race_label):
         CharacterCreationScreen.current_race_index = (CharacterCreationScreen.current_race_index - 1) % len(races)
         race_label.config(text=f"Select Race: {races[CharacterCreationScreen.current_race_index]}")
-        set_image(image_label, races[CharacterCreationScreen.current_race_index])
+
+        # update the photo
+        CharacterCreationScreen.update_character_image()
+
+    @staticmethod
+    def update_character_image():
+        character_image_path = race_images[races[CharacterCreationScreen.current_race_index]]
+        character_image = Image.open(character_image_path)
+        character_image = character_image.resize((200, 200), Image.LANCZOS)
+        character_image = ImageTk.PhotoImage(character_image)
+
+        CharacterCreationScreen.character_label.config(image=character_image)
+        CharacterCreationScreen.character_label.image = character_image
 
     @staticmethod
     def create_character(name_entry, race_label):
         name = name_entry.get()
-        selected_race = race_label.cget("text").split(":")[1].strip()
+        selected_race = races[CharacterCreationScreen.current_race_index]  # Use races list directly
 
         if not name or not selected_race:
             print("Please enter a valid name and select a race.")
@@ -104,10 +125,13 @@ class CharacterCreationScreen:
         print("Race:", selected_race)
 
         with open("documenten/characters.txt", "a") as file:
-            file.write(f"{name},{selected_race}\n")
+            file.write(f"{name},{selected_race},male,images/human_male.png\n")
+
+        # Update the character image
+        CharacterCreationScreen.update_character_image()
 
         # Update the combobox
-        CharacterCreationScreen.show_existing_characters(None, CharacterCreationScreen.character_dropdown)
+        CharacterCreationScreen.show_existing_characters(None, CharacterCreationScreen.character_dropdown, None)
 
     @staticmethod
     def show_existing_characters(venster, character_dropdown, start_adventure_button):
@@ -121,42 +145,44 @@ class CharacterCreationScreen:
     def create_character_screen(venster):
         kill_all_children(venster)
 
-        character_image = Image.open(r"Images/gollum.png")
+        name_label = Label(venster, text="Enter Name:")
+        name_label.place(relx=0.3, rely=0.4, anchor="center")
+
+        name_entry = Entry(venster)
+        name_entry.place(relx=0.5, rely=0.4, anchor="center")
+
+        race_label = Label(venster, text=f"Select Race: {races[CharacterCreationScreen.current_race_index]}")
+        race_label.place(relx=0.3, rely=0.5, anchor="center")
+
+        right_arrow_button = Button(venster, text="➡",
+                                    command=lambda: CharacterCreationScreen.next_character(race_label))
+        right_arrow_button.place(relx=0.6, rely=0.5, anchor="center")
+
+        left_arrow_button = Button(venster, text="⬅",
+                                   command=lambda: CharacterCreationScreen.prev_character(race_label))
+        left_arrow_button.place(relx=0.4, rely=0.5, anchor="center")
+
+        character_image_path = race_images[races[CharacterCreationScreen.current_race_index]]
+        character_image = Image.open(character_image_path)
         character_image = character_image.resize((200, 200), Image.LANCZOS)
         character_image = ImageTk.PhotoImage(character_image)
 
-        character_label = Label(venster, text="Character Preview", image=character_image, compound="bottom")
-        character_label.image = character_image
-        character_label.place(relx=0.5, rely=0.4, anchor="center")
+        CharacterCreationScreen.character_label = Label(venster, text="Character Preview", image=character_image, compound="bottom")
+        CharacterCreationScreen.character_label.image = character_image
+        CharacterCreationScreen.character_label.place(relx=0.5, rely=0.6, anchor="center")
 
-        name_label = Label(venster, text="Enter Name:")
-        name_label.place(relx=0.3, rely=0.2, anchor="center")
-
-        name_entry = Entry(venster)
-        name_entry.place(relx=0.5, rely=0.2, anchor="center")
-
-        race_label = Label(venster, text=f"Select Race: {races[CharacterCreationScreen.current_race_index]}")
-        race_label.place(relx=0.3, rely=0.35, anchor="center")
-
-        right_arrow_button = Button(venster, text="➡",
-                                    command=lambda: CharacterCreationScreen.next_character(race_label, character_label))
-        right_arrow_button.place(relx=0.6, rely=0.4, anchor="center")
-
-        left_arrow_button = Button(venster, text="⬅",
-                                   command=lambda: CharacterCreationScreen.prev_character(race_label, character_label))
-        left_arrow_button.place(relx=0.4, rely=0.4, anchor="center")
 
         original_image2 = Image.open(r"Images/home_button.png")
         original_image2 = original_image2.resize((100, 100), Image.LANCZOS)
         voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
         create_button = Button(venster, text="Create Character", command=lambda: CharacterCreationScreen.create_character(name_entry, race_label))
-        create_button.place(relx=0.5, rely=0.6, anchor="center")
+        create_button.place(relx=0.5, rely=0.8, anchor="center")
 
         end_button2 = Label(venster, image=voorbeeld_image2, text="Back to character selection", compound="bottom")
         end_button2.image = voorbeeld_image2
         end_button2.bind("<Button-1>", lambda click_event: goto_user_created_characters(venster))
-        end_button2.place(relx=0.5, rely=0.8, anchor="center")
+        end_button2.place(relx=0.5, rely=1.0, anchor="center")
 
 def goto_character_creation(venster):
     from character_selection import make_character_selection_screen
@@ -176,6 +202,11 @@ def make_character_creation_screen(venster):
     start_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.create_character_screen(venster))
     start_button.place(relx=0.35, rely=0.2, anchor="center")
 
+    # Combobox
+    CharacterCreationScreen.character_dropdown = ttk.Combobox(venster, font=("Arial", 16), state="readonly")
+    CharacterCreationScreen.character_dropdown.place(relx=0.65, rely=0.35, anchor="center")
+    CharacterCreationScreen.character_dropdown.bind("<Button-1>", lambda click_event: CharacterCreationScreen.show_existing_characters(venster, CharacterCreationScreen.character_dropdown, start_adventure_button))
+
     # Start button for adventure selection
     original_image3 = Image.open(r"Images/adventure_button.png")
     original_image3 = original_image3.resize((200, 200), Image.LANCZOS)
@@ -186,11 +217,6 @@ def make_character_creation_screen(venster):
     start_adventure_button["state"] = "disabled"
     start_adventure_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster, get_selected_character_info(CharacterCreationScreen.character_dropdown.current(), "documenten/characters.txt")))
     start_adventure_button.place(relx=0.35, rely=0.7, anchor="center")
-
-    # Combobox
-    CharacterCreationScreen.character_dropdown = ttk.Combobox(venster, font=("Arial", 16), state="readonly")
-    CharacterCreationScreen.character_dropdown.place(relx=0.65, rely=0.35, anchor="center")
-    CharacterCreationScreen.character_dropdown.bind("<Button-1>", lambda click_event: CharacterCreationScreen.show_existing_characters(venster, CharacterCreationScreen.character_dropdown, start_adventure_button))
 
     show_existing_button = Label(venster, text="Show existing characters", image=voorbeeld_image, compound="bottom")
     show_existing_button.image = voorbeeld_image
@@ -208,31 +234,4 @@ def make_character_creation_screen(venster):
     delete_button = Label(venster, text="Delete Character", image=voorbeeld_image, compound="bottom")
     delete_button.image = voorbeeld_image
     delete_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.delete_character(CharacterCreationScreen.character_dropdown))
-    delete_button.place(relx=0.65, rely=0.7, anchor="center")
-
-def set_image(image_label, image):
-
-    print(image_label, image)
-    image_file = "images/elf_male.png"
-    if image == "Elf Male":
-        image_file = "images/elf_male.png"
-    if image == "Hobbit Male":
-        image_file = "images/hobbit_male.png"
-    if image == "Dwarf Male":
-        image_file = "images/dwarf_male.png"
-    if image == "Human Male":
-        image_file = "images/human_male.png"
-    if image == "Elf Female":
-        image_file = "images/elf_female.png"
-    if image == "Hobbit Female":
-        image_file = "images/hobbit_female.png"
-    if image == "Dwarf Female":
-        image_file = "images/dwarf_female.png"
-    if image == "Human Female":
-        image_file = "images/human_female.png"
-    character_image = Image.open(image_file, mode="r")
-    character_image = character_image.resize((200, 200), Image.LANCZOS)
-    character_image = ImageTk.PhotoImage(character_image)
-
-    image_label.config(image=character_image)
-    image_label.image = character_image
+    delete_button.place(relx=0.65, rely=0.8, anchor="center")
