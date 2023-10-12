@@ -34,3 +34,6 @@ def make_splash_screen(venster):
     admin_button.bind("<Button-1>", lambda click_event: goto_screen_admin_login(venster))
     start_button.place(relx=0.5, rely=0.4, anchor="center")
     admin_button.place(relx=0.5, rely=0.5, anchor="center")
+
+    from exit_button import make_exit_button
+    make_exit_button(venster)
