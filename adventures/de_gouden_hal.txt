@@ -37,7 +37,7 @@ question:“De weg naar het verlaten kasteel is lang en zwaar. Je bent echter ma
 opties;
 1:Een pijl en boog,goto7,O?
 2:Een zwaard,goto7,O?
-3:Een strijdbijl,goto7,O?
+3:Een strijdbijl,goto7,O!
 
 screen:6.
 question:"Je komt een enorme spin van ruim 2 meter tegen, wat doe je?".
@@ -76,5 +76,5 @@ opties;
 screen:11.
 question:"Je bent in het kasteel, maar je hebt de Gouden Hal nog niet gevonden. Waar zoek je eerst?".
 opties;
-1.Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn zo fragiel dat het instort nadat je op de muren klopt. Je bent geplet!"?
-2:Ga naar de kelder,gotoWin,O?
+1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn zo fragiel dat het instort nadat je op de muren klopt. Je bent geplet!"?
+2:Ga naar de kelder,gotoWin,O!
