@@ -9,7 +9,7 @@ van voorspoed en vrede. Maar die vrede werd verbroken toen een groep Dwergen op
 mysterieuze wijze spoorloos verdween.”
 Om onze eer te herstellen moeten wij de verdwenen dwergen vinden, wil je ons
 helpen?@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/vermistedwergen/dwarves_city.png"@
 opties;
 1:Ga verder,goto1,O,CP!
 
@@ -18,14 +18,14 @@ question:"Je komt aan in Erebor, je komt hier Balin en Dvalin tegen.
 Balin:
 Onze broeders zijn spoorloos verdwenen, we moeten ze terug vinden!
 Wil je ons helpen?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/vermistedwergen/dwarves_city.png"@
 opties;
 1:Ik wil jullie helpen in jullie zoektocht.,goto2,O,CP?
 2:Nee,gotoDied,X,"Je hebt besloten ze te negeren."!
 
 screen:2@
 question:"Je heb besloten om ze te helpen, welk wapen neem je mee op je avontuur?"@
-image:"adventures/goudenhal/vincent.png"@
+image:"adventures/vermistedwergen/weaponry2.png"@
 opties;
 1:Boog,goto3,O,CP?
 2:Zwaard,goto3,O,CP?
@@ -34,7 +34,7 @@ opties;
 screen:3@
 question:"We moeten ergens informatie vandaan halen.
 Waar denk je dat we langs moeten gaan?"@
-image:"adventures/goudenhal/cave.png"@
+image:"adventures/vermistedwergen/information.png"@
 opties;
 1:Schimmige informatie handelaar,gotoDied,X,"Hij heeft jullie gevangen genomen."?
 2:Een tovenaar,goto4,O,CP?
@@ -56,7 +56,7 @@ En als je de top bereikt, doorzettingsvermogen aan je zij, Zal de geheime plek z
 Dus, moedige ziel, ga vooruit en neem deze uitdaging aan, Ontdek de mistige berg, waarvan de legende is ontstaan.
 En onthul het geheim, dat diep verborgen ligt, In de eeuwenoude raadsel, dat de avonturiers bezwijgt..
 Hoe ga je naar de mistige berg?"@
-image:"adventures/goudenhal/cave.png"@
+image:"adventures/vermistedwergen/wizard.png"@
 opties;
 1:Je neemt de weg,gotoDied,X,"In de nacht worden al je spullen gestolen.
 Hierdoor kan je je zoektocht niet meer hervatten."?
@@ -67,7 +67,7 @@ Jullie worden gevangen."!
 screen:5@
 question:“Je komt aan op misty mountain, Het pad split en je heb 3 keuzes.
 Welk pad kies je?"@
-image:"adventures/goudenhal/weaponry.png"@
+image:"adventures/vermistedwergen/misty_mountain.png"@
 opties;
 1:Berg op,gotoDied,X,"Je gaat de berg op en komt daar goblins tegen.
 Zij vechten met je en je sterft."?
@@ -90,7 +90,7 @@ Daelt af int donkere ende laet uwe ghedachten driven, Naer desen onderaerts oase
 Dus moet ghi der uutdaginghe aengane, Moedich ende sterck, ende explorerne den onbekenden, een reise sonder perke.
  Het antwoort wacht up den geene die het can overwinnen.
  Balin zegt van 3 plekken te hebben gehoord die het kunnen zijn. Welke denk jij?@
-image:"adventures/goudenhal/spinnetje.png"@
+image:"adventures/vermistedwergen/runes_on_wall.png"@
 opties;
 1:Ivoorpieken,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat
 eindigt met jouw dood."?
@@ -99,9 +99,9 @@ eindigt met jouw dood."?
 eindigt met jouw dood."!
 
 screen:7@
-question:"Je komt een balrog tegen in het Onderwereldse meer. Wat doe je?"@
-Dvalin raad aan om een frontaal gevecht te doen. Maar er zijn meer opties
-image:"adventures/goudenhal/food.png"@
+question:"Je komt een balrog tegen in het Onderwereldse meer. Wat doe je?
+Dvalin raad aan om een frontaal gevecht te doen. Maar er zijn meer opties."@
+image:"adventures/vermistedwergen/balrog.png"@
 opties;
 1:Je kan hem van een kliff lokken naast het meer ,goto8,O,CP?
 2:Je kan weg rennen,gotoDied,X,"De balrog is sneller en eindigt je leven"?
@@ -110,7 +110,7 @@ opties;
 screen:8@
 question:"Nu het onmiddellijke gevaar geweken is kijken jullie om je heen.
 Jullie zien 3 mogelijke plekken waar je naartoe kan"@
-image:"adventures/goudenhal/orcs.png"@
+image:"adventures/vermistedwergen/underground_lake.png"@
 opties;
 1:Onderwater een soort opening waar je in kan.
 Maar je zou je uitrusting uit moeten doen om erin te zwemmen.,goto9,O,CP?
@@ -124,7 +124,7 @@ question:"Je bent net door de onderwater opening gezwommen en je ben drijf nat.
 Je kijkt om je heen en ziet dat je je in een troonzaal bevind.
 Je denkt dat de verdwenen dwergen hier waarschijnlijk terecht zijn geraakt terwijl ze weg aan het rennen waren,
 voor de balrog"@
-image:"adventures/goudenhal/orcs.png"@
+image:"adventures/vermistedwergen/throne_hall.png"@
 opties;
 1:Je ziet een kleine doorgang achter de troon.,gotoDied,X,"Je gaat erdoor en er sluit een metalen deur achter je.
 Je zit gevangen, maar door wie?"?
@@ -135,10 +135,11 @@ Ze zien je en nemen je gevangen.!"!
 screen:10@
 question:“Je komt in de kamer de vermiste dwergen tegen. Ze zien er zwak, ondervoed en bang uit.
 Je wil ze veilig stellen, hoe ga je dat doen?"@
-image:"adventures/goudenhal/draak.png"@
+image:"adventures/vermistedwergen/dwarf_end.png"@
 opties;
 1:Je juicht omdat je de dwergen gevonden heb,gotoDied,X,"De goblins horen je kreet en nemen je gevangen!"?
-2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,"WIN MESSAGE"?
+2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,"Goed gedaan"?
+Je heb de eer van de dwergen herstelt.
 3:Je hoort dat er goblins in de andere kamer zitten.
 Je besluit samen met de dwergen ze aan te vallen.,gotoDied,X,"De dwergen zijn fysiek uitgeput.
 Jullie verliezen het gevecht."!
