@@ -9,7 +9,6 @@ def admin_login(venster):
     from main import kill_all_children
     kill_all_children(venster)
 
-
     password = "kekw"
 
     admin_login_title_label_font = tkinter.font.Font(family="Blackadder ITC", size=80, weight="bold")
@@ -31,6 +30,7 @@ def admin_login(venster):
 
     login_button.bind("<Button-1>", lambda click_event: check_admin_wachtwoord(user_input, password))
 
+
 def check_check():
 
     if check_admin_wachtwoord(user_input, password):
@@ -47,23 +47,6 @@ def check_admin_wachtwoord(user_input, password):
         return admin_mode
     else:
         return False
-
-
-
-
-
-    # hello_world_label = Label(venster, text="Admin login")
-
-    # button = Button(venster, text="Login",
-    #                 command=lambda: verander_label_text(hello_world_label, gebruikers_input.get()))
-    # gebruikers_input = Entry(venster, bd=1)
-
-
-
-
-    # hello_world_label.place(relx=0.5, rely=0.3, anchor="center")
-    # gebruikers_input.place(relx=0.5, rely=0.45, anchor="center")
-    # button.place(relx=0.5, rely=0.5, anchor="center")
 
 
 def verander_label_text(label, tekst):

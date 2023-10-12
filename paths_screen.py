@@ -6,6 +6,8 @@ from read_adventure import read_adventure
 
 adventure = []
 character_dict = {}
+
+
 def start_adventure(venster, file_name, dict):
     global adventure
     global character_dict
@@ -14,15 +16,18 @@ def start_adventure(venster, file_name, dict):
     first_screen = adventure[0]
     generate_screen(venster, first_screen)
 
+
 def resize_image(file_path):
-    #image_settings_characters
+    # image_settings_characters
     character_imagesize_x = 400
     character_imagesize_y = 700
 
     original_image = Image.open(file_path, mode="r")
-    resized_image = original_image.resize((character_imagesize_x, character_imagesize_y), Image.LANCZOS)
+    resized_image = original_image.resize(
+        (character_imagesize_x, character_imagesize_y), Image.LANCZOS)
     final_image = ImageTk.PhotoImage(resized_image)
     return final_image
+
 
 def generate_screen(venster, screen_dict):
     global adventure
@@ -30,6 +35,9 @@ def generate_screen(venster, screen_dict):
     root = venster
     from main import kill_all_children
     kill_all_children(root)
+
+    from home_button import make_home_button
+    make_home_button(venster)
 
     character_slot_1_image = resize_image(character_dict['image'])
 
@@ -59,11 +67,16 @@ def create_buttons(screen_dict, root):
 
     option_list = screen_dict['options']
     for option in option_list:
-        option_button = Button(frame2, text=option['text'], height=5, pady=1, padx=1, borderwidth=1, relief="raised", anchor="w", justify="left", command=lambda x=root, y=option['action'], z=option['death_message']: take_action(x, y, z))
+        option_button = Button(frame2, text=option['text'], height=5, pady=1, padx=1,
+                               borderwidth=1, relief="raised", anchor="w", justify="left",
+                               command=lambda x=root, y=option['action'], z=option['death_message']:
+                               take_action(x, y, z))
         option_button.pack(anchor="w", pady=1, padx=1, fill="x")
 
-    question_label = Label(frame1, text=screen_dict['question'], anchor="center", compound="center", borderwidth=2, relief="sunken")
+    question_label = Label(frame1, text=screen_dict['question'], anchor="center", compound="center",
+                           borderwidth=2, relief="sunken")
     question_label.pack(expand=1)
+
 
 def take_action(root, code_string, death_message):
     global adventure

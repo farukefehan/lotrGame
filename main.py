@@ -13,7 +13,8 @@ def kill_all_children(venster):
 
 def generate_background(zone):
     original_image = Image.open(r"images/background.png")
-    resized_image = original_image.resize((zone.winfo_screenwidth(), zone.winfo_screenheight()), Image.LANCZOS)
+    resized_image = original_image.resize((
+        zone.winfo_screenwidth(), zone.winfo_screenheight()), Image.LANCZOS)
     background_image = ImageTk.PhotoImage(resized_image)
 
     background = Label(zone, image=background_image)
@@ -26,12 +27,9 @@ def main():
     root.geometry("1920x1080")
     root.title("Boromir")
     root.state('zoomed')
-
     root.winfo_screenheight()
     root.winfo_height()
     generate_background(root)
-    #generate_screen(root, screen_dict)
-    #start_adventure(root, "adventures/goudenhal/de_gouden_hal.txt")
     make_splash_screen(root)
     root.mainloop()
 

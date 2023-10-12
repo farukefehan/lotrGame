@@ -12,8 +12,15 @@ def goto_splash_screen(venster):
     make_splash_screen(venster)
 
 
-def death(venster, deathmessage):
-    print()
+def make_home_button(venster):
+    home_button_image_proto = Image.open(r"Images/home_button.png")
+    home_button_image_proto = home_button_image_proto.resize((200, 200), Image.LANCZOS)
+    home_button_image = ImageTk.PhotoImage(home_button_image_proto)
+
+    home_button = Label(venster, image=home_button_image, compound="bottom", bg="#603000", fg="white")
+    home_button.image = home_button_image
+    home_button.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))
+    home_button.place(relx=0.5, rely=0.7, anchor="center")
 
 
 def print_adventure_result(venster, image, deathmessage):
@@ -21,21 +28,11 @@ def print_adventure_result(venster, image, deathmessage):
     original_image = end_image.resize((1200, 400), Image.LANCZOS)
     voorbeeld_image = ImageTk.PhotoImage(original_image)
 
-    start_button = Label(venster, text = deathmessage, image=voorbeeld_image, compound="bottom", bg="#603000", fg="white")
+    start_button = Label(venster, text=deathmessage, image=voorbeeld_image, compound="top",
+                         bg="#603000", fg="white")
     start_button.image = voorbeeld_image
     start_button.place(relx=0.5, rely=0.3, anchor="center")
     make_home_button(venster)
-
-
-def make_home_button(venster):
-    home_button_image_proto = Image.open(r"Images/home_button.png")
-    home_button_image_proto = home_button_image_proto.resize((200, 200), Image.LANCZOS)
-    home_button_image = ImageTk.PhotoImage(home_button_image_proto)
-
-    end_button2 = Label(venster, image=home_button_image, compound="bottom", bg="#603000", fg="white")
-    end_button2.image = home_button_image
-    end_button2.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))
-    end_button2.place(relx=0.5, rely=0.7, anchor="center")
 
 
 def make_end_screen_dead(venster, deathmessage):

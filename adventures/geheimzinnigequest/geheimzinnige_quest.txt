@@ -1,7 +1,9 @@
 avontuur 11!
 
 screen:0@
-question:"Wil je naar bos, vlakte of bergen"@
+question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras die informatie heeft over Sauron en een schat verbergt.
+Je bent van plan verder met je avontuur te gaan op zoek naar deze man. Ook wil je deze man vragen of hij jouw helpt met het verslaan van Sauron.
+ Maar eerst moet je bij dit moeras komen. Welke weg neem je? Wil je naar het bos, de vlakte of de bergen?"@
 opties;
 1:bos,goto1,O?
 2:vlakte,goto2,O?
@@ -22,22 +24,22 @@ opties;
 3:middelste pad,goto7,O!
 
 screen:3@
-question:"Tussen de Bergen"@
+question:"Tussen de Bergen zie je drie gevaarlijke wegen. Welke weg neem je?"@
 opties;
 1:links,goto10,X?
 2:rechts,goto12,O?
 3:rechtdoor,goto11,O!
 
 screen:4@
-question:"Je bent gestorven door boom"@
+question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht. Maar aan de bomen hingen appels, hele harden appels, een daarvan kwam hard tegen je achterhoofd aan en breekt je schedel."@
 opties;
 1:Ga verder,gotoDied,X!
 
 screen:5@
-question:"bosmonster valt aan"@
+question:"Een boze Ent valt je aan! Wat doe Je?"@
 opties;
-1:vlucht,goto13,O?
-2:vecht,goto14,X!
+1:vlucht van de Ent,goto13,O?
+2:vecht de Ent,goto14,X!
 
 screen:6@
 question:"Je zit in een maïsveld. Neem je een afslag of blijf je doorgaan?"@
