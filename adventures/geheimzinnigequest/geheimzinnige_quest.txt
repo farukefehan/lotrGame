@@ -5,7 +5,7 @@ screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras die informatie heeft over Sauron en een schat verbergt.
 Je bent van plan verder met je avontuur te gaan op zoek naar deze man. Ook wil je deze man vragen of hij jouw helpt met het verslaan van Sauron.
 Maar eerst moet je bij dit moeras komen. Welke weg neem je? Wil je naar het bos, de vlakte of de bergen?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/rivendell.png"@
 opties;
 1:bos,goto1,O?
 2:vlakte,goto2,O?
@@ -13,7 +13,7 @@ opties;
 
 screen:1@
 question:"In het bos is een splitsing. Welke kant wil je op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/bos2.png"@
 opties;
 1:rechts,goto4,X?
 2:links,goto6,O?
