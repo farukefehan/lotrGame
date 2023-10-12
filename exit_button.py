@@ -2,8 +2,8 @@ from tkinter import Label
 from PIL import Image, ImageTk
 
 def make_exit_button(venster):
-    character_imagesize_x = 25
-    character_imagesize_y = 25
+    character_imagesize_x = 35
+    character_imagesize_y = 35
 
     original_image = Image.open(r"images/prohibit_sign.png")
     resized_image = original_image.resize(
