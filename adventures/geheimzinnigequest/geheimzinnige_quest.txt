@@ -1,5 +1,5 @@
 avontuur 11;
-checkpoints:3!
+checkpoints:2!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras die informatie heeft over Sauron en een schat verbergt.
@@ -304,7 +304,7 @@ question:"Je ziet al wat beter. Er komen steeds meer Nazgûl's achter je aan"@
 image:"adventures/goudenhal/screen1.png"@
 opties;
 1:links,goto43,X?
-2:rechtdoor,goto44,X?
+2:rechtdoor,goto44,XO?
 3:rechts,goto46,O!
 
 screen:43@
@@ -330,7 +330,7 @@ question:"Je ziet het al licht worden. Er zitten zelfs nog meer Nazgûl's achter
 image:"adventures/goudenhal/screen1.png"@
 opties;
 1:links,goto45,X?
-2:rechtdoor,goto38,O?
+2:rechtdoor,goto48,O?
 3:rechts,goto47,X!
 
 screen:47@
