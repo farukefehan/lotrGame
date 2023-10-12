@@ -1,8 +1,11 @@
 from tkinter import Label, Frame, Button
 from PIL import Image, ImageTk
+
+from end_screen import make_end_screen_dead, make_end_screen_success
 from read_adventure import read_adventure
 
 adventure = []
+character_dict = {}
 def start_adventure(venster, file_name):
     global adventure
     adventure = read_adventure(file_name)
@@ -25,7 +28,7 @@ def generate_screen(venster, screen_dict):
     from main import kill_all_children
     kill_all_children(root)
 
-    character_slot_1_image = resize_image("Images/dwarf_male.png")
+    character_slot_1_image = resize_image("images/vincent.png")
 
     character_slot_2_image = resize_image(screen_dict['image'])
 
@@ -64,11 +67,9 @@ def take_action(root, code_string, death_message):
     if code_string.find("goto") != int("-1"):
         action = code_string.replace("goto", "")
         if action == "Died":
-            #end_screen_fuction here + deathmessage
-            print("d")
+            make_end_screen_dead(root, death_message)
         elif action == "Win":
-            #go to win screen + win message
-            print("d")
+            make_end_screen_success(root, death_message)
         else:
             action = int(action)
             print(action)
