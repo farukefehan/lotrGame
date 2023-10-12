@@ -6,13 +6,18 @@ from read_adventure import read_adventure
 
 adventure = []
 character_dict = {}
-
+amount_of_checkpoints = 0
+checkpoints_got = 0
 
 def start_adventure(venster, file_name, dict):
     global adventure
     global character_dict
+    global amount_of_checkpoints
+    global checkpoints_got
     character_dict = dict
     adventure = read_adventure(file_name)
+    print(adventure[0])
+    amount_of_checkpoints = adventure.pop(0)
     first_screen = adventure[0]
     generate_screen(venster, first_screen)
 
@@ -54,6 +59,7 @@ def generate_screen(venster, screen_dict):
 
 
 def create_buttons(screen_dict, root):
+    global checkpoints_got, amount_of_checkpoints
     frame1 = Frame(root, width=1000, height=800, borderwidth=5, relief="raised")
     frame1.pack(anchor="center", pady=100)
     frame1.propagate(False)
@@ -62,10 +68,11 @@ def create_buttons(screen_dict, root):
     frame2.pack(side="top", anchor="center", fill="x")
     frame2.propagate(False)
 
-    min_space_label = Label(frame2, width=1, height=1, bg="black")
+    min_space_label = Label(frame2, width=1, height=1, bg="black", text=f"{checkpoints_got}/{amount_of_checkpoints}", fg="white")
     min_space_label.pack(anchor="n", fill="x")
 
     option_list = screen_dict['options']
+
     for option in option_list:
         option_button = Button(frame2, text=option['text'], height=4, pady=1, padx=1,
                                borderwidth=1, relief="raised", anchor="w", justify="left",
@@ -79,14 +86,17 @@ def create_buttons(screen_dict, root):
 
 
 def take_action(root, code_string, death_message):
-    global adventure
+    global adventure, checkpoints_got, amount_of_checkpoints
     if code_string.find("goto") != int("-1"):
         action = code_string.replace("goto", "")
         if action == "Died":
             make_end_screen_dead(root, death_message)
         elif action == "Win":
+            checkpoints_got += 1
             make_end_screen_success(root, death_message)
         else:
+            if death_message == "CP":
+                checkpoints_got += 1
             action = int(action)
             print(action)
             generate_screen(root, adventure[action])

@@ -1,4 +1,5 @@
-avontuur 3!
+avontuur 3;
+Checkpoints:8!
 
 screen:0@
 question:“Dappere held, ik heb je nodig! De kwaadaardige draak Smaug wil mijn schatten stelen!
@@ -6,7 +7,7 @@ Ik heb een dappere held nodig om naar de Gouden Hal te gaan en mijn schatten vei
 De held die dit voor mij doet zal rijkelijk beloond worden!”@
 image:"adventures/goudenhal/screen1.png"@
 opties;
-1:Accepteer de queeste,goto1,O?
+1:Accepteer de queeste,goto1,O,CP?
 2:Blijf thuis,gotoDied,X,"Je gaat dood van verveling."!
 
 screen:1@
@@ -15,7 +16,7 @@ Naar wie ga je voor deze informatie?"@
 image:"adventures/goudenhal/screen1.png"@
 opties;
 1:Een dappere hobbit,goto2,O?
-2:Balin en Dwalin,goto3,O!
+2:Balin en Dwalin,goto3,O,CP!
 
 screen:2@
 question:"Vincent de Hobbit wil een biertje met je drinken, accepteer je?"@
@@ -25,13 +26,13 @@ opties;
 2:Nee!,goto1,O!
 
 screen:3@
-question:“Balin en Dwalin zijn dwergen die leven in de grotten.
+question:“Balin en Dwalin zijn dwergen leven in de grotten.
 Het is een lange reis, maar het gaat je lukken!
 Je kan op drie manieren bij de grotten komen:"@
 image:"adventures/goudenhal/cave.png"@
 opties;
 1:Via de weg,gotoDied,X,"Je werd beroofd en bent zonder spullen geforceerd terug te keren naar huis."?
-2:Door het bos,goto4,O?
+2:Door het bos,goto4,O,CP?
 3:Over de bergen,gotoDied,X,"Je stuit perongeluk op een kamp vol Orcs en legt het helaas af in het gevecht dat volgt."!
 
 screen:4@
@@ -48,9 +49,9 @@ question:“De weg naar het verlaten kasteel is lang en zwaar.
 Je bent echter maar sterk genoeg om één wapen mee te nemen. Welk wapen neem je mee?"@
 image:"adventures/goudenhal/weaponry.png"@
 opties;
-1:Een pijl en boog,goto7,O?
-2:Een zwaard,goto7,O?
-3:Een strijdbijl,goto7,O!
+1:Een pijl en boog,goto7,O,CP?
+2:Een zwaard,goto7,O,CP?
+3:Een strijdbijl,goto7,O,CP!
 
 screen:6@
 question:"Je komt een enorme spin van ruim 2 meter tegen, wat doe je?"@
@@ -63,7 +64,7 @@ screen:7@
 question:"Voor zo'n zware reis neem je ook eten mee, wat kies je als maaltijd?"@
 image:"adventures/goudenhal/food.png"@
 opties;
-1:Brood,goto8,O?
+1:Brood,goto8,O,CP?
 2:Koekjes,gotoDied,X,"Koekjes zijn geen maaltijd voor een reis zo zwaar als deze!
 Je verhongert tijdens de reis."?
 3:Fruit,gotoDied,X,"Helaas was het fruit giftig en ben je dood!"!
@@ -73,7 +74,7 @@ question:"Op weg naar het verlaten kasteel kom je een duo orcs tegen! Wat doe je
 image:"adventures/goudenhal/orcs.png"@
 opties;
 1:Vecht met de orcs,goto9,O?
-2:Verstop je in de bosjes en wacht tot ze weg zijn,goto10,O?
+2:Verstop je in de bosjes en wacht tot ze weg zijn,goto10,O,CP?
 3:Zet een val,gotoDied,X,"De orcs doorzien je val en nemen je als gevangene mee naar hun kamp!"!
 
 screen:9@
@@ -81,7 +82,7 @@ question:"Hoe vecht je tegen de orcs?"@
 image:"adventures/goudenhal/orcs.png"@
 opties;
 1:Je rent op ze af met je wapen,gotoDied,X,"twee tegen één win je niet, je legt het af in het gevecht@"?
-2:Houdt je afstand en vecht slim,goto10,O?
+2:Houdt je afstand en vecht slim,goto10,O,CP?
 3:Schreeuw heel hard om de orcs af te schrikken,gotoDied,X,"Er komt een trol op het geluid af, zowel jij als de orcs worden vermoord!"!
 
 screen:10@
@@ -93,7 +94,7 @@ Wat doe je?"@
 image:"adventures/goudenhal/draak.png"@
 opties;
 1:Juich uit blijdschap omdat je het kasteel gevonden hebt,gotoDied,X,"De draak Smaug hoort je kreet en zet je meteen in vuur en vlam!"?
-2:Je sneakt voorzichtig naar het kasteel,goto11,O?
+2:Je sneakt voorzichtig naar het kasteel,goto11,O,CP?
 3:Ren zo snel mogelijk naar het kasteel om de draak te vermijden,gotoDied,X,"De draak Smaug hoort je luide stappen en zet je meteen in vuur en vlam!"!
 
 screen:11@
