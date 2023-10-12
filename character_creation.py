@@ -136,7 +136,7 @@ class CharacterCreationScreen:
                                    command=lambda: CharacterCreationScreen.prev_character(race_label))
         left_arrow_button.place(relx=0.4, rely=0.5, anchor="center")
 
-        character_image = Image.open(r"images/gollum.png")
+        character_image = Image.open(r"Images/gollum.png")
         character_image = character_image.resize((200, 200), Image.LANCZOS)
         character_image = ImageTk.PhotoImage(character_image)
 
@@ -144,7 +144,7 @@ class CharacterCreationScreen:
         character_label.image = character_image
         character_label.place(relx=0.5, rely=0.6, anchor="center")
 
-        original_image2 = Image.open(r"images/home_button.png")
+        original_image2 = Image.open(r"Images/home_button.png")
         original_image2 = original_image2.resize((100, 100), Image.LANCZOS)
         voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
@@ -166,7 +166,7 @@ def goto_user_created_characters(venster):
 def make_character_creation_screen(venster):
     kill_all_children(venster)
 
-    original_image = Image.open(r"images/stickman_echt.png")
+    original_image = Image.open(r"Images/stickman_echt.png")
     voorbeeld_image = ImageTk.PhotoImage(original_image)
 
     start_button = Label(venster, text="Create new character", image=voorbeeld_image, compound="bottom")
@@ -180,7 +180,7 @@ def make_character_creation_screen(venster):
     CharacterCreationScreen.character_dropdown.bind("<Button-1>", lambda click_event: CharacterCreationScreen.show_existing_characters(venster, CharacterCreationScreen.character_dropdown, start_adventure_button))
 
     # Start button for adventure selection
-    original_image3 = Image.open(r"images/adventure_button.png")
+    original_image3 = Image.open(r"Images/adventure_button.png")
     original_image3 = original_image3.resize((200, 200), Image.LANCZOS)
     voorbeeld_image3 = ImageTk.PhotoImage(original_image3)
 
@@ -194,7 +194,7 @@ def make_character_creation_screen(venster):
     show_existing_button.image = voorbeeld_image
     show_existing_button.place(relx=0.65, rely=0.2, anchor="center")
 
-    original_image2 = Image.open(r"images/home_button.png")
+    original_image2 = Image.open(r"Images/home_button.png")
     original_image2 = original_image2.resize((200, 200), Image.LANCZOS)
     voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
