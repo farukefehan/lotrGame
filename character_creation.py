@@ -6,7 +6,7 @@ races = ["Hobbit", "Elf", "Dwarf", "Human", "Wizard"]
 
 class CharacterCreationScreen:
     current_race_index = 0
-    character_dropdown = None  # Yeni satır
+    character_dropdown = None
 
     @staticmethod
     def load_characters_from_file(file_path):
@@ -56,7 +56,7 @@ class CharacterCreationScreen:
         create_button.place(relx=0.5, rely=0.8, anchor="center")
         end_button2 = Label(venster, image=voorbeeld_image2, text="Back to character selection", compound="bottom")
         end_button2.image = voorbeeld_image2
-        end_button2.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
+        end_button2.bind("<Button-1>", lambda click_event: goto_user_created_characters(venster))
         end_button2.place(relx=0.5, rely=1.0, anchor="center")
 
     @staticmethod
@@ -92,7 +92,9 @@ class CharacterCreationScreen:
 def goto_character_creation(venster):
     from character_selection import make_character_selection_screen
     make_character_selection_screen(venster)
+def goto_user_created_characters(venster):
 
+    make_character_creation_screen(venster)
 def make_character_creation_screen(venster):
     kill_all_children(venster)
 
@@ -102,16 +104,17 @@ def make_character_creation_screen(venster):
     start_button = Label(venster, text="Create new character", image=voorbeeld_image, compound="bottom")
     start_button.image = voorbeeld_image
     start_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.create_character_screen(venster))
-    start_button.place(relx=0.35, rely=0.4, anchor="center")
+    start_button.place(relx=0.35, rely=0.2, anchor="center")
 
     # Combobox
     CharacterCreationScreen.character_dropdown = ttk.Combobox(venster, font=("Arial", 16), state="readonly")
-    CharacterCreationScreen.character_dropdown.place(relx=0.65, rely=0.4, anchor="center")
+    CharacterCreationScreen.character_dropdown.place(relx=0.65, rely=0.35, anchor="center")
+    CharacterCreationScreen.character_dropdown.bind("<Button-1>", lambda click_event: CharacterCreationScreen.show_existing_characters(venster, CharacterCreationScreen.character_dropdown))
+
 
     show_existing_button = Label(venster, text="Show existing characters", image=voorbeeld_image, compound="bottom")
     show_existing_button.image = voorbeeld_image
-    show_existing_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.show_existing_characters(venster, CharacterCreationScreen.character_dropdown))
-    show_existing_button.place(relx=0.65, rely=0.4, anchor="center")
+    show_existing_button.place(relx=0.65, rely=0.2, anchor="center")
 
     original_image2 = Image.open(r"Images/home_button.png")
     original_image2 = original_image2.resize((200, 200), Image.LANCZOS)
