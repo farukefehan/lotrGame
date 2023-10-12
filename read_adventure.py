@@ -6,13 +6,13 @@ def read_adventure(file):
     screens_list = []
     for screen in data_screens_list:
         screen_data = screen.split("@\n")
-        option_data = screen_data[2].replace("opties;\n", "").split("?\n")
+        option_data = screen_data[3].replace("opties;\n", "").split("?\n")
         options_list = []
         for option in option_data:
             data = option.split(":")
             data_list_options = data[1].split(",")
             death_message = "None"
-            if data_list_options[1] == "gotoDied":
+            if data_list_options[1] == "gotoDied" or data_list_options[1] == "gotoWin":
                 death_message = data_list_options[3]
             option_dict = {
                 "text": data_list_options[0],
@@ -23,10 +23,10 @@ def read_adventure(file):
             }
             options_list.append(option_dict)
         question = screen_data[1].replace("question:", "").replace("\"", "")
-        #image = screen_data[2].replace("image:", "").replace("\"", "")
+        image = screen_data[2].replace("image:", "").replace("\"", "")
         screen_dict = {
             "question": question,
-            "image": "images/vincent.png",
+            "image": image,
             "options": options_list
         }
         screens_list.append(screen_dict)
