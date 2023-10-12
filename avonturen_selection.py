@@ -8,7 +8,7 @@ def make_adventure_selection_screen(venster):
     kill_all_children(venster)
     generate_background(venster)
 
-    adventure1_image_proto = Image.open(r"Images/adventure1_proto.png")
+    adventure1_image_proto = Image.open(r"images/adventure1_proto.png")
     adventure1_image = adventure1_image_proto.resize((400, 700), Image.LANCZOS)
     adventure1_image = ImageTk.PhotoImage(adventure1_image)
     adventure1_button = Label(venster, text="De bergen in", image=adventure1_image, compound="top", bg="#603000", fg="white")
@@ -16,7 +16,7 @@ def make_adventure_selection_screen(venster):
     adventure1_button.bind("<Button-1>", lambda click_event: make_path_choice_screen(venster))
     adventure1_button.place(relx=0.2, rely=0.475, anchor="center")
 
-    adventure2_image_proto = Image.open(r"Images/adventure2_proto.png")
+    adventure2_image_proto = Image.open(r"images/adventure2_proto.png")
     adventure2_image = adventure2_image_proto.resize((400, 700), Image.LANCZOS)
     adventure2_image = ImageTk.PhotoImage(adventure2_image)
     adventure2_button = Label(venster, text="Het bos in", image=adventure2_image, compound="top", bg="#603000", fg="white")
@@ -24,7 +24,7 @@ def make_adventure_selection_screen(venster):
     adventure2_button.bind("<Button-1>", lambda click_event: make_path_choice_screen(venster))
     adventure2_button.place(relx=0.5, rely=0.475, anchor="center")
 
-    adventure3_image_proto = Image.open(r"Images/adventure3_proto.png")
+    adventure3_image_proto = Image.open(r"images/adventure3_proto.png")
     adventure3_image = adventure3_image_proto.resize((400, 700), Image.LANCZOS)
     adventure3_image = ImageTk.PhotoImage(adventure3_image)
     adventure3_button = Label(venster, text="De rivier op", image=adventure3_image, compound="top", bg="#603000", fg="white")
