@@ -56,7 +56,7 @@ screen:6@
 question:"Je komt een enorme spin van ruim 2 meter tegen, wat doe je?"@
 image:"adventures/goudenhal/spinnetje.png"@
 opties;
-1:Ren weg,goto5,O?
+1:Ren weg,goto4,O?
 2:Vecht met de spin,gotoDied,X,"De spin is veel sterker en eet je op!"!
 
 screen:7@
