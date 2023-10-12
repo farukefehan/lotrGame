@@ -1,430 +1,430 @@
 avontuur 11!
 
-screen:0.
-question:"Wil je naar bos, vlakte of bergen".
+screen:0@
+question:"Wil je naar bos, vlakte of bergen"@
 opties;
 1:bos,goto1,O?
 2:vlakte,goto2,O?
 3:bergen,goto3,O!
 
-screen:1.
-question:"In het bos".
+screen:1@
+question:"In het bos"@
 opties;
 1:rechts,goto4,X?
 2:links,goto6,O?
 3:rechtdoor,goto5,O!
 
-screen:2.
-question:"Op de Vlakte".
+screen:2@
+question:"Op de Vlakte"@
 opties;
 1:links,goto9,O?
 2:rechts,goto8,X?
 3:rechtdoor,goto7,O!
 
-screen:3.
-question:"Tussen de Bergen".
+screen:3@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto10,X?
 2:rechts,goto12,O?
 3:rechtdoor,goto11,O!
 
-screen:4.
-question:"Je bent gestorven door boom".
+screen:4@
+question:"Je bent gestorven door boom"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:5.
-question:"bosmonster valt aan".
+screen:5@
+question:"bosmonster valt aan"@
 opties;
 1:vlucht,goto13,O?
 2:vecht,goto14,X!
 
-screen:6.
-question:"Tussen de Bergen".
+screen:6@
+question:"Je zit in een maïsveld. Neem je een afslag of blijf je doorgaan?"@
 opties;
-1:links,goto15,X?
-2:rechts,goto7,O!
+1:afslag,goto15,X?
+2:rechtdoor,goto7,O!
 
-screen:7.
-question:"Tussen de Bergen".
+screen:7@
+question:"Tussen de Bergen"@
 opties;
 1:rechts,goto16,O?
 2:rechtdoor,goto17,X?
 3:links,goto18,O!
 
-screen:8.
-question:"Tussen de Bergen".
+screen:8@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:9.
-question:"Tussen de Bergen".
+screen:9@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto33,X?
 2:rechtdoor,goto21,O?
 3:rechts,goto20,O!
 
-screen:10.
-question:"Tussen de Bergen".
+screen:10@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:11.
-question:"Tussen de Bergen".
+screen:11@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto24,X?
 2:rechts,goto23,O!
 
-screen:12.
-question:"Tussen de Bergen".
+screen:12@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto22,X?
 2:rechts,goto21,O!
 
-screen:13.
-question:"Tussen de Bergen".
+screen:13@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto14,X?
 2:rechts,goto25,O!
 
-screen:14.
-question:"Tussen de Bergen".
+screen:14@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:15.
-question:"Tussen de Bergen".
+screen:15@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:16.
-question:"Je ontmoet Elrond".
+screen:16@
+question:"Je ontmoet Elrond"@
 opties;
 1:Ga verder,goto19,O!
 
-screen:17.
-question:"Tussen de Bergen".
+screen:17@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:18.
-question:"Je ziet een Nazgul".
+screen:18@
+question:"Je ziet een Nazgul"@
 opties;
 1:Ga verder,goto19,X!
 
-screen:19.
-question:"een Nazgul heeft jouw gezien".
+screen:19@
+question:"een Nazgul heeft jouw gezien"@
 opties;
 1:links,goto36,X?
 2:rechts,goto34,X?
 3:rechtdoor,goto35,O!
 
-screen:20.
-question:"U heeft de heilige koffie gekregen.".
+screen:20@
+question:"U heeft de heilige koffie gekregen."@
 opties;
 1:rechts,goto27,X?
 2:rechtdoor,goto18,O!
 
-screen:21.
-question:"Tussen de Bergen".
+screen:21@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto30,O?
 2:rechts,goto18,X?
 3:rechtdoor,goto28,X!
 
-screen:22.
-question:"Tussen de Bergen".
+screen:22@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:23.
-question:"Tussen de Bergen".
+screen:23@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto29,X?
 2:rechts,goto30,O!
 
-screen:24.
-question:"Tussen de Bergen".
+screen:24@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:25.
-question:"Tussen de Bergen".
+screen:25@
+question:"Tussen de Bergen"@
 opties;
 1:links,goto16,O?
 2:rechts,goto31,X?
 3:rechtdoor,goto32,X!
 
-screen:26.
-question:"Tussen de Bergen".
+screen:26@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:27.
-question:"Tussen de Bergen".
+screen:27@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:28.
-question:"Tussen de Bergen".
+screen:28@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:29.
-question:"Tussen de Bergen".
+screen:29@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:30.
-question:"Je ontmoet Arwin".
+screen:30@
+question:"Je ontmoet Arwin"@
 opties;
 1:Ga verder,goto19,X!
 
-screen:31.
-question:"Tussen de Bergen".
+screen:31@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:32.
-question:"Tussen de Bergen".
+screen:32@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:33.
-question:"Tussen de Bergen".
+screen:33@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:34.
-question:"Tussen de Bergen".
+screen:34@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:35.
-question:"Run from nazguls".
+screen:35@
+question:"Run from nazguls"@
 opties;
 1:links,goto39,O?
 2:rechtdoor,goto38,X?
 3:rechts,goto37,X!
 
-screen:36.
-question:"Tussen de Bergen".
+screen:36@
+question:"Tussen de Bergen"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:37.
-question:"Run from nazguls".
+screen:37@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:38.
-question:"Run from nazguls".
+screen:38@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:39.
-question:"Run from nazguls".
+screen:39@
+question:"Run from nazguls"@
 opties;
 1:links,goto40,X?
 2:rechtdoor,goto41,X?
 3:rechts,goto42,O!
 
-screen:40.
-question:"Run from nazguls".
+screen:40@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:41.
-question:"Run from nazguls".
+screen:41@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:42.
-question:"Run from nazguls".
+screen:42@
+question:"Run from nazguls"@
 opties;
 1:links,goto43,X?
 2:rechtdoor,goto44,X?
 3:rechts,goto46,O!
 
-screen:43.
-question:"Run from nazguls".
+screen:43@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:44.
-question:"Run from nazguls".
+screen:44@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:45.
-question:"Run from nazguls".
+screen:45@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:46.
-question:"Run from nazguls".
+screen:46@
+question:"Run from nazguls"@
 opties;
 1:links,goto45,X?
 2:rechtdoor,goto38,O?
 3:rechts,goto47,X!
 
-screen:47.
-question:"Run from nazguls".
+screen:47@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:48.
-question:"Run from nazguls".
+screen:48@
+question:"Run from nazguls"@
 opties;
 1:links,goto52,O?
 2:rechtdoor,goto51,X?
 3:rechts,goto49,X!
 
-screen:49.
-question:"Run from nazguls".
+screen:49@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:50.
-question:"Run from nazguls".
+screen:50@
+question:"Run from nazguls"@
 opties;
 1:links,goto56,O!
 
-screen:51.
-question:"Run from nazguls".
+screen:51@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,O!
 
-screen:52.
-question:"Run from nazguls".
+screen:52@
+question:"Run from nazguls"@
 opties;
 1:links,goto54,O?
 2:rechtdoor,goto55,X?
 3:rechts,goto53,X!
 
-screen:53.
-question:"Run from nazguls".
+screen:53@
+question:"Run from nazguls"@
 opties;
 1:links,goto57,X?
 2:rechtdoor,goto58,X?
 3:rechts,goto59,O!
 
-screen:54
-question:"Run from nazguls".
+screen:54@
+question:"Run from nazguls"@
 opties;
 1:links,goto61,O?
 2:rechts,goto60,X!
 
-screen:55.
-question:"Run from nazguls".
+screen:55@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:56.
-question:"Run from nazguls".
+screen:56@
+question:"Run from nazguls"@
 opties;
 1:je gaat verder,goto65,O!
 
-screen:57.
-question:"Run from nazguls".
+screen:57@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:58.
-question:"Run from nazguls".
+screen:58@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:59.
-question:"Run from nazguls".
+screen:59@
+question:"Run from nazguls"@
 opties;
 1:links,goto64,O?
 2:rechtdoor,goto62,X?
 3:rechts,goto63,X!
 
-screen:60.
-question:"Run from nazguls".
+screen:60@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:61.
-question:"Run from nazguls".
+screen:61@
+question:"Run from nazguls"@
 opties;
 1:links,goto66,X?
 2:rechtdoor,goto67,X?
 3:rechts,goto72,O!
 
-screen:62.
-question:"Run from nazguls".
+screen:62@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:63.
-question:"Run from nazguls".
+screen:63@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:64.
-question:"Run from nazguls".
+screen:64@
+question:"Run from nazguls"@
 opties;
 1:links,goto69,O?
 2:rechtdoor,goto74,X!
 
-screen:65.
-question:"Run from nazguls".
+screen:65@
+question:"Run from nazguls"@
 opties;
 1:links,goto68,X?
 2:rechtdoor,goto69,O?
 3:rechts,goto70,X!
 
-screen:66.
-question:"Run from nazguls".
+screen:66@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:67.
-question:"Run from nazguls".
+screen:67@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:68.
-question:"Run from nazguls".
+screen:68@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:69.
-question:"Wat is het Raadsel".
+screen:69@
+question:"Wat is het Raadsel"@
 opties;
 1:rechtdoor,goto75,O!
 
-screen:70.
-question:"Run from nazguls".
+screen:70@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:71.
-question:"Run from nazguls".
+screen:71@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:72.
-question:"Run from nazguls".
+screen:72@
+question:"Run from nazguls"@
 opties;
 1:links,goto71,X?
 2:rechtdoor,goto69,O?
 3:rechts,goto73,X!
 
-screen:73.
-question:"Run from nazguls".
+screen:73@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:74.
-question:"Run from nazguls".
+screen:74@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoDied,X!
 
-screen:75.
-question:"Run from nazguls".
+screen:75@
+question:"Run from nazguls"@
 opties;
 1:Ga verder,gotoWin,X
