@@ -14,8 +14,8 @@ def goto_screen_select_character(venster):
 
 
 def goto_screen_admin_login(venster):
-    from admin_menu import make_admin_menu
-    make_admin_menu(venster)
+    from admin_login import admin_login
+    admin_login(venster)
 
 
 def make_image(image_path):
@@ -24,10 +24,10 @@ def make_image(image_path):
 
 
 def make_splash_screen(venster):
-    from main import kill_all_children, generate_background
+    from main import kill_all_children
     kill_all_children(venster)
 
-    voorbeeld_image = make_image(r"Images/testbutton.png")
+    voorbeeld_image = make_image(r"images/testbutton.png")
     goto_home_button(venster)
 
 

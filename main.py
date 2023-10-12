@@ -1,5 +1,5 @@
 from tkinter import Tk, Label, Canvas
-from Splash_screen import make_splash_screen
+from splash_screen import make_splash_screen
 from paths_screen import generate_screen
 from PIL import Image, ImageTk
 

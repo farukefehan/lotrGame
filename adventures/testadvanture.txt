@@ -1,4 +1,4 @@
-avontuur 11,
+avontuur 1!
 
 screen:0.
 question:"wil je naar bos, vlakte of bergen".
@@ -7,8 +7,9 @@ opties;
 2:vlakte,goto2,O?
 3:bergen,goto4,O!
 
-screen: 1.
-question:"je bij een 3 weg splitsing, Welke kant ga je op?"
-1:recht,goto5,X
-2:rechtdoor,goto6,O
-3:links,goto7,O?\n
+screen:1.
+question:"je bij een 3 weg splitsing, Welke kant ga je op?".
+opties;
+1:recht,goto5,X?
+2:rechtdoor,goto6,O?
+3:links,goto7,O
