@@ -33,6 +33,9 @@ def generate_screen(venster, screen_dict):
     from main import kill_all_children
     kill_all_children(root)
 
+    from home_button import make_home_button
+    make_home_button(venster)
+
     character_slot_1_image = resize_image("images/vincent.png")
 
     character_slot_2_image = resize_image(screen_dict['image'])
