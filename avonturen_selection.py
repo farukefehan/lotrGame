@@ -20,8 +20,8 @@ def make_adventure_selection_screen(venster):
     from home_button import make_home_button
     make_home_button(venster)
 
-    create_adventure_selection_image(venster, r"images/adventure1_proto.png", "De bergen in", 0.2, 0.475)
+    create_adventure_selection_image(venster, r"adventures/geheimzinnigequest/rivendell.png", "De geheimzinnige Queeste", 0.2, 0.475)
 
-    create_adventure_selection_image(venster, r"images/adventure2_proto.png", "Het bos is", 0.5, 0.475)
+    create_adventure_selection_image(venster, r"adventures/vermistedwergen/dwergen.png", "De verdwenen dwergen", 0.5, 0.475)
 
-    create_adventure_selection_image(venster, r"images/adventure3_proto.png", "De Gouden Hal", 0.8, 0.475)
+    create_adventure_selection_image(venster, r"adventures/goudenhal/de gouden hal.png", "De Gouden Hal", 0.8, 0.475)

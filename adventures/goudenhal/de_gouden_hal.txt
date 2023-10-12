@@ -2,6 +2,7 @@ avontuur 3!
 
 screen:0.
 question:“Dappere held, ik heb je nodig! De kwaadaardige draak Smaug wil mijn schatten stelen! Ik heb een dappere held nodig om naar de Gouden Hal te gaan en mijn schatten veilig te stellen. De held die dit voor mij doet zal rijkelijk beloond worden!”.
+image:"adventures/goudenhal/
 opties;
 1:Accepteer de queeste,goto1,O?
 2:Blijf thuis,gotoDied,X,"Je gaat dood van verveling"!
