@@ -20,8 +20,8 @@ def make_adventure_selection_screen(venster):
     from home_button import make_home_button
     make_home_button(venster)
 
-    create_adventure_selection_image(venster, r"adventures/geheimzinnigequest/rivendell.png", "De geheimzinnige Queeste", 0.2, 0.475, "adventures/goudenhal/de_gouden_hal.txt")
+    create_adventure_selection_image(venster, r"adventures/geheimzinnigequest/rivendell.png", "De Geheimzinnige Queeste", 0.2, 0.475, "adventures/goudenhal/de_gouden_hal.txt")
 
-    create_adventure_selection_image(venster, r"adventures/vermistedwergen/dwergen.png", "De verdwenen dwergen", 0.5, 0.475, "adventures/goudenhal/de_gouden_hal.txt")
+    create_adventure_selection_image(venster, r"adventures/vermistedwergen/dwergen.png", "De Verdwenen Dwergen", 0.5, 0.475, "adventures/goudenhal/de_gouden_hal.txt")
 
     create_adventure_selection_image(venster, r"adventures/goudenhal/de gouden hal.png", "De Gouden Hal", 0.8, 0.475, "adventures/goudenhal/de_gouden_hal.txt")
