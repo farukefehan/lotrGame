@@ -1,4 +1,6 @@
 from tkinter import Tk, Label
+
+import paths_screen
 from splash_screen import make_splash_screen
 from PIL import Image, ImageTk
 from read_adventure import read_adventure
@@ -30,7 +32,9 @@ def main():
     root.winfo_screenheight()
     root.winfo_height()
     generate_background(root)
-    make_splash_screen(root)
+    #make_splash_screen(root)
+    char_dict = {"image": "images/vincent.png"}
+    paths_screen.start_adventure(root, "adventures/goudenhal/de_gouden_hal.txt", char_dict)
     root.mainloop()
 
 

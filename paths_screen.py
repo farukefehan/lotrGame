@@ -58,11 +58,11 @@ def create_buttons(screen_dict, root):
     frame1.pack(anchor="center", pady=100)
     frame1.propagate(False)
 
-    frame2 = Frame(frame1, borderwidth=5, relief="raised", height=500)
+    frame2 = Frame(frame1, borderwidth=5, relief="raised", height=400)
     frame2.pack(side="top", anchor="center", fill="x")
     frame2.propagate(False)
 
-    min_space_label = Label(frame2, width=5, height=5, bg="black")
+    min_space_label = Label(frame2, width=1, height=1, bg="black")
     min_space_label.pack(anchor="n", fill="x")
 
     option_list = screen_dict['options']
