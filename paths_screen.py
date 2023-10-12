@@ -1,6 +1,7 @@
 from tkinter import Label, Frame, Button
 from PIL import Image, ImageTk
 
+from admin_login import check_admin_mode
 from end_screen import make_end_screen_dead, make_end_screen_success
 from read_adventure import read_adventure
 
@@ -8,12 +9,10 @@ adventure = []
 character_dict = {}
 amount_of_checkpoints = 0
 checkpoints_got = 0
+admin_mode = False
 
 def start_adventure(venster, file_name, dict):
-    global adventure
-    global character_dict
-    global amount_of_checkpoints
-    global checkpoints_got
+    global adventure, character_dict, amount_of_checkpoints,checkpoints_got, admin_mode
     amount_of_checkpoints = 0
     checkpoints_got = 0
     character_dict = dict
@@ -21,6 +20,8 @@ def start_adventure(venster, file_name, dict):
     print(adventure[0])
     amount_of_checkpoints = adventure.pop(0)
     first_screen = adventure[0]
+    admin_mode = check_admin_mode()
+    print(f"admin: {admin_mode}")
     generate_screen(venster, first_screen)
 
 
