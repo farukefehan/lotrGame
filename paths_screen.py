@@ -1,7 +1,11 @@
 from tkinter import Label, Frame
 from PIL import Image, ImageTk
+from read_adventure import read_adventure
 
-
+def start_adventure(venster, file_name):
+    read_adventure(file_name)
+    first_screen = adventure[0]
+    generate_screen(venster, first_screen)
 
 def generate_screen(venster, screen_dict):
     root = venster
