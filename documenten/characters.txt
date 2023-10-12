@@ -5,3 +5,4 @@ Gimli,Dwarf,Describtion,images/gimli.png
 Gandalf,Wizard,Describtion,images/gandalf.png
 Boromir,Man,Describtion,images/boromir.png
 Vincent,Human,Describtion,images/vincent.png
+
