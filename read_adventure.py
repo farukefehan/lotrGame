@@ -13,10 +13,15 @@ def read_adventure(file):
         for option in option_data:
             data = option.split(":")
             data_list_options = data[1].split(",")
+            death_message = "None"
+            if data_list_options[1] == "gotoDied":
+                death_message = data_list_options[3]
             option_dict = {
                 "text": data_list_options[0],
                 "action": data_list_options[1],
-                "admin": data_list_options[2]
+                "admin": data_list_options[2],
+                "death_message": death_message
+
             }
             options_list.append(option_dict)
         print(options_list)
