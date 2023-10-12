@@ -77,7 +77,7 @@ class CharacterCreationScreen:
         print("Name:", name)
         print("Race:", selected_race)
 
-        with open("Documenten/characters.txt", "a") as file:
+        with open("documenten/characters.txt", "a") as file:
             file.write(f"{name},{selected_race}\n")
 
         # Update the combobox
@@ -85,7 +85,7 @@ class CharacterCreationScreen:
 
     @staticmethod
     def show_existing_characters(venster, character_dropdown):
-        characters_from_file = CharacterCreationScreen.load_characters_from_file("Documenten/characters.txt")
+        characters_from_file = CharacterCreationScreen.load_characters_from_file("documenten/characters.txt")
         character_dropdown['values'] = [f"{char[0]} - {char[1]}" for char in characters_from_file]
         character_dropdown.set("")  # default selection empty
 
