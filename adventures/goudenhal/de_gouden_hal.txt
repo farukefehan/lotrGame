@@ -4,6 +4,7 @@ screen:0@
 question:“Dappere held, ik heb je nodig! De kwaadaardige draak Smaug wil mijn schatten stelen!
 Ik heb een dappere held nodig om naar de Gouden Hal te gaan en mijn schatten veilig te stellen.
 De held die dit voor mij doet zal rijkelijk beloond worden!”@
+image:"adventures/goudenhal/screen1.png"@
 opties;
 1:Accepteer de queeste,goto1,O?
 2:Blijf thuis,gotoDied,X,"Je gaat dood van verveling."!
@@ -11,12 +12,14 @@ opties;
 screen:1@
 question:"Voor het vinden van de Gouden Hal zal je eerst informatie moeten verkrijgen over de locatie.
 Naar wie ga je voor deze informatie?"@
+image:"adventures/goudenhal/screen1.png"@
 opties;
 1:Een dappere hobbit,goto2,O?
 2:Balin en Dwalin,goto3,O!
 
 screen:2@
 question:"Vincent de Hobbit wil een biertje met je drinken, accepteer je?"@
+image:"adventures/goudenhal/vincent.png"@
 opties;
 1:Ja!,gotoDied,X,"Je bent dronken geraakt met Vincent en je kunt je avontuur niet vervolgen!"?
 2:Nee!,goto1,O!
@@ -25,6 +28,7 @@ screen:3@
 question:“Balin en Dwalin zijn dwergen die leven in de grotten.
 Het is een lange reis, maar het gaat je lukken!
 Je kan op drie manieren bij de grotten komen:"@
+image:"adventures/goudenhal/cave.png"@
 opties;
 1:Via de weg,gotoDied,X,"Je werd beroofd en bent zonder spullen geforceerd terug te keren naar huis."?
 2:Door het bos,goto4,O?
@@ -33,6 +37,7 @@ opties;
 screen:4@
 question:"Je hebt de grot gevonden: “Beste reiziger, de Gouden Hal is al jaren door niemand meer betreden.
 We hebben over de tijd verschillende locaties van deze legendarische plek vernomen."@
+image:"adventures/goudenhal/cave.png"@
 opties;
 1:Het paleis van de elfenkoning,gotoDied,X,"Je bent gevangen genomen door de wachters van de elfenkoning!"?
 2:Het verlaten kasteel van de oude koningen,goto5,O?
@@ -41,6 +46,7 @@ opties;
 screen:5@
 question:“De weg naar het verlaten kasteel is lang en zwaar.
 Je bent echter maar sterk genoeg om één wapen mee te nemen. Welk wapen neem je mee?"@
+image:"adventures/goudenhal/weaponry.png"@
 opties;
 1:Een pijl en boog,goto7,O?
 2:Een zwaard,goto7,O?
@@ -48,20 +54,23 @@ opties;
 
 screen:6@
 question:"Je komt een enorme spin van ruim 2 meter tegen, wat doe je?"@
+image:"adventures/goudenhal/spinnetje.png"@
 opties;
 1:Ren weg,goto5,O?
 2:Vecht met de spin,gotoDied,X,"De spin is veel sterker en eet je op!"!
 
 screen:7@
 question:"Voor zo'n zware reis neem je ook eten mee, wat kies je als maaltijd?"@
+image:"adventures/goudenhal/food.png"@
 opties;
 1:Brood,goto8,O?
 2:Koekjes,gotoDied,X,"Koekjes zijn geen maaltijd voor een reis zo zwaar als deze!
-Je verhongert tijdens de reis@"?
+Je verhongert tijdens de reis."?
 3:Fruit,gotoDied,X,"Helaas was het fruit giftig en ben je dood!"!
 
 screen:8@
 question:"Op weg naar het verlaten kasteel kom je een duo orcs tegen! Wat doe je?"@
+image:"adventures/goudenhal/orcs.png"@
 opties;
 1:Vecht met de orcs,goto9,O?
 2:Verstop je in de bosjes en wacht tot ze weg zijn,goto10,O?
@@ -69,6 +78,7 @@ opties;
 
 screen:9@
 question:"Hoe vecht je tegen de orcs?"@
+image:"adventures/goudenhal/orcs.png"@
 opties;
 1:Je rent op ze af met je wapen,gotoDied,X,"twee tegen één win je niet, je legt het af in het gevecht@"?
 2:Houdt je afstand en vecht slim,goto10,O?
@@ -80,6 +90,7 @@ De glinstering die ervandaan komt laat zien dat je op de goede weg bent
 Helaas zie je ook de kwaadaardige draak Smaug rondvliegen.
 Je moet zo snel mogelijk naar het kasteel toe om de schatten veilig te stellen.
 Wat doe je?"@
+image:"adventures/goudenhal/draak.png"@
 opties;
 1:Juich uit blijdschap omdat je het kasteel gevonden hebt,gotoDied,X,"De draak Smaug hoort je kreet en zet je meteen in vuur en vlam!"?
 2:Je sneakt voorzichtig naar het kasteel,goto11,O?
@@ -88,6 +99,7 @@ opties;
 screen:11@
 question:"Je bent in het kasteel, maar je hebt de Gouden Hal nog niet gevonden.
  Waar zoek je eerst?"@
+ image:"adventures/goudenhal/castle.png"@
 opties;
 1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn zo fragiel dat het instort nadat je op de muren klopt.
  Je bent geplet!"?
