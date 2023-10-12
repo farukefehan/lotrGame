@@ -6,7 +6,7 @@ question:"“Er was eens, in het mystieke rijk van Midden-Aarde, een
 grote schaduw over het land van de Dwergen. Het koninkrijk Erebor, dat was
 heroverd door Thorin Eikenschild en zijn gezelschap van Dwergen, was een plaats
 van voorspoed en vrede. Maar die vrede werd verbroken toen een groep Dwergen op
-mysterieuze wijze spoorloos verdween.”@
+mysterieuze wijze spoorloos verdween.”
 Om onze eer te herstellen moeten wij de verdwenen dwergen vinden, wil je ons
 helpen?@
 image:"adventures/goudenhal/screen1.png"@
@@ -130,7 +130,7 @@ Je wil ze veilig stellen, hoe ga je dat doen?"@
 image:"adventures/goudenhal/draak.png"@
 opties;
 1:Je juicht omdat je de dwergen gevonden heb,gotoDied,X,"De goblins horen je kreet en nemen je gevangen!"?
-2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O?
+2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,"WIN MESSAGE"?
 3:Je hoort dat er goblins in de andere kamer zitten.
 Je besluit samen met de dwergen ze aan te vallen.,gotoDied,X,"Jullie verliezen het gevecht.
 Je wist hun nummers niet en de dwergen waren ondervoed, ze waren met 30."!
