@@ -1,4 +1,5 @@
-avontuur 11!
+avontuur 11;
+checkpoints:3!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras die informatie heeft over Sauron en een schat verbergt.
@@ -125,7 +126,7 @@ question:"Een Nazgûl heeft jouw gezien! Hij komt achter jouw aan. Probeer te ov
 opties;
 1:links,goto36,X?
 2:rechts,goto34,X?
-3:rechtdoor,goto35,O!
+3:rechtdoor,goto35,O,CP!
 
 screen:20@
 question:"De lekkere geur leidt naar de heilige koffiebonen. Je neemt een paar mee.
@@ -135,74 +136,82 @@ opties;
 2:Naar het oosten,goto18,O!
 
 screen:21@
-question:"Tussen de Bergen"@
+question:"Je loopt door een ravijn. Je voelt je hier niet fijn en wil zo snel mogelijk eruit.
+Er zijn twee grotten en een pad omhoog"@
 opties;
-1:links,goto30,O?
-2:rechts,goto18,X?
-3:rechtdoor,goto28,X!
+1:grot links,goto30,O?
+2:Pad omhoog,goto18,O?
+3:grot rechts,goto28,X!
 
 screen:22@
-question:"Tussen de Bergen"@
+question:"Terwijl je de over de rivier gaat, hoor je het geluid steeds harder worden. Je hebt verkeerd gekozen, maar het is te laat.
+je doet je ogen dicht en valt. Je ogen gaan ook niet meer open."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent van een waterval gevallen."!
 
 screen:23@
-question:"Tussen de Bergen"@
+question:"De sneeuwstorm is over, en je gaat weer verder. Naast je zie je een ravijn en vermijd die.
+Dan zie je voetstappen in de sneeuw. Wil je die volgen of blijf je op het pad?"@
 opties;
-1:links,goto29,X?
-2:rechts,goto30,O!
+1:Blijf op het pad,goto29,X?
+2:Volg de voetstappen,goto30,O!
 
 screen:24@
-question:"Tussen de Bergen"@
+question:"Je blijft lopen het sneeuwt steeds, je zit in een sneeuwstorm. je kan niet veel zien voor je en dan val je.
+ je blijft maar rolen en rollen totdat je van een cliff valt."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent van een cliff gevallen tot je dood."!
 
 screen:25@
-question:"Tussen de Bergen"@
+question:"De paddenstoel smaakte vreselijk. Je gaat waar verder en ziet hoevenafdrukken, maar ergens anders zijn voetstappen. Wat doe je?"@
 opties;
-1:links,goto16,O?
-2:rechts,goto31,X?
-3:rechtdoor,goto32,X!
+1:Volg voetstappen,goto16,O?
+2:Volg hoefafdrukken,goto31,X?
+3:Blijf door het moeras lopen,goto32,X!
 
 screen:26@
-question:"Tussen de Bergen"@
+question:"De paddenstoel smaakte heerlijk het beste wat je ooit hebt gegeten, maar je valt neer.
+Je kan je lichaam niet meer bewegen en langzaam heb je geen kracht meer."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent dood door een giftige paddenstoel."!
 
 screen:27@
-question:"Tussen de Bergen"@
+question:"Je rent naar het noorden want de storm komt naar jouw toe. maar dan is er geen grond meer. Je kijkt omlaag en je ziet een ravijn.
+Je stopt met rennen, maar dan de storm duwt je in het ravijn"@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent gevallen in het ravijn."!
 
 screen:28@
-question:"Tussen de Bergen"@
+question:"Je gaat de grot in en daar steeds iets op een paard. Even later lig je op de grond met een gat in je buik."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Een Nazgûl heeft jouw gedood."!
 
 screen:29@
-question:"Tussen de Bergen"@
+question:"Je blijft op het pad en je ziet een Nazgûl. Hij kijkt jouw diep in je ogen."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent gevangen door een Nazgûl"!
 
 screen:30@
-question:"Je ontmoet Arwin"@
+question:"In de grot ontmoet je Arwen een elf. Zij verteld dat ze een mysterieuze man had ontmoet hij was op zoek naar de heilige koffiebonen.
+Jullie besluiten samen die man op te zoeken."@
 opties;
 1:Ga verder,goto19,X!
 
 screen:31@
-question:"Tussen de Bergen"@
+question:"Je volgt de hoefafdrukken naar een Nazgûl."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent gevangen door een Nazgûl."!
 
 screen:32@
-question:"Tussen de Bergen"@
+question:"Terwijl je door het moeras loopt zit je benen ineens vast. Je probeert je benen lostemaken, maar je zinkt steeds dieper.
+Je blijft zinken totdat je niet meer kan ademen."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent doodgegaan door een drijfmoeras."!
 
 screen:33@
-question:"Tussen de Bergen"@
+question:"Je loopt omhoog en ziet een Nazgûl. Je probeert te rennen, maar de Nazgûl is sneller"@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:34@
 question:"Tussen de Bergen"@
