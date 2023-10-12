@@ -1,5 +1,7 @@
 from tkinter import Label, Entry, Button, StringVar, Tk, ttk
 from PIL import Image, ImageTk
+
+from character_selection import goto_adventure_selection_screen
 from main import kill_all_children
 
 races = ["Hobbit", "Elf", "Dwarf", "Human", "Wizard"]
@@ -41,8 +43,10 @@ class CharacterCreationScreen:
                                    command=lambda: CharacterCreationScreen.prev_character(race_label))
         left_arrow_button.place(relx=0.4, rely=0.5, anchor="center")
 
-        original_image = Image.open(r"Images/stickman_echt.png")
-        character_image = ImageTk.PhotoImage(original_image)
+        character_image = Image.open(r"Images/gollum.png")
+        character_image = character_image.resize((200, 200), Image.LANCZOS)
+        character_image = ImageTk.PhotoImage(character_image)
+
 
         character_label = Label(venster, text="Character Preview", image=character_image, compound="bottom")
         character_label.image = character_image
@@ -111,6 +115,16 @@ def make_character_creation_screen(venster):
     CharacterCreationScreen.character_dropdown.place(relx=0.65, rely=0.35, anchor="center")
     CharacterCreationScreen.character_dropdown.bind("<Button-1>", lambda click_event: CharacterCreationScreen.show_existing_characters(venster, CharacterCreationScreen.character_dropdown))
 
+    # Start button for adventure selection
+    original_image3 = Image.open(r"Images/adventure_button.png")
+    original_image3 = original_image3.resize((200, 200), Image.LANCZOS)
+    voorbeeld_image3 = ImageTk.PhotoImage(original_image3)
+
+    start_adventure_button = Label(venster, image=voorbeeld_image3, text="Start Adventure", compound="bottom")
+    start_adventure_button.image = voorbeeld_image3
+    start_adventure_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    start_adventure_button.place(relx=0.35, rely=0.7, anchor="center")
+
 
     show_existing_button = Label(venster, text="Show existing characters", image=voorbeeld_image, compound="bottom")
     show_existing_button.image = voorbeeld_image
@@ -124,3 +138,4 @@ def make_character_creation_screen(venster):
     end_button2.image = voorbeeld_image2
     end_button2.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
     end_button2.place(relx=0.5, rely=0.7, anchor="center")
+
