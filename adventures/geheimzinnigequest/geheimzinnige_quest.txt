@@ -8,18 +8,18 @@ opties;
 3:bergen,goto3,O!
 
 screen:1@
-question:"In het bos"@
+question:"In het bos is een splitsing. Welke kant wil je op?"@
 opties;
 1:rechts,goto4,X?
 2:links,goto6,O?
 3:rechtdoor,goto5,O!
 
 screen:2@
-question:"Op de Vlakte"@
+question:"Op de Vlakte zie je drie padden. Welke pad wil je op."@
 opties;
-1:links,goto9,O?
-2:rechts,goto8,X?
-3:rechtdoor,goto7,O!
+1:linker pad,goto9,O?
+2:rechter pad,goto8,X?
+3:middelste pad,goto7,O!
 
 screen:3@
 question:"Tussen de Bergen"@
