@@ -30,6 +30,8 @@ def admin_login(venster):
 
     login_button.bind("<Button-1>", lambda click_event: check_admin_wachtwoord(user_input, password))
 
+    from home_button import make_home_button
+    make_home_button(venster)
 
 def check_check():
 
