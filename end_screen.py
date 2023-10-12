@@ -24,7 +24,7 @@ def print_adventure_result(venster, image):
 
 
 def make_home_button(venster):
-    home_button_image_proto = Image.open(r"Images/home_button.png")
+    home_button_image_proto = Image.open(r"images/home_button.png")
     home_button_image_proto = home_button_image_proto.resize((200, 200), Image.LANCZOS)
     home_button_image = ImageTk.PhotoImage(home_button_image_proto)
 
@@ -36,11 +36,11 @@ def make_home_button(venster):
 
 def make_end_screen_dead(venster):
     clear_page(venster)
-    image_for_result_path = r"Images/you_died.png"
+    image_for_result_path = r"images/you_died.png"
     print_adventure_result(venster, image_for_result_path)
 
 
 def make_end_screen_success(venster):
     clear_page(venster)
-    image_for_result_path = r"Images/the_end.png"
+    image_for_result_path = r"images/the_end.png"
     print_adventure_result(venster, image_for_result_path)
