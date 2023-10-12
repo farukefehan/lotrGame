@@ -116,7 +116,7 @@ opties;
 Maar je zou je uitrusting uit moeten doen om erin te zwemmen.,goto9,O,CP?
 2:Een trap achter het meer die dieper de berg in gaat. Het ziet er verlaten en donker uit.,gotoDied,X,"Je treed de duisternis in en zonder dat je het weet stort het plafond in.
 Er vallen stenen en 1 raakt jou hoofd, je bent op slag dood."?
-3:Je ziet een zwaard in een steen, en denkt als je hem eruit trekt dat er een deur tevoorschijn komt.,gotoDied,X,"Er kwam geen deur tevoorschijn.
+3:Je ziet een zwaard in een steen. Je denkt dat als je hem eruit trekt er een deur tevoorschijn komt.,gotoDied,X,"Er kwam geen deur tevoorschijn.
 De grot stort in en jullie overlijden door vallende rotsblokken."!
 
 screen:9@
