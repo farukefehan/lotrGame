@@ -526,4 +526,4 @@ screen:75@
 question:"Je hebt de geheime queeste voltooid en bent veilig in Jochem zijn huis!"@
 image:"adventures/goudenhal/screen1.png"@
 opties;
-1:Ga verder,gotoWin,O
+1:Ga verder,gotoWin,O,"Je hebt gewonnen"!
