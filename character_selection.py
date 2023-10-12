@@ -16,9 +16,11 @@ def create_template_image_label(venster, image_path, race, relx_value, rely_valu
     template_character_image_proto = Image.open(image_path)
     template_character_image = template_character_image_proto.resize((200, 200), Image.LANCZOS)
     template_character_image = ImageTk.PhotoImage(template_character_image)
-    template_character_button = Label(venster, text=race, image=template_character_image, compound="bottom", bg="#603000", fg="white")
+    template_character_button = Label(venster, text=race, image=template_character_image, compound="bottom",
+                                      bg="#603000", fg="white")
     template_character_button.image = template_character_image
-    template_character_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster))
+    template_character_button.bind("<Button-1>",
+                                   lambda click_event: goto_adventure_selection_screen(venster))
     template_character_button.place(relx=relx_value, rely=rely_value, anchor="center")
 
 
@@ -33,16 +35,19 @@ def make_character_selection_screen(venster):
     menu_button_image = ImageTk.PhotoImage(menu_button_image_proto)
 
     # Hobbit Template
-    create_template_image_label(venster, "images/hobbit_male.png", "Hobbit", 0.3, 0.4)
+    create_template_image_label(venster, "images/hobbit_male.png", "Hobbit",
+                                0.3, 0.4)
 
     # Elf Template
-    create_template_image_label(venster, "images/elf_male.png", "Elf", 0.5, 0.4)
+    create_template_image_label(venster, "images/elf_male.png", "Elf",
+                                0.5, 0.4)
 
     # Dwarf Template
-    create_template_image_label(venster, "images/dwarf_male.png", "Dwarf", 0.7, 0.4)
+    create_template_image_label(venster, "images/dwarf_male.png", "Dwarf",
+                                0.7, 0.4)
 
-    start_button4 = Label(venster, text="User created characters", image=menu_button_image, compound="center",
-                          bg="#603000", fg="white")
+    start_button4 = Label(venster, text="User created characters", image=menu_button_image,
+                          compound="center", bg="#603000", fg="white")
     start_button4.image = menu_button_image
     start_button4.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
     start_button4.place(relx=0.5, rely=0.6, anchor="center")
