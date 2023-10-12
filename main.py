@@ -27,6 +27,7 @@ def generate_background(zone):
 def main():
     root = Tk()
     root.geometry("1920x1080")
+    root.attributes("-fullscreen", True)
     root.title("Boromir")
     root.state('zoomed')
     root.winfo_screenheight()
