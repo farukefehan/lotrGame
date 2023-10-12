@@ -14,8 +14,8 @@ def goto_screen_select_character(venster):
 
 
 def goto_screen_admin_login(venster):
-    from admin_menu import make_admin_menu
-    make_admin_menu(venster)
+    from admin_login import admin_login
+    admin_login(venster)
 
 
 def make_image(image_path):
