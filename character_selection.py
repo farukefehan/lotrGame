@@ -3,7 +3,7 @@ from PIL import Image, ImageTk
 
 
 def goto_adventure_selection_screen(venster, dict):
-    from avonturen_selection import make_adventure_selection_screen
+    from adventure_selection import make_adventure_selection_screen
     make_adventure_selection_screen(venster, dict)
 
 
