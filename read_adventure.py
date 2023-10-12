@@ -1,14 +1,12 @@
 def read_adventure(file):
-    with open(file, "r") as bestand:
+    with open(file, "r", encoding="utf8") as bestand:
         adventure_bestand = bestand.read()
     adventure_bestand_name_screens = adventure_bestand.split("!\n\n")
     data_screens_list = adventure_bestand_name_screens[1:]
     screens_list = []
     for screen in data_screens_list:
         screen_data = screen.split(".\n")
-        print(screen)
-        option_data = screen_data[2].replace("opties;\n", "").split("?\n")
-        print(option_data)
+        option_data = screen_data[3].replace("opties;\n", "").split("?\n")
         options_list = []
         for option in option_data:
             data = option.split(":")
@@ -24,13 +22,13 @@ def read_adventure(file):
 
             }
             options_list.append(option_dict)
-        print(options_list)
         question = screen_data[1].replace("question:", "").replace("\"", "")
+        image = screen_data[2].replace("image:", "").replace("\"", "")
         screen_dict = {
             "question": question,
+            "image": image,
             "options": options_list
         }
-        print(screen_dict)
         screens_list.append(screen_dict)
-    print(screens_list)
+        print(screens_list)
     return screens_list

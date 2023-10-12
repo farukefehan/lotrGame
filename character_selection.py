@@ -47,3 +47,21 @@ def make_character_selection_screen(venster):
     start_button4.image = menu_button_image
     start_button4.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
     start_button4.place(relx=0.5, rely=0.6, anchor="center")
+def characters_dictionary(file_path):
+
+        characters = []
+        try:
+            with open(file_path, 'r') as file:
+                for line in file:
+                    parts = line.strip().split(',')
+                    character = {"naam":parts[0],
+                    "race": parts[1],
+                    "describtion": parts[2],
+                    "image": parts[3]}
+
+                    characters.append(character)
+        except FileNotFoundError:
+            pass
+
+        return characters
+
