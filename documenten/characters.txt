@@ -1,0 +1,7 @@
+Frodo Baggins,Hobbit,Describtion,images/frodo.png
+Aragorn,Man,Describtion,images/aragorn.png
+Legolas,Elf,Describtion,images/legolas.png
+Gimli,Dwarf,Describtion,images/gimli.png
+Gandalf,Wizard,Describtion,images/gandalf.png
+Boromir,Man,Describtion,images/boromir.png
+Vincent,Human,Describtion,images/vincent.png
