@@ -31,7 +31,7 @@ opties;
 3:rechtdoor,goto11,O!
 
 screen:4@
-question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht. Maar aan de bomen hingen appels, hele harden appels, een daarvan kwam hard tegen je achterhoofd aan en breekt je schedel."@
+question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht. Maar aan de bomen hingen appels, hele harden appels, een daarvan kwam er een hard tegen je achterhoofd aan en breekt je schedel."@
 opties;
 1:Ga verder,gotoDied,X!
 
@@ -48,84 +48,91 @@ opties;
 2:rechtdoor,goto7,O!
 
 screen:7@
-question:"Tussen de Bergen"@
+question:"De pad werd steeds kleiner en modderig. Plotseling hoor je het geluid van een paard.
+ Ook is er een pad bijgekomen. Wat doe je"@
 opties;
-1:rechts,goto16,O?
-2:rechtdoor,goto17,X?
-3:links,goto18,O!
+1:Blijf lopen op het modderige pad,goto16,O?
+2:Ga van het moderige pad af en ga naar het geluid,goto17,X?
+3:Ga naar het andere pad,goto18,O!
 
 screen:8@
-question:"Tussen de Bergen"@
+question:"Het pad dat je gaat eindigt in een maïsveld. Je blijft doorlopen maar raakt verdwaald.
+Het wordt donker, je kan niks zien in het donker en door het maïs. Dan komt een storm aan en neemt jouw mee de lucht in."@
 opties;
 1:Ga verder,gotoDied,X!
 
 screen:9@
-question:"Tussen de Bergen"@
+question:"Het pad daalt af. Je reukt een lekkere geur. En je ziet een andere pad dat omhoog gaat naast jouw pad. Wat doe je?"@
 opties;
-1:links,goto33,X?
-2:rechtdoor,goto21,O?
-3:rechts,goto20,O!
+1:Neem het pad omhoog,goto33,X?
+2:Blijf omlaag lopen,goto21,O?
+3:Ga richting de lekkere geur,goto20,O!
 
 screen:10@
-question:"Tussen de Bergen"@
+question:"De weg die je nam loopt langs een ravijn. Het sneeuwt hard, maar je kan nergens schuilen. Plotseling breekt een stuk steen boven je. Je ontwijkt de steen maar verloor je evenwicht je valt in het ravijn."@
 opties;
 1:Ga verder,gotoDied,X!
 
 screen:11@
-question:"Tussen de Bergen"@
+question:"Je loopt op de weg door de bergen. Het begint te sneeuwen. Er is een grot dichtbij. Wil je schuilen in de grot of blijven lopen?"@
 opties;
-1:links,goto24,X?
-2:rechts,goto23,O!
+1:Blijf lopen door de sneeuw,goto24,X?
+2:Schuilen in de grot,goto23,O!
 
 screen:12@
-question:"Tussen de Bergen"@
+question:"Het pad lijdt naar een rivier. Je zwemt door de rivier, maar er komt een splitsing. Ook hoor je ergens een waterval, maar je weet niet waar die is. Welke kant ga je op? "@
 opties;
 1:links,goto22,X?
 2:rechts,goto21,O!
 
 screen:13@
-question:"Tussen de Bergen"@
+question:"Je bent diep in het bos belandt. Je hebt honger, maar er zijn alleen maar paddenstoelen. Sommige zijn geel met rode curven andere zijn rood met witte stippen.
+Je moet eten anders sterf je van de honger. Welke paddenstoel eet je?"@
 opties;
-1:links,goto14,X?
-2:rechts,goto25,O!
+1:Geel,goto14,X?
+2:Rood,goto25,O!
 
 screen:14@
-question:"Tussen de Bergen"@
+question:"Jee vecht de boze Ent, maar hij is te sterk. Je probeert weg te rennen, maar dan gooit de boze Ent een grote steen naar jouw toe. Je overleefde dat niet."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Een steen heeft jouw verpletterd."!
 
 screen:15@
-question:"Tussen de Bergen"@
+question:"Je gaat door een maïsveld. Maar ineens zie je een boomstam uit de lucht vliegen en raakte jouw zo hard dat niet meer kon opstaan."@
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Een storm gooide een boomstam die jouw raakte."!
 
 screen:16@
-question:"Je ontmoet Elrond"@
+question:"Welkom in het moeras. Daar ontmoet je Elrond. Hij was ook op zoek naar de mysterieuze man. Elrond zei dat hij een leeg huis had gevonden van iemand genaamd Jochem.
+Ook stond er bij het huis een lege stal. Jullie besloten samen te reizen."@
 opties;
 1:Ga verder,goto19,O!
 
 screen:17@
-question:"Tussen de Bergen"@
+question:"Je gaat richting het geluid. Maar dan zie je het. Een donkere man op een paard. Maar dan komt de man naar jouw toe.
+De man neemt jouw gevangen."@
+image:"
 opties;
-1:Ga verder,gotoDied,X!
+1:Ga verder,gotoDied,X,"Je bent gevangen door een Nazgûl."!
 
 screen:18@
-question:"Je ziet een Nazgul"@
+question:"Het begint donker te worden. Dan zie je iets in de verte. Een Nazgûl! Je rent weg van hem."@
 opties;
 1:Ga verder,goto19,X!
 
 screen:19@
-question:"een Nazgul heeft jouw gezien"@
+question:"Een Nazgûl heeft jouw gezien! Hij komt achter jouw aan. Probeer te overleven tot zonlicht. Kies jouw acties: links, rechts of rechtdoor."@
 opties;
 1:links,goto36,X?
 2:rechts,goto34,X?
 3:rechtdoor,goto35,O!
 
 screen:20@
-question:"U heeft de heilige koffie gekregen."@
+question:"De lekkere geur leidt naar de heilige koffiebonen. Je neemt een paar mee.
+Ook zie je een storm komen uit het zuiden. Welke richting ga je op?"@
 opties;
-1:rechts,goto27,X?
-2:rechtdoor,goto18,O!
+1:Naar het noorden,goto27,X?
+2:Naar het oosten,goto18,O!
 
 screen:21@
 question:"Tussen de Bergen"@
