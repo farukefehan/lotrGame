@@ -6,8 +6,10 @@ from read_adventure import read_adventure
 
 adventure = []
 character_dict = {}
-def start_adventure(venster, file_name):
+def start_adventure(venster, file_name, dict):
     global adventure
+    global character_dict
+    character_dict = dict
     adventure = read_adventure(file_name)
     first_screen = adventure[0]
     generate_screen(venster, first_screen)
@@ -24,11 +26,12 @@ def resize_image(file_path):
 
 def generate_screen(venster, screen_dict):
     global adventure
+    global character_dict
     root = venster
     from main import kill_all_children
     kill_all_children(root)
 
-    character_slot_1_image = resize_image("images/vincent.png")
+    character_slot_1_image = resize_image(character_dict['image'])
 
     character_slot_2_image = resize_image(screen_dict['image'])
 
