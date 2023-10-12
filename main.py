@@ -25,6 +25,8 @@ def generate_background(zone):
 
 
 def main():
+    from loading_screen import loading_screen
+    loading_screen()
     root = Tk()
     root.geometry("1920x1080")
     root.attributes("-fullscreen", True)
