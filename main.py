@@ -1,6 +1,8 @@
 from tkinter import Tk, Label
 from splash_screen import make_splash_screen
 from PIL import Image, ImageTk
+from read_adventure import read_adventure
+from paths_screen import start_adventure
 
 
 def kill_all_children(venster):
@@ -10,7 +12,7 @@ def kill_all_children(venster):
 
 
 def generate_background(zone):
-    original_image = Image.open(r"Images/background.png")
+    original_image = Image.open(r"images/background.png")
     resized_image = original_image.resize((zone.winfo_screenwidth(), zone.winfo_screenheight()), Image.LANCZOS)
     background_image = ImageTk.PhotoImage(resized_image)
 
@@ -28,8 +30,9 @@ def main():
     root.winfo_screenheight()
     root.winfo_height()
     generate_background(root)
+    #generate_screen(root, screen_dict)
+    #start_adventure(root, "adventures/goudenhal/de_gouden_hal.txt")
     make_splash_screen(root)
-
     root.mainloop()
 
 

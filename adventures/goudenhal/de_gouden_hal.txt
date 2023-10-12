@@ -98,9 +98,9 @@ opties;
 
 screen:11@
 question:"Je bent in het kasteel, maar je hebt de Gouden Hal nog niet gevonden.
- Waar zoek je eerst?"@
- image:"adventures/goudenhal/castle.png"@
+Waar zoek je eerst?"@
+image:"adventures/goudenhal/castle.png"@
 opties;
 1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn zo fragiel dat het instort nadat je op de muren klopt.
  Je bent geplet!"?
-2:Ga naar de kelder,gotoWin,O!
+2:Ga naar de kelder,gotoWin,O,"You win"!
