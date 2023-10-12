@@ -288,9 +288,7 @@ opties;
 screen:50.
 question:"Run from nazguls".
 opties;
-1:links,goto52,O?
-2:rechtdoor,goto51,X?
-3:rechts,goto49,X!
+1:links,goto56,O!
 
 screen:51.
 question:"Run from nazguls".
@@ -307,13 +305,126 @@ opties;
 screen:53.
 question:"Run from nazguls".
 opties;
-1:Ga verder,goto39,O?
-2:Ga verder,goto38,X?
-3:Ga verder,goto37,O!
+1:links,goto57,X?
+2:rechtdoor,goto58,X?
+3:rechts,goto59,O!
 
-screen:35.
+screen:54
 question:"Run from nazguls".
 opties;
-1:Ga verder,goto39,O?
-2:Ga verder,goto38,X?
-3:Ga verder,goto37,O!
+1:links,goto61,O?
+2:rechts,goto60,X!
+
+screen:55.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:56.
+question:"Run from nazguls".
+opties;
+1:je gaat verder,goto65,O!
+
+screen:57.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:58.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:59.
+question:"Run from nazguls".
+opties;
+1:links,goto64,O?
+2:rechtdoor,goto62,X?
+3:rechts,goto63,X!
+
+screen:60.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:61.
+question:"Run from nazguls".
+opties;
+1:links,goto66,X?
+2:rechtdoor,goto67,X?
+3:rechts,goto72,O!
+
+screen:62.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:63.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:64.
+question:"Run from nazguls".
+opties;
+1:links,goto69,O?
+2:rechtdoor,goto74,X!
+
+screen:65.
+question:"Run from nazguls".
+opties;
+1:links,goto68,X?
+2:rechtdoor,goto69,O?
+3:rechts,goto70,X!
+
+screen:66.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:67.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:68.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:69.
+question:"Wat is het Raadsel".
+opties;
+1:rechtdoor,goto75,O!
+
+screen:70.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:71.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:72.
+question:"Run from nazguls".
+opties;
+1:links,goto71,X?
+2:rechtdoor,goto69,O?
+3:rechts,goto73,X!
+
+screen:73.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:74.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoDied,X!
+
+screen:75.
+question:"Run from nazguls".
+opties;
+1:Ga verder,gotoWin,X
