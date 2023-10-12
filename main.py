@@ -26,12 +26,9 @@ def main():
     root.geometry("1920x1080")
     root.title("Boromir")
     root.state('zoomed')
-
     root.winfo_screenheight()
     root.winfo_height()
     generate_background(root)
-    #generate_screen(root, screen_dict)
-    #start_adventure(root, "adventures/goudenhal/de_gouden_hal.txt")
     make_splash_screen(root)
     root.mainloop()
 

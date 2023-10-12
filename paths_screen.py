@@ -6,14 +6,17 @@ from read_adventure import read_adventure
 
 adventure = []
 character_dict = {}
+
+
 def start_adventure(venster, file_name):
     global adventure
     adventure = read_adventure(file_name)
     first_screen = adventure[0]
     generate_screen(venster, first_screen)
 
+
 def resize_image(file_path):
-    #image_settings_characters
+    # image_settings_characters
     character_imagesize_x = 400
     character_imagesize_y = 700
 
@@ -21,6 +24,7 @@ def resize_image(file_path):
     resized_image = original_image.resize((character_imagesize_x, character_imagesize_y), Image.LANCZOS)
     final_image = ImageTk.PhotoImage(resized_image)
     return final_image
+
 
 def generate_screen(venster, screen_dict):
     global adventure
@@ -61,6 +65,7 @@ def create_buttons(screen_dict, root):
 
     question_label = Label(frame1, text=screen_dict['question'], anchor="center", compound="center", borderwidth=2, relief="sunken")
     question_label.pack(expand=1)
+
 
 def take_action(root, code_string, death_message):
     global adventure
