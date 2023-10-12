@@ -13,8 +13,13 @@ def read_adventure(file):
         screen_data = screen.split("@\n")
         option_data = screen_data[3].replace("opties;\n", "").split("?\n")
         options_list = []
+        print(f"screen: {screen}")
+        print(f"screen_data: {screen_data}")
+        print(f"Option_data: {option_data}")
         for option in option_data:
+            print(f"Option: {option}")
             data = option.split(":")
+            print(f"Data: {data}")
             data_list_options = data[1].split(",")
             death_message = "None"
             print(data_list_options)

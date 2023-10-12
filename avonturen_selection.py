@@ -28,7 +28,7 @@ def make_adventure_selection_screen(venster, dict):
 
     create_adventure_selection_image(venster, r"adventures/vermistedwergen/dwergen.png",
                                      "De verdwenen dwergen", 0.5, 0.475,
-                                     "adventures/goudenhal/de_gouden_hal.txt", dict)
+                                     "adventures/vermistedwergen/vermiste_dwergen.txt", dict)
 
     create_adventure_selection_image(venster, r"adventures/goudenhal/de gouden hal.png",
                                      "De Gouden Hal", 0.8, 0.475,

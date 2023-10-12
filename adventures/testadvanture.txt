@@ -1,16 +1,16 @@
 avontuur 1!
 
-screen:0.
-question:"wil je naar bos, vlakte of bergen".
-image:"Images/stickman_echt.png".
+screen:0@
+question:"wil je naar bos, vlakte of bergen"@
+image:"Images/stickman_echt.png"@
 opties;
 1:bos,goto1,O?
 2:vlakte,goto2,O?
 3:bergen,goto4,O!
 
-screen:1.
-question:"je bij een 3 weg splitsing, Welke kant ga je op?".
-image:"Images/stickman_echt.png".
+screen:1@
+question:"je bij een 3 weg splitsing, Welke kant ga je op?"@
+image:"Images/stickman_echt.png"@
 opties;
 1:recht,goto5,X?
 2:rechtdoor,goto6,O?
