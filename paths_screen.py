@@ -77,7 +77,11 @@ def create_buttons(screen_dict, root):
     option_list = screen_dict['options']
 
     for option in option_list:
-        option_button = Button(frame2, text=option['text'], height=4, pady=1, padx=1,
+        if admin_mode is True:
+            button_text = f"{option['text']} {option['admin']}"
+        else:
+            button_text = f"{option['text']}"
+        option_button = Button(frame2, text=button_text, height=4, pady=1, padx=1,
                                borderwidth=1, relief="raised", anchor="w", justify="left",
                                command=lambda x=root, y=option['action'], z=option['death_message']:
                                take_action(x, y, z))
