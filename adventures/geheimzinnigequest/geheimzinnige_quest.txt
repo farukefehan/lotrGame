@@ -3,7 +3,8 @@ checkpoints:2!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras die informatie heeft over Sauron en een schat verbergt.
-Je bent van plan verder met je avontuur te gaan op zoek naar deze man. Ook wil je deze man vragen of hij jouw helpt met het verslaan van Sauron.
+Je bent van plan verder met je avontuur te gaan op zoek naar deze man.
+Ook wil je deze man vragen of hij jouw helpt met het verslaan van Sauron.
 Maar eerst moet je bij dit moeras komen. Welke weg neem je? Wil je naar het bos, de vlakte of de bergen?"@
 image:"adventures/geheimzinnigequest/rivendell.png"@
 opties;
@@ -36,8 +37,11 @@ opties;
 3:rechtdoor,goto11,O!
 
 screen:4@
-question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht. Maar aan de bomen hingen appels, hele harden appels, een daarvan kwam er een hard tegen je achterhoofd aan en breekt je schedel."@
-image:"adventures/goudenhal/screen1.png"@
+question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht.
+Aan de bomen hangen appels, hele harden appels.
+Een daarvan kwam er een hard tegen je achterhoofd aan.
+Je breekt je schedel."@
+image:"adventures/geheimzinnigequest/falling_tree.png"@
 opties;
 1:Ga verder,gotoDied,X,"Wow. je bent doodgegaan door een appel!"!
 
