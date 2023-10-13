@@ -343,7 +343,7 @@ opties;
 screen:42@
 question:"Je ziet al wat beter.
 Er komen steeds meer Nazgûl's achter je aan"@
-image:"adventures/geheimzinnigequest/nazgu_chase.png"@
+image:"adventures/geheimzinnigequest/horseman.png"@
 opties;
 1:links,goto43,X?
 2:rechtdoor,goto44,XO?
