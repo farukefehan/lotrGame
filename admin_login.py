@@ -56,7 +56,7 @@ def admin_login(venster):
 def check_check(root, box, password):
     global admin_mode
     if box.get() == password:
-        print("Admin logged in!")
+        # print("Admin logged in!")
         admin_mode = True
         character_selection.make_character_selection_screen(root)
     else:
