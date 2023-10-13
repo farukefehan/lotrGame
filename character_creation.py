@@ -3,12 +3,16 @@ from PIL import Image, ImageTk
 from character_selection import goto_adventure_selection_screen
 from main import kill_all_children
 
-races = ["Hobbit", "Elf", "Dwarf", "Human"]
+races = ["Hobbit_Male", "Hobbit_Female", "Elf_Male", "Elf_Female", "Dwarf_Male", "Dwarf_Female", "Human_Male", "Human_Female"]
 race_images = {
-    "Hobbit": "images/hobbit_male.png",
-    "Elf": "images/elf_male.png",
-    "Dwarf": "images/dwarf_male.png",
-    "Human": "images/human_male.png",
+    "Hobbit_Male": "images/hobbit_male.png",
+    "Hobbit_Female": "images/hobbit_female.png",
+    "Elf_Male": "images/elf_male.png",
+    "Elf_Female": "images/elf_female.png",
+    "Dwarf_Male": "images/dwarf_male.png",
+    "Dwarf_Female": "images/dwarf_female.png",
+    "Human_Male": "images/human_male.png",
+    "Human_Female": "images/human_female.png"
 }
 
 
@@ -113,7 +117,7 @@ class CharacterCreationScreen:
         CharacterCreationScreen.character_label.image = character_image
 
     @staticmethod
-    def create_character(name_entry, race_label):
+    def create_character(name_entry, race_label, root):
         name = name_entry.get()
         selected_race = races[CharacterCreationScreen.current_race_index]  # Use races list directly
 
@@ -132,8 +136,7 @@ class CharacterCreationScreen:
 
         # Update the combobox
         CharacterCreationScreen.show_existing_characters(None, CharacterCreationScreen.character_dropdown, None)
-        # hey bro u just created a character
-        messagebox.showinfo("Character Created", f"Character '{name}' created successfully!")
+        goto_user_created_characters(root)
 
     @staticmethod
     def show_existing_characters(venster, character_dropdown, start_adventure_button):
@@ -164,16 +167,6 @@ class CharacterCreationScreen:
                                    command=lambda: CharacterCreationScreen.prev_character(race_label),bg="#603000", fg="white")
         left_arrow_button.place(relx=0.4, rely=0.4, anchor="center")
 
-        gender_label = Label(venster, text="Select Gender:", bg="#603000", fg="white")
-        gender_label.place(relx=0.3, rely=0.6, anchor="center")
-
-        male_radio = ttk.Radiobutton(venster, text="Male", value="male")
-        male_radio.place(relx=0.5, rely=0.6, anchor="center")
-
-        female_radio = ttk.Radiobutton(venster, text="Female", value="female")
-        female_radio.place(relx=0.5, rely=0.65, anchor="center")
-
-
         character_image_path = race_images[races[CharacterCreationScreen.current_race_index]]
         character_image = Image.open(character_image_path)
         character_image = character_image.resize((230, 230), Image.LANCZOS)
@@ -187,7 +180,7 @@ class CharacterCreationScreen:
         original_image2 = original_image2.resize((35, 35), Image.LANCZOS)
         voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
-        create_button = Button(venster, text="Create Character", command=lambda: CharacterCreationScreen.create_character(name_entry, race_label))
+        create_button = Button(venster, text="Create Character", command=lambda: CharacterCreationScreen.create_character(name_entry, race_label, venster))
         create_button.place(relx=0.5, rely=0.8, anchor="center")
 
         # Move the button to the top-right corner
