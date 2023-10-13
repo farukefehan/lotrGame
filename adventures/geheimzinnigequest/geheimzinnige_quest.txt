@@ -64,7 +64,7 @@ opties;
 screen:7@
 question:"De pad werd steeds kleiner en modderig. Plotseling hoor je het geluid van een paard.
 Ook is er een pad bijgekomen. Wat doe je?"@
-image:"adventures/geheimzinnigequest/swamp1.png"@
+image:"adventures/geheimzinnigequest/swamp.png"@
 opties;
 1:Blijf lopen op het modderige pad,goto16,O?
 2:Ga van het moderige pad af en ga naar het geluid,goto17,X?
