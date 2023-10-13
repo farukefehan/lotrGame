@@ -5,24 +5,24 @@ def read_adventure(file):
     data_screens_list = adventure_bestand_name_screens[1:]
     check_point_data = adventure_bestand_name_screens[0]
     checkpoints = check_point_data.split(":")[1]
-    print(checkpoints)
+    # print(checkpoints)
     screens_list = []
     screens_list.append(checkpoints)
-    print(f"abns: {adventure_bestand_name_screens}")
+    # print(f"abns: {adventure_bestand_name_screens}")
     for screen in data_screens_list:
         screen_data = screen.split("@\n")
         option_data = screen_data[3].replace("opties;\n", "").split("?\n")
         options_list = []
-        print(f"screen: {screen}")
-        print(f"screen_data: {screen_data}")
-        print(f"Option_data: {option_data}")
+        # print(f"screen: {screen}")
+        # print(f"screen_data: {screen_data}")
+        # print(f"Option_data: {option_data}")
         for option in option_data:
-            print(f"Option: {option}")
+            # print(f"Option: {option}")
             data = option.split(":")
-            print(f"Data: {data}")
+            # print(f"Data: {data}")
             data_list_options = data[1].split(",")
             death_message = "None"
-            print(data_list_options)
+            # print(data_list_options)
             if data_list_options[1] == "gotoDied" or data_list_options[1] == "gotoWin":
                 death_message = data_list_options[3]
             try:
@@ -30,7 +30,7 @@ def read_adventure(file):
                     death_message = data_list_options[3]
             except:
                 death_message = "None"
-            print(death_message)
+            # print(death_message)
             option_dict = {
                 "text": data_list_options[0],
                 "action": data_list_options[1],
@@ -47,5 +47,5 @@ def read_adventure(file):
             "options": options_list
         }
         screens_list.append(screen_dict)
-        print(screens_list[0])
+        # print(screens_list[0])
     return screens_list
