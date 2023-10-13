@@ -23,7 +23,7 @@ def make_splash_screen(venster):
 
     voorbeeld_image = make_image(r"images/testbutton.png")
 
-    start_button = Label(venster, text="Choose your character", image=voorbeeld_image, compound="center",
+    start_button = Label(venster, text="Begin het spel", image=voorbeeld_image, compound="center",
                          bg="#603000", fg="black")
     start_button.image = voorbeeld_image
 

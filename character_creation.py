@@ -15,6 +15,7 @@ race_images = {
     "Human_Female": "images/human_female.png"
 }
 
+
 def get_selected_character_image(selected_index):
     characters=[]
     try:
@@ -35,9 +36,6 @@ def get_selected_character_image(selected_index):
         return characters[selected_index]["image"]
     else:
         return None
-
-
-
 
 
 def get_selected_character_info(selected_index, characters_file_path):
@@ -61,8 +59,6 @@ def get_selected_character_info(selected_index, characters_file_path):
         return characters[selected_index]
     else:
         return None
-
-
 
 
 class CharacterCreationScreen:
@@ -173,13 +169,13 @@ class CharacterCreationScreen:
     def create_character_screen(venster):
         kill_all_children(venster)
 
-        name_label = Label(venster, text="Enter Name:", bg="#603000", fg="white")
+        name_label = Label(venster, text="Kies een naam:", bg="#603000", fg="white")
         name_label.place(relx=0.3, rely=0.2, anchor="center")
 
         name_entry = Entry(venster)
         name_entry.place(relx=0.5, rely=0.2, anchor="center")
 
-        race_label = Label(venster, text=f"Select Race: {races[CharacterCreationScreen.current_race_index]}", bg="#603000", fg="white")
+        race_label = Label(venster, text=f"Kies een volk: {races[CharacterCreationScreen.current_race_index]}", bg="#603000", fg="white")
         race_label.place(relx=0.3, rely=0.4, anchor="center")
 
         right_arrow_button = Button(venster, text="➡",
@@ -195,7 +191,7 @@ class CharacterCreationScreen:
         character_image = character_image.resize((230, 230), Image.LANCZOS)
         character_image = ImageTk.PhotoImage(character_image)
 
-        CharacterCreationScreen.character_label = Label(venster, text="Character Preview", image=character_image, compound="bottom", bg="#603000", fg="white")
+        CharacterCreationScreen.character_label = Label(venster, text="Voorbeeld karakter", image=character_image, compound="bottom", bg="#603000", fg="white")
         CharacterCreationScreen.character_label.image = character_image
         CharacterCreationScreen.character_label.place(relx=0.5, rely=0.4, anchor="center")
 
@@ -203,11 +199,11 @@ class CharacterCreationScreen:
         original_image2 = original_image2.resize((35, 35), Image.LANCZOS)
         voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
-        create_button = Button(venster, text="Create Character", command=lambda: CharacterCreationScreen.create_character(name_entry, race_label, venster))
+        create_button = Button(venster, text="Creëer karakter", command=lambda: CharacterCreationScreen.create_character(name_entry, race_label, venster))
         create_button.place(relx=0.5, rely=0.8, anchor="center")
 
         # Move the button to the top-right corner
-        end_button2 = Label(venster, image=voorbeeld_image2, text="Back to\ncharacter selection", compound="bottom", bg="black", fg= "white")
+        end_button2 = Label(venster, image=voorbeeld_image2, text="Terug naar \n selectie", compound="bottom", bg="black", fg= "white")
         end_button2.image = voorbeeld_image2
         end_button2.bind("<Button-1>", lambda click_event: goto_user_created_characters(venster))
         end_button2.place(relx=0.95, rely=0.08, anchor="ne")  # Adjusted relx and rely
@@ -229,7 +225,7 @@ def make_character_creation_screen(venster):
     original_image = original_image.resize((200, 200), Image.LANCZOS)
     voorbeeld_image = ImageTk.PhotoImage(original_image)
 
-    start_button = Label(venster, text="Create new character", image=voorbeeld_image, compound="bottom", bg="#603000", fg="white")
+    start_button = Label(venster, text="Creëer nieuw karakter", image=voorbeeld_image, compound="bottom", bg="#603000", fg="white")
     start_button.image = voorbeeld_image
     start_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.create_character_screen(venster))
     start_button.place(relx=0.35, rely=0.2, anchor="center")
@@ -253,13 +249,13 @@ def make_character_creation_screen(venster):
     voorbeeld_image4 = ImageTk.PhotoImage(original_image4)
 
 
-    start_adventure_button = Label(venster, image=voorbeeld_image3, text="Start Adventure", compound="bottom",bg="#603000", fg="white")
+    start_adventure_button = Label(venster, image=voorbeeld_image3, text="Start avontuur", compound="bottom",bg="#603000", fg="white")
     start_adventure_button.image = voorbeeld_image3
     start_adventure_button["state"] = "disabled"
     start_adventure_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster, get_selected_character_info(CharacterCreationScreen.character_dropdown.current(),"documenten/characters.txt")))
     start_adventure_button.place(relx=0.5, rely=0.7, anchor="center")  # Centered horizontally
 
-    show_existing_button = Label(venster, text="Show existing characters", image=voorbeeld_image4, compound="bottom",bg="#603000", fg="white")
+    show_existing_button = Label(venster, text="Laat gemaakte karakters zien", image=voorbeeld_image4, compound="bottom",bg="#603000", fg="white")
     show_existing_button.image = voorbeeld_image4
     show_existing_button.place(relx=0.65, rely=0.2, anchor="center")
 
@@ -269,7 +265,7 @@ def make_character_creation_screen(venster):
     original_image2 = original_image2.resize((35, 35), Image.LANCZOS)
     voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
-    end_button2 = Label(venster, image=voorbeeld_image2, text="Back to\n character selection", compound="top", bg="black", fg= "white")
+    end_button2 = Label(venster, image=voorbeeld_image2, text="Terug naar\n Selectiescherm", compound="top", bg="black", fg= "white")
     end_button2.image = voorbeeld_image2
     end_button2.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
     end_button2.place(relx=0.92, rely=0.95, anchor="center")
@@ -278,7 +274,7 @@ def make_character_creation_screen(venster):
     delete_button_image_proto = delete_button_image_proto.resize((50, 50), Image.LANCZOS)
     delete_button_image = ImageTk.PhotoImage(delete_button_image_proto)
 
-    delete_button = Label(venster, text="Delete selected character", image=delete_button_image, compound="bottom", bg="#603000", fg="white")
+    delete_button = Label(venster, text="Verwijder huidig \n geselecteerd karakter", image=delete_button_image, compound="bottom", bg="#603000", fg="white")
     delete_button.image = delete_button_image
     delete_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.delete_character(CharacterCreationScreen.character_dropdown))
     delete_button.place(relx=0.65, rely=0.45, anchor="center")
