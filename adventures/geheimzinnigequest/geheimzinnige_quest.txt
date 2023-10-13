@@ -1,5 +1,5 @@
 avontuur 11;
-checkpoints:2!
+checkpoints:14!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras.
@@ -10,9 +10,9 @@ Maar eerst moet je bij dit moeras komen.
 Welke weg neem je? Wil je naar het bos, de vlakte of de bergen?"@
 image:"adventures/geheimzinnigequest/rivendell.png"@
 opties;
-1:Bos,goto1,O?
-2:Vlakte,goto2,O?
-3:Bergen,goto3,O!
+1:Bos,goto1,O,CP?
+2:Vlakte,goto2,O,CP?
+3:Bergen,goto3,O,CP!
 
 screen:1@
 question:"In het bos is een splitsing. Welke kant wil je op?"@
@@ -20,7 +20,7 @@ image:"adventures/geheimzinnigequest/bos2.png"@
 opties;
 1:Rechts,goto4,X?
 2:Links,goto6,O?
-3:Rechtdoor,goto5,O!
+3:Rechtdoor,goto5,O,CP!
 
 screen:2@
 question:"Op de Vlakte zie je drie paden. Welke pad wil je op."@
@@ -28,7 +28,7 @@ image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
 1:Linker pad,goto9,O?
 2:Rechter pad,goto8,X?
-3:Middelste pad,goto7,O!
+3:Middelste pad,goto7,O,CP!
 
 screen:3@
 question:"Tussen de Bergen zie je drie gevaarlijke wegen. Welke weg neem je?"@
@@ -51,7 +51,7 @@ screen:5@
 question:"Een boze Ent valt je aan! Wat doe Je?"@
 image:"adventures/geheimzinnigequest/tree_monster.png"@
 opties;
-1:Vlucht van de Ent,goto13,O?
+1:Vlucht van de Ent,goto13,O,CP?
 2:Vecht de Ent,goto14,X!
 
 screen:6@
@@ -68,7 +68,7 @@ image:"adventures/geheimzinnigequest/swamp.png"@
 opties;
 1:Blijf lopen op het modderige pad,goto16,O?
 2:Ga van het moderige pad af en ga naar het geluid,goto17,X?
-3:Ga naar het andere pad,goto18,O!
+3:Ga naar het andere pad,goto18,O,CP!
 
 screen:8@
 question:"Het pad dat je gaat eindigd in een maïsveld. Je blijft doorlopen, maar raakt verdwaald.
@@ -119,7 +119,7 @@ Je moet eten anders sterf je van de honger. Welke paddenstoel eet je?"@
 image:"adventures/geheimzinnigequest/mushroom.png"@
 opties;
 1:Geel,goto14,X?
-2:Rood,goto25,O!
+2:Rood,goto25,O,CP!
 
 screen:14@
 question:"Je vecht de boze Ent, maar hij is te sterk.
@@ -158,7 +158,7 @@ question:"Het begint donker te worden. Dan zie je iets in de verte.
 Een Nazgûl! Je rent weg van hem."@
 image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
-1:Ga verder,goto19,O!
+1:Ga verder,goto19,O,CP!
 
 screen:19@
 question:"Een Nazgûl heeft je gezien! Hij komt achter je aan.
@@ -297,7 +297,7 @@ question:"Het is diep in de nacht.
 Er zitten Nazgûl's achter je aan"@
 image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
-1:Links,goto39,O?
+1:Links,goto39,O,CP?
 2:Rechtdoor,goto38,X?
 3:Rechts,goto37,X!
 
@@ -326,7 +326,7 @@ image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
 1:Links,goto40,X?
 2:Rechtdoor,goto41,X?
-3:Rechts,goto42,O!
+3:Rechts,goto42,O,CP!
 
 screen:40@
 question:"Je wordt gevangen door een Nazgûl"@
@@ -361,7 +361,7 @@ Je komt erachter dat het geen normale Nazgûl is.
 Hij neemt je mee op de korte, gevaarlijke route."@
 image:"adventures/geheimzinnigequest/horseman.png"@
 opties;
-1:Ga verder,goto50,O!
+1:Ga verder,goto50,O,CP!
 
 screen:45@
 question:"Je wordt gevangen door een Nazgûl"@
@@ -408,7 +408,7 @@ Hij vertelde dat hij een nieuw huis had gekocht en op weg was daar naar toe.
 Jullie slapen tot daglicht."@
 image:"adventures/geheimzinnigequest/jochem.png"@
 opties;
-1:Ga verder,goto56,O!
+1:Ga verder,goto56,O,CP!
 
 screen:51@
 question:"Je wordt gevangen door een Nazgûl"@
@@ -459,7 +459,7 @@ Hij vertelt dat hij een schat had gevonden en opnieuw verstopt in Rivendell.
 Hierdoor kan hij altijd meer koffie kopen."@
 image:"adventures/geheimzinnigequest/jochem.png"@
 opties;
-1:Jullie gaan verder,goto65,O!
+1:Jullie gaan verder,goto65,O,CP!
 
 screen:57@
 question:"Hier is een monster."@
@@ -523,7 +523,7 @@ Welke kant ga op?"@
 image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
 1:Links,goto68,X?
-2:Rechtdoor,goto75,O?
+2:Rechtdoor,goto75,O,CP?
 3:Rechts,goto70,X!
 
 screen:66@
