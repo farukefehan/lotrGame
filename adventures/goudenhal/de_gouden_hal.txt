@@ -112,4 +112,4 @@ image:"adventures/goudenhal/castle.png"@
 opties;
 1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn fragiel.
 Het stort in nadat je op de muren klopt. Je bent geplet!"?
-2:Ga naar de kelder,gotoWin,O,"Je hebt de schat van Thorin gevonden en hem gered!"
+2:Ga naar de kelder,gotoWin,O,"Je hebt de schat van Thorin gevonden en veilig gesteld!"
