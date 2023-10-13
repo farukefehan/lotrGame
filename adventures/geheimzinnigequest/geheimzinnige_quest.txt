@@ -1,5 +1,5 @@
 avontuur 11;
-checkpoints:14!
+checkpoints:13!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras.
@@ -10,9 +10,9 @@ Maar eerst moet je bij dit moeras komen.
 Welke weg neem je? Wil je naar het bos, de vlakte of de bergen?"@
 image:"adventures/geheimzinnigequest/rivendell.png"@
 opties;
-1:Bos,goto1,O,CP?
+1:Bos,goto1,O?
 2:Vlakte,goto2,O,CP?
-3:Bergen,goto3,O,CP!
+3:Bergen,goto3,O!
 
 screen:1@
 question:"In het bos is een splitsing. Welke kant wil je op?"@
