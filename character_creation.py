@@ -15,6 +15,29 @@ race_images = {
     "Human_Female": "images/human_female.png"
 }
 
+def get_selected_character_image(selected_index):
+    characters=[]
+    try:
+        with open("characters.txt", 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                character = {
+                    "name": parts[0],
+                    "race": parts[1],
+                    "sex": parts[2],
+                    "image": parts[3]
+                }
+                characters.append(character)
+    except FileNotFoundError:
+        pass
+
+    if 0 <= selected_index < len(characters):
+        return characters[selected_index]["image"]
+    else:
+        return None
+
+
+
 
 
 def get_selected_character_info(selected_index, characters_file_path):
@@ -129,7 +152,7 @@ class CharacterCreationScreen:
         print("Race:", selected_race)
 
         with open("documenten/characters.txt", "a") as file:
-            file.write(f"{name},{selected_race},male,images/human_male.png\n")
+            file.write(f"{name},{selected_race},male,{race_images[races[CharacterCreationScreen.current_race_index]]}\n")
 
         # Update the character image
         CharacterCreationScreen.update_character_image()
