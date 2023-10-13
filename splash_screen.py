@@ -21,6 +21,16 @@ def make_splash_screen(venster):
     from main import kill_all_children
     kill_all_children(venster)
 
+
+    original_image = Image.open("images/lotr.png", mode="r")
+    resized_image = original_image.resize(
+        (800, 400), Image.LANCZOS)
+    head_image_resize = ImageTk.PhotoImage(resized_image)
+
+    header_image = Label(image=head_image_resize)
+    header_image.image = head_image_resize
+    header_image.pack(side="top", pady=40)
+
     voorbeeld_image = make_image(r"images/testbutton.png")
 
     start_button = Label(venster, text="Begin het spel", image=voorbeeld_image, compound="center",
@@ -32,8 +42,8 @@ def make_splash_screen(venster):
 
     start_button.bind("<Button-1>", lambda click_event: goto_screen_select_character(venster))
     admin_button.bind("<Button-1>", lambda click_event: goto_screen_admin_login(venster))
-    start_button.place(relx=0.5, rely=0.4, anchor="center")
-    admin_button.place(relx=0.5, rely=0.5, anchor="center")
+    start_button.place(relx=0.5, rely=0.7, anchor="center")
+    admin_button.place(relx=0.5, rely=0.8, anchor="center")
 
     from exit_button import make_exit_button
     make_exit_button(venster)
