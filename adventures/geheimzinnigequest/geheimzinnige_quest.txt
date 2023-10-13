@@ -19,7 +19,7 @@ question:"In het bos is een splitsing. Welke kant wil je op?"@
 image:"adventures/geheimzinnigequest/bos2.png"@
 opties;
 1:Rechts,goto4,X?
-2:Links,goto6,O?
+2:Links,goto6,O,CP?
 3:Rechtdoor,goto5,O,CP!
 
 screen:2@
@@ -35,8 +35,8 @@ question:"Tussen de Bergen zie je drie gevaarlijke wegen. Welke weg neem je?"@
 image:"adventures/geheimzinnigequest/mountains.png"@
 opties;
 1:Links,goto10,X?
-2:Rechts,goto12,O?
-3:Rechtdoor,goto11,O!
+2:Rechts,goto12,O,CP?
+3:Rechtdoor,goto11,O,CP!
 
 screen:4@
 question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht.
@@ -59,14 +59,14 @@ question:"Je zit in een maïsveld. Neem je een afslag of blijf je doorgaan?"@
 image:"adventures/geheimzinnigequest/cornfield.png"@
 opties;
 1:Afslag,goto15,X?
-2:Rechtdoor,goto7,O!
+2:Rechtdoor,goto7,O,CP!
 
 screen:7@
 question:"De pad werd steeds kleiner en modderig. Plotseling hoor je het geluid van een paard.
 Ook is er een pad bijgekomen. Wat doe je?"@
 image:"adventures/geheimzinnigequest/swamp.png"@
 opties;
-1:Blijf lopen op het modderige pad,goto16,O?
+1:Blijf lopen op het modderige pad,goto16,O,CP?
 2:Ga van het moderige pad af en ga naar het geluid,goto17,X?
 3:Ga naar het andere pad,goto18,O,CP!
 
@@ -84,8 +84,8 @@ Je ziet een andere pad dat omhoog gaat naast jouw pad. Wat doe je?"@
 image:"adventures/geheimzinnigequest/mountains.png"@
 opties;
 1:Neem het pad omhoog,goto33,X?
-2:Blijf omlaag lopen,goto21,O?
-3:Ga richting de lekkere geur,goto20,O!
+2:Blijf omlaag lopen,goto21,O,CP?
+3:Ga richting de lekkere geur,goto20,O,CP!
 
 screen:10@
 question:"De weg die je gekozen hebt, loopt langs een ravijn.
@@ -102,7 +102,7 @@ Er is een grot dichtbij. Wil je schuilen in de grot of blijven lopen?"@
 image:"adventures/geheimzinnigequest/cave1.png"@
 opties;
 1:Blijf lopen door de sneeuw,goto24,X?
-2:Schuilen in de grot,goto23,O!
+2:Schuilen in de grot,goto23,O,CP!
 
 screen:12@
 question:"Het pad lijdt naar een rivier. Je zwemt door de rivier, maar er komt een splitsing.
@@ -110,7 +110,7 @@ Ergens hoor je een waterval, maar je weet niet waar die is. Welke kant ga je op?
 image:"adventures/geheimzinnigequest/river.png"@
 opties;
 1:Links,goto22,X?
-2:Rechts,goto21,O!
+2:Rechts,goto21,O,CP!
 
 screen:13@
 question:"Je bent diep in het bos belandt. Je hebt honger, maar er zijn alleen maar paddenstoelen.
@@ -119,7 +119,7 @@ Je moet eten anders sterf je van de honger. Welke paddenstoel eet je?"@
 image:"adventures/geheimzinnigequest/mushroom.png"@
 opties;
 1:Geel,goto14,X?
-2:Rood,goto25,O,CP!
+2:Rood,goto25,O!
 
 screen:14@
 question:"Je vecht de boze Ent, maar hij is te sterk.
@@ -143,7 +143,7 @@ Elrond zei dat hij een leeg huis had gevonden van iemand genaamd Jochem.
 Ook stond er bij het huis een lege stal. Jullie besloten samen te reizen."@
 image:"adventures/geheimzinnigequest/swamp_elf.png"@
 opties;
-1:Ga verder,goto19,O!
+1:Ga verder,goto19,O,CP!
 
 screen:17@
 question:"Je gaat richting het geluid. Maar dan zie je het. Een donkere man op een paard.
@@ -177,7 +177,7 @@ Ook zie je een storm komen uit het zuiden. Welke richting ga je op?"@
 image:"adventures/geheimzinnigequest/holy_coffee.png"@
 opties;
 1:Naar het noorden,goto27,X?
-2:Naar het oosten,goto18,O!
+2:Naar het oosten,goto18,O,CP!
 
 screen:21@
 question:"Je loopt door een ravijn.
@@ -186,7 +186,7 @@ Er zijn twee grotten en een pad omhoog"@
 image:"adventures/geheimzinnigequest/mountain_cave.png"@
 opties;
 1:Grot links,goto30,O?
-2:Pad omhoog,goto18,O?
+2:Pad omhoog,goto18,O,CP?
 3:Grot rechts,goto28,X!
 
 screen:22@
@@ -205,7 +205,7 @@ Wil je die volgen of blijf je op het pad?"@
 image:"adventures/geheimzinnigequest/ravine1.png"@
 opties;
 1:Blijf op het pad,goto29,X?
-2:Volg de voetstappen,goto30,O!
+2:Volg de voetstappen,goto30,O,CP!
 
 screen:24@
 question:"Je blijft lopen het sneeuwt steeds, je zit in een sneeuwstorm.
@@ -221,7 +221,7 @@ Je gaat waar verder en ziet hoevenafdrukken.
 Ergens anders heb je voetstappen gevonden. Wat doe je?"@
 image:"adventures/geheimzinnigequest/dark_forest.png"@
 opties;
-1:Volg voetstappen,goto16,O?
+1:Volg voetstappen,goto16,O,CP?
 2:Volg hoefafdrukken,goto31,X?
 3:Blijf door het moeras lopen,goto32,X!
 
@@ -263,7 +263,7 @@ Hij was op zoek naar de heilige koffiebonen.
 Jullie besluiten samen die man op te zoeken."@
 image:"adventures/geheimzinnigequest/elf_mountain.png"@
 opties;
-1:Ga verder,goto19,O!
+1:Ga verder,goto19,O,CP!
 
 screen:31@
 question:"Je volgt de hoefafdrukken naar een Nazgûl."@
@@ -346,7 +346,7 @@ Er komen steeds meer Nazgûl's achter je aan"@
 image:"adventures/geheimzinnigequest/horseman.png"@
 opties;
 1:Links,goto43,X?
-2:Rechtdoor,goto44,XO?
+2:Rechtdoor,goto44,O?
 3:Rechts,goto46,O!
 
 screen:43@
