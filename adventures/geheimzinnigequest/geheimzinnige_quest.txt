@@ -346,7 +346,7 @@ Er komen steeds meer Nazgûl's achter je aan"@
 image:"adventures/geheimzinnigequest/horseman.png"@
 opties;
 1:Links,goto43,X?
-2:Rechtdoor,goto44,O?
+2:Rechtdoor,goto44,O,CP?
 3:Rechts,goto46,O!
 
 screen:43@
