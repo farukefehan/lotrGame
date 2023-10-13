@@ -16,7 +16,7 @@ def make_home_button(venster):
         (character_imagesize_x, character_imagesize_y), Image.LANCZOS)
     character_slot_1_image = ImageTk.PhotoImage(resized_image)
 
-    home_button = Label(venster,text="Back to \n main menu", image=character_slot_1_image,
+    home_button = Label(venster,text="Terug naar \n hoofdmenu", image=character_slot_1_image,
                         compound="top", bg="black", fg="white")
     home_button.image = character_slot_1_image
     home_button.bind("<Button-1>", lambda click_event: goto_splash_screen(venster))

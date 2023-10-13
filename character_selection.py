@@ -66,7 +66,7 @@ def make_character_selection_screen(venster):
     # Dwarf Template
     create_template_image_label(venster, "images/dwarf_male.png", "Dwarf", 0.7, 0.4,3 )
 
-    start_button4 = Label(venster, text="User created characters", image=menu_button_image, compound="center",
+    start_button4 = Label(venster, text="Zelf gemaakte karakters", image=menu_button_image, compound="center",
                           bg="#603000", fg="black")
     start_button4.image = menu_button_image
     start_button4.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
