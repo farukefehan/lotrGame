@@ -86,7 +86,7 @@ def characters_dictionary(file_path):
                     parts = line.strip().split(',')
                     character = {"naam":parts[0],
                     "race": parts[1],
-                    "describtion": parts[2],
+                    "sex": parts[2],
                     "image": parts[3]}
 
                     characters.append(character)
