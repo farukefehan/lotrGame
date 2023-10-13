@@ -4,7 +4,7 @@ Checkpoints:8!
 screen:0@
 question:“Dappere held, ik heb je nodig! De kwaadaardige draak Smaug wil mijn schatten stelen!
 Ik heb een dappere held nodig om naar de Gouden Hal te gaan en mijn schatten veilig te stellen.
-De held die dit voor mij doet zal rijkelijk beloond worden!”@
+De held die dit voor mij doet, zal rijkelijk beloond worden!”@
 image:"adventures/goudenhal/screen1.png"@
 opties;
 1:Accepteer de queeste,goto1,O,CP?
@@ -79,7 +79,7 @@ opties;
 1:Vecht met de orcs,goto9,O?
 2:Verstop je in de bosjes en wacht tot ze weg zijn,goto10,O,CP?
 3:Zet een val,gotoDied,X,"De orcs doorzien je val.
-je gaat als gevangene mee naar hun kamp!"!
+Je gaat als gevangene mee naar hun kamp!"!
 
 screen:9@
 question:"Hoe vecht je tegen de orcs?"@
@@ -112,4 +112,4 @@ image:"adventures/goudenhal/castle.png"@
 opties;
 1:Klop op de muren om te zoeken naar holle ruimtes,gotoDied,X,"Het kasteel is na eeuwen verlaten te zijn fragiel.
 Het stort in nadat je op de muren klopt. Je bent geplet!"?
-2:Ga naar de kelder,gotoWin,O,"Je hebt de schat van Thorin gevonden en hem gered!"!
+2:Ga naar de kelder,gotoWin,O,"Je hebt de schat van Thorin gevonden en hem gered!"

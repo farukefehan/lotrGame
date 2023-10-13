@@ -1,5 +1,5 @@
 avontuur 2!
-Checkpoints:8!
+Checkpoints:11!
 
 screen:0@
 question:"“Er was eens, in het mystieke rijk van Midden-Aarde, een
