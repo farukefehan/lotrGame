@@ -6,9 +6,7 @@ question:"“Er was eens, in het mystieke rijk van Midden-Aarde, een
 grote schaduw over het land van de Dwergen. Het koninkrijk Erebor, dat was
 heroverd door Thorin Eikenschild en zijn gezelschap van Dwergen, was een plaats
 van voorspoed en vrede. Maar die vrede werd verbroken toen een groep Dwergen op
-mysterieuze wijze spoorloos verdween.”
-Om onze eer te herstellen moeten wij de verdwenen dwergen vinden, wil je ons
-helpen?@
+mysterieuze wijze spoorloos verdween.”@
 image:"adventures/vermistedwergen/dwarves_city.png"@
 opties;
 1:Ga verder,goto1,O,CP!
@@ -16,33 +14,34 @@ opties;
 screen:1@
 question:"Je komt aan in Erebor, je komt hier Balin en Dvalin tegen.
 Balin:
-Onze broeders zijn spoorloos verdwenen, we moeten ze terug vinden!
+Onze broeders zijn spoorloos verdwenen, we moeten ze terug vinden om de eer van de dwergen te herstellen.
 Wil je ons helpen?"@
 image:"adventures/vermistedwergen/dwarves_city.png"@
 opties;
-1:Ik wil jullie helpen in jullie zoektocht.,goto2,O,CP?
+1:Ik wil jullie helpen in de zoektocht.,goto2,O,CP?
 2:Nee,gotoDied,X,"Je hebt besloten ze te negeren."!
 
 screen:2@
-question:"Je heb besloten om ze te helpen, welk wapen neem je mee op je avontuur?"@
+question:"Je heb besloten om ze te helpen, welk wapen neem je mee op het avontuur?"@
 image:"adventures/vermistedwergen/weaponry2.png"@
 opties;
-1:Boog,goto3,O,CP?
-2:Zwaard,goto3,O,CP?
-3:Strijdbijl,goto3,O,CP!
+1:Een Boog,goto3,O,CP?
+2:Een Zwaard,goto3,O,CP?
+3:Een Strijdbijl,goto3,O,CP!
 
 screen:3@
-question:"We moeten ergens informatie vandaan halen.
+question:"Dwalin:
+We moeten ergens informatie vandaan halen.
 Waar denk je dat we langs moeten gaan?"@
 image:"adventures/vermistedwergen/information.png"@
 opties;
-1:Schimmige informatie handelaar,gotoDied,X,"Hij heeft jullie gevangen genomen."?
-2:Een tovenaar,goto4,O,CP?
-3:De kroeg,gotoDied,X,"Je drinkt teveel en raakt in coma.
-Jullie kunnen hierdoor niet meer jullie zoektocht voltooien."!
+1:Schimmige informatie handelaar,gotoDied,X,"Hij heeft jullie gevangen genomen en vraagt je familie om losgeld."?
+2:Gandalf de tovernaar,goto4,O,CP?
+3:De kroeg met misschien één of meer biertjes,gotoDied,X,"Je drinkt teveel en wordt dronken.
+Je bent nu niet meer instaat de zoektocht te voltooien."!
 
 screen:4@
-question:"De tovenaar vertelt jou een visioen:
+question:"Gandalf vertelt jou de vooruitziende blik die hij had:
 In de diepten der tijd, een legende geweven, Een oude raadsel dat fluistert van een geheim,
 Een plek verscholen, verhuld in mysterie, Waar de dapperen reizen en enkel wijzen de toegang mogen vinden.
 Door mist en nevel, een berg torent hoog, Zijn top zoekend door wolken, triomfantelijk en stoer.
@@ -52,10 +51,11 @@ Maar zeg mij, vriend, wat kent het geheimzinnig bergland? Wat is de plek die lig
 Geduld is jouw bondgenoot in deze zoektocht zo groots, Terwijl je worstelt door de nevels en de grillige kloofs.
 Leer van de oude wijzen die voor jou dit pad bewandelden, Want alleen zij die waardig zijn, zullen het zoeken verhandelen.
 Dus wees vastberaden en laat je niet afschrikken, De mistige berg is waar je uiteindelijk kunt blikken.
-En als je de top bereikt, doorzettingsvermogen aan je zij, Zal de geheime plek zich openbaren, als een schat zo vrij.
+En als je door de opening gaat, doorzettingsvermogen aan je zij, Zal de geheime plek zich openbaren, als een schat zo vrij.
 Dus, moedige ziel, ga vooruit en neem deze uitdaging aan, Ontdek de mistige berg, waarvan de legende is ontstaan.
 En onthul het geheim, dat diep verborgen ligt, In de eeuwenoude raadsel, dat de avonturiers bezwijgt..
-Hoe ga je naar de mistige berg?"@
+Hoe ga je naar de mistige berg?
+Gandalf waarschuwd je voor rovers op de weg, neem je het risico? of zullen ze ook ergens anders verschijnen"@
 image:"adventures/vermistedwergen/wizard.png"@
 opties;
 1:Je neemt de weg,gotoDied,X,"In de nacht worden al je spullen gestolen.
@@ -76,30 +76,31 @@ Zij vechten met je en je sterft."?
 Hierdoor overlijd je."!
 
 screen:6@
-question:"Je betreed een eeuwenoude dwergen stad en er staat een raadsel in een oude taal, je probeert het te ontcijferen"
+question:"Je betreed Khazad-dûm eeuwenoude dwergen stad en er staat een raadsel in een verouderde taal.
+Balin kan de taal amper lezen en probeert het te ontcijferen"
 Ic ligge diep verborgen, een scat soe selde, Een mysterie bewaert bi den tijde ende een legendarisch verhael.
- Up soeke natic moet ghi reisen, Naer een plaetse daer heymeliken suyken ende intriguën Risen.
+Up soeke natic moet ghi reisen, Naer een plaetse daer heymeliken suyken ende intriguën Risen.
 Over berthene hoghe ende dalen diepe, Lancs outtiden weghe ende duuster steeghe, soe stijts-ful.
- Volghe die gholdene cautionen van outs, Betrouwe up uwe intuitie ende wisdom als by verguldts.
+Volghe die gholdene cautionen van outs, Betrouwe up uwe intuitie ende wisdom als by verguldts.
 Diepe int swerels oudt verleden, Waer oude talen suyken ende daer heerlyck is in vrede.
- Hier ruste ic paciëntelijck, onder den aerten verborgen, Een blinckende geheim dat nemmermeer verderven sal noch verleiden.
+Hier ruste ic paciëntelijck, onder den aerten verborgen, Een blinckende geheim dat nemmermeer verderven sal noch verleiden.
 Dat water klatert ende kabbelt in harmonie, Een onderaerts meer, een bekoorlijcke symphonie.
- Reflecterende de sterren ende die maen so welcler, Het herte van dese heymelike plaetse, soe diep ende soe ver.
+Reflecterende de sterren ende die maen so welcler, Het herte van dese heymelike plaetse, soe diep ende soe ver.
 Daelt af int donkere ende laet uwe ghedachten driven, Naer desen onderaerts oase, daer dromen gedieven.
- Want enich duer hier die raetsel ontsleutelt, Zullen den scat ontdecken.
+Want enich duer hier die raetsel ontsleutelt, Zullen den scat ontdecken.
 Dus moet ghi der uutdaginghe aengane, Moedich ende sterck, ende explorerne den onbekenden, een reise sonder perke.
- Het antwoort wacht up den geene die het can overwinnen.
- Balin zegt van 3 plekken te hebben gehoord die het kunnen zijn. Welke denk jij?@
+Het antwoort wacht up den geene die het can overwinnen.
+Balin zegt van 3 plekken te hebben gehoord die het kunnen zijn. En vraagt jou naar welke ze zullen zoeken.@
 image:"adventures/vermistedwergen/runes_on_wall.png"@
 opties;
-1:Ivoorpieken,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat
+1:Ivoorpieken,gotoDied,X,"Een oneindige zoektocht naar een plek die niet bestaat
 eindigt met jouw dood."?
 2:Het Onderwereldse meer,goto7,O,CP?
-3:De Fluisterende Vallei,gotoDied,X,"Je oneindige zoektocht naar een plek die niet bestaat
+3:De Fluisterende Vallei,gotoDied,X,"Een oneindige zoektocht naar een plek die niet bestaat
 eindigt met jouw dood."!
 
 screen:7@
-question:"Je komt een balrog tegen in het Onderwereldse meer. Wat doe je?
+question:"Je komt een Balrog tegen in het Onderwereldse meer. Wat doe je?
 Dvalin raad aan om een frontaal gevecht te doen. Maar er zijn meer opties."@
 image:"adventures/vermistedwergen/balrog.png"@
 opties;
@@ -108,28 +109,30 @@ opties;
 3:Je kan een frontaal gevecht doen.,gotoDied,X,"Helaas was de balrog sterker."!
 
 screen:8@
-question:"Nu het onmiddellijke gevaar geweken is kijken jullie om je heen.
-Jullie zien 3 mogelijke plekken waar je naartoe kan"@
+question:"Nu het onmiddellijke gevaar geweken is kijk je om je heen.
+Jullie zien 3 mogelijke plekken waar de dwergen kunnen zijn gegaan, want ze konden niet van de balrog winnen.
+Jullie zien ook gesmolten metaal op de grond."@
 image:"adventures/vermistedwergen/underground_lake.png"@
 opties;
 1:Onderwater een soort opening waar je in kan.
 Maar je zou je uitrusting uit moeten doen om erin te zwemmen.,goto9,O,CP?
-2:Een trap achter het meer die dieper de berg in gaat. Het ziet er verlaten en donker uit.,gotoDied,X,"Je treed de duisternis in en zonder dat je het weet stort het plafond in.
+2:Een trap achter het meer die dieper de berg in gaat. Het ziet er donker en verlaten uit.,gotoDied,X,"Je treed de duisternis in en zonder dat je het weet stort het plafond in.
 Er vallen stenen en 1 raakt jou hoofd, je bent op slag dood."?
-3:Je ziet een zwaard in een steen. Je denkt dat als je hem eruit trekt er een deur tevoorschijn komt.,gotoDied,X,"Er kwam geen deur tevoorschijn.
+3:Je ziet een zwaard in een steen. Je denkt dat als je hem eruit trekt er een geheime doorgang tevoorschijn komt.,gotoDied,X,"Er kwam geen deur tevoorschijn.
 De grot stort in en jullie overlijden door vallende rotsblokken."!
 
 screen:9@
 question:"Je bent net door de onderwater opening gezwommen en je ben drijf nat.
 Je kijkt om je heen en ziet dat je je in een troonzaal bevind.
 Je denkt dat de verdwenen dwergen hier waarschijnlijk terecht zijn geraakt terwijl ze weg aan het rennen waren,
-voor de balrog"@
+voor de Balrog"@
 image:"adventures/vermistedwergen/throne_hall.png"@
 opties;
 1:Je ziet een kleine doorgang achter de troon.,gotoDied,X,"Je gaat erdoor en er sluit een metalen deur achter je.
 Je zit gevangen, maar door wie?"?
-2:Je ziet een donkere kamer rechts van je en hoort geritsel ,goto10,O,CP?
-3:Je hoort metaal op metaal uit de kamer links van je.,gotoDied,X,"Er zit een groep goblins.
+2:Je ziet een donkere kamer rechts van je en hoort niks,goto10,O,CP?
+3:Je hoort metaal op metaal en een vreemd accent uit de kamer links van je.
+Je denkt dat dit goblins zijn die op de vlucht waren van de Balrog.,gotoDied,X,"Er zit een groep goblins.
 Ze zien je en nemen je gevangen.!"!
 
 screen:10@
@@ -137,9 +140,9 @@ question:“Je komt in de kamer de vermiste dwergen tegen. Ze zien er zwak, onde
 Je wil ze veilig stellen, hoe ga je dat doen?"@
 image:"adventures/vermistedwergen/dwarf_end.png"@
 opties;
-1:Je juicht omdat je de dwergen gevonden heb,gotoDied,X,"De goblins horen je kreet en nemen je gevangen!"?
+1:Je juicht omdat je de dwergen gevonden heb en marcheren naar buiten,gotoDied,X,"De goblins horen je kreet en nemen je gevangen!"?
 2:Je sluipt samen met de dwergen terug van waar je vandaan kwam,gotoWin,O,Goed gedaan
 Je heb de eer van de dwergen herstelt.?
 3:Je hoort dat er goblins in de andere kamer zitten.
 Je besluit samen met de dwergen ze aan te vallen.,gotoDied,X,"De dwergen zijn fysiek uitgeput.
-Jullie verliezen het gevecht."!
+Jullie verliezen het gevecht en de goblins nemen je gevangen."!
