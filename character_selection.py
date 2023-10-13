@@ -35,9 +35,6 @@ def template_character_info(num):
     return dict
 
 
-
-
-
 def create_template_image_label(venster, image_path, race, relx_value, rely_value, num):
 
     template_character_image_proto = Image.open(image_path)
@@ -48,9 +45,6 @@ def create_template_image_label(venster, image_path, race, relx_value, rely_valu
     template_character_button.image = template_character_image
     template_character_button.bind("<Button-1>", lambda click_event: goto_adventure_selection_screen(venster, template_character_info(num)))
     template_character_button.place(relx=relx_value, rely=rely_value, anchor="center")
-
-
-
 
 
 def make_character_selection_screen(venster):
@@ -73,25 +67,26 @@ def make_character_selection_screen(venster):
     create_template_image_label(venster, "images/dwarf_male.png", "Dwarf", 0.7, 0.4,3 )
 
     start_button4 = Label(venster, text="User created characters", image=menu_button_image, compound="center",
-                          bg="#603000", fg="white")
+                          bg="#603000", fg="black")
     start_button4.image = menu_button_image
     start_button4.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
     start_button4.place(relx=0.5, rely=0.6, anchor="center")
+
+
 def characters_dictionary(file_path):
+    characters = []
+    try:
+        with open(file_path, 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                character = {"naam":parts[0],
+                "race": parts[1],
+                "sex": parts[2],
+                "image": parts[3]}
 
-        characters = []
-        try:
-            with open(file_path, 'r') as file:
-                for line in file:
-                    parts = line.strip().split(',')
-                    character = {"naam":parts[0],
-                    "race": parts[1],
-                    "sex": parts[2],
-                    "image": parts[3]}
+                characters.append(character)
+    except FileNotFoundError:
+        pass
 
-                    characters.append(character)
-        except FileNotFoundError:
-            pass
-
-        return characters
+    return characters
 

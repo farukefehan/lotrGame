@@ -3,40 +3,40 @@ checkpoints:2!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras.
-Hij heeft informatie dat Sauron een schat verbergt.
+Ook hoorde je dat deze man informatie heeft over een waardevolle schat.
 Je bent van plan verder met je avontuur te gaan op zoek naar deze man.
 Daarnaast wil je deze man vragen of hij jouw helpt met het verslaan van Sauron.
 Maar eerst moet je bij dit moeras komen.
 Welke weg neem je? Wil je naar het bos, de vlakte of de bergen?"@
 image:"adventures/geheimzinnigequest/rivendell.png"@
 opties;
-1:bos,goto1,O?
-2:vlakte,goto2,O?
-3:bergen,goto3,O!
+1:Bos,goto1,O?
+2:Vlakte,goto2,O?
+3:Bergen,goto3,O!
 
 screen:1@
 question:"In het bos is een splitsing. Welke kant wil je op?"@
 image:"adventures/geheimzinnigequest/bos2.png"@
 opties;
-1:rechts,goto4,X?
-2:links,goto6,O?
-3:rechtdoor,goto5,O!
+1:Rechts,goto4,X?
+2:Links,goto6,O?
+3:Rechtdoor,goto5,O!
 
 screen:2@
 question:"Op de Vlakte zie je drie paden. Welke pad wil je op."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
-1:linker pad,goto9,O?
-2:rechter pad,goto8,X?
-3:middelste pad,goto7,O!
+1:Linker pad,goto9,O?
+2:Rechter pad,goto8,X?
+3:Middelste pad,goto7,O!
 
 screen:3@
 question:"Tussen de Bergen zie je drie gevaarlijke wegen. Welke weg neem je?"@
 image:"adventures/geheimzinnigequest/mountains.png"@
 opties;
-1:links,goto10,X?
-2:rechts,goto12,O?
-3:rechtdoor,goto11,O!
+1:Links,goto10,X?
+2:Rechts,goto12,O?
+3:Rechtdoor,goto11,O!
 
 screen:4@
 question:"Door een storm vlogen boomstammen om je oren. Bladeren in je gezicht.
@@ -51,20 +51,20 @@ screen:5@
 question:"Een boze Ent valt je aan! Wat doe Je?"@
 image:"adventures/geheimzinnigequest/tree_monster.png"@
 opties;
-1:vlucht van de Ent,goto13,O?
-2:vecht de Ent,goto14,X!
+1:Vlucht van de Ent,goto13,O?
+2:Vecht de Ent,goto14,X!
 
 screen:6@
 question:"Je zit in een maïsveld. Neem je een afslag of blijf je doorgaan?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/cornfield.png"@
 opties;
-1:afslag,goto15,X?
-2:rechtdoor,goto7,O!
+1:Afslag,goto15,X?
+2:Rechtdoor,goto7,O!
 
 screen:7@
 question:"De pad werd steeds kleiner en modderig. Plotseling hoor je het geluid van een paard.
-Ook is er een pad bijgekomen. Wat doe je"@
-image:"adventures/goudenhal/screen1.png"@
+Ook is er een pad bijgekomen. Wat doe je?"@
+image:"adventures/geheimzinnigequest/swamp.png"@
 opties;
 1:Blijf lopen op het modderige pad,goto16,O?
 2:Ga van het moderige pad af en ga naar het geluid,goto17,X?
@@ -74,14 +74,14 @@ screen:8@
 question:"Het pad dat je gaat eindigd in een maïsveld. Je blijft doorlopen, maar raakt verdwaald.
 Het wordt donker, je kan niks zien in het donker en door het maïs.
 Plotseling vormt er een magische storm en neemt jou mee de lucht in."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/cornfield.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je wordt meegenomen in de storm totdat je dood valt."!
 
 screen:9@
 question:"Het pad daalt af. Je reukt een lekkere geur.
 Je ziet een andere pad dat omhoog gaat naast jouw pad. Wat doe je?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/mountains.png"@
 opties;
 1:Neem het pad omhoog,goto33,X?
 2:Blijf omlaag lopen,goto21,O?
@@ -91,7 +91,7 @@ screen:10@
 question:"De weg die je gekozen hebt, loopt langs een ravijn.
 Het sneeuwt hard, maar je kan nergens schuilen. Plotseling breekt een stuk steen boven je.
 Je ontwijkt de steen, maar verloor je evenwicht je valt in het ravijn."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequestl/ravine1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je valt in het ravijn, waar je je hoofd 5 keer stoot.
 Je raakt bewusteloos."!
@@ -99,7 +99,7 @@ Je raakt bewusteloos."!
 screen:11@
 question:"Je loopt op de weg door de bergen. Het begint te sneeuwen.
 Er is een grot dichtbij. Wil je schuilen in de grot of blijven lopen?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/cave1.png"@
 opties;
 1:Blijf lopen door de sneeuw,goto24,X?
 2:Schuilen in de grot,goto23,O!
@@ -107,32 +107,32 @@ opties;
 screen:12@
 question:"Het pad lijdt naar een rivier. Je zwemt door de rivier, maar er komt een splitsing.
 Ergens hoor je een waterval, maar je weet niet waar die is. Welke kant ga je op? "@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/river.png"@
 opties;
-1:links,goto22,X?
-2:rechts,goto21,O!
+1:Links,goto22,X?
+2:Rechts,goto21,O!
 
 screen:13@
 question:"Je bent diep in het bos belandt. Je hebt honger, maar er zijn alleen maar paddenstoelen.
 Sommige zijn geel met rode curven, anderen zijn rood met witte stippen.
 Je moet eten anders sterf je van de honger. Welke paddenstoel eet je?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/mushroom.png"@
 opties;
 1:Geel,goto14,X?
 2:Rood,goto25,O!
 
 screen:14@
-question:"Jee vecht de boze Ent, maar hij is te sterk.
+question:"Je vecht de boze Ent, maar hij is te sterk.
 Je probeert weg te rennen, maar dan gooit de boze Ent een grote steen naar je toe.
 Je overleefde dat niet."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/tree_monster.png"@
 opties;
 1:Ga verder,gotoDied,X,"Een steen heeft je verpletterd."!
 
 screen:15@
 question:"Je gaat door een maïsveld.
 Ineens zie je een boomstam uit de lucht vliegen en raakte jou zo hard dat niet meer kon opstaan."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/falling_tree.png"@
 opties;
 1:Ga verder,gotoDied,X,"Een storm gooide een boomstam die jouw raakte."!
 
@@ -141,7 +141,7 @@ question:"Welkom in het moeras. Daar ontmoet je Elrond.
 Hij was ook op zoek naar de mysterieuze man.
 Elrond zei dat hij een leeg huis had gevonden van iemand genaamd Jochem.
 Ook stond er bij het huis een lege stal. Jullie besloten samen te reizen."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/swamp_elf.png"@
 opties;
 1:Ga verder,goto19,O!
 
@@ -149,14 +149,14 @@ screen:17@
 question:"Je gaat richting het geluid. Maar dan zie je het. Een donkere man op een paard.
 Maar dan komt de man naar je toe.
 De man neemt jouw gevangen."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent gevangen door een Nazgûl."!
 
 screen:18@
 question:"Het begint donker te worden. Dan zie je iets in de verte.
 Een Nazgûl! Je rent weg van hem."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
 1:Ga verder,goto19,O!
 
@@ -164,17 +164,17 @@ screen:19@
 question:"Een Nazgûl heeft je gezien! Hij komt achter je aan.
 Je moet proberen te overleven tot zonlicht.
 Kies jouw actie: links, rechts of rechtdoor. Er is er meer een goed."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
-1:links,goto36,X?
-2:rechts,goto34,X?
-3:rechtdoor,goto35,O,CP!
+1:Links,goto36,X?
+2:Rechts,goto34,X?
+3:Rechtdoor,goto35,O,CP!
 
 screen:20@
 question:"De lekkere geur leidt naar de heilige koffiebonen.
 Je neemt een paar mee.
 Ook zie je een storm komen uit het zuiden. Welke richting ga je op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/holy_coffee.png"@
 opties;
 1:Naar het noorden,goto27,X?
 2:Naar het oosten,goto18,O!
@@ -183,17 +183,17 @@ screen:21@
 question:"Je loopt door een ravijn.
 Je voelt je hier niet fijn en wil zo snel mogelijk eruit.
 Er zijn twee grotten en een pad omhoog"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/mountain_cave.png"@
 opties;
-1:grot links,goto30,O?
+1:Grot links,goto30,O?
 2:Pad omhoog,goto18,O?
-3:grot rechts,goto28,X!
+3:Grot rechts,goto28,X!
 
 screen:22@
 question:"Terwijl je de over de rivier gaat, hoor je het geluid steeds harder worden.
 Je hebt verkeerd gekozen, maar het is te laat.
 Je doet je ogen dicht en valt. Je ogen gaan ook niet meer open."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/ravine_waterfall.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent van een waterval gevallen."!
 
@@ -202,7 +202,7 @@ question:"De sneeuwstorm is over, en je gaat weer verder.
 Naast je zie je een ravijn en vermijd die.
 Dan zie je voetstappen in de sneeuw.
 Wil je die volgen of blijf je op het pad?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/ravine1.png"@
 opties;
 1:Blijf op het pad,goto29,X?
 2:Volg de voetstappen,goto30,O!
@@ -211,7 +211,7 @@ screen:24@
 question:"Je blijft lopen het sneeuwt steeds, je zit in een sneeuwstorm.
 Je kan niet veel zien voor je en dan val je.
 Je blijft, maar rolen en rollen totdat je van een cliff valt."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/snow.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent van een cliff gevallen tot je dood."!
 
@@ -219,7 +219,7 @@ screen:25@
 question:"De paddenstoel smaakte vreselijk.
 Je gaat waar verder en ziet hoevenafdrukken.
 Ergens anders heb je voetstappen gevonden. Wat doe je?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/dark_forest.png"@
 opties;
 1:Volg voetstappen,goto16,O?
 2:Volg hoefafdrukken,goto31,X?
@@ -229,7 +229,7 @@ screen:26@
 question:"De paddenstoel smaakte heerlijk.
 Het beste wat je ooit hebt gegeten, maar je valt neer.
 Je kan je lichaam niet meer bewegen en langzaam heb je geen kracht meer."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/mushroom.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent dood door een giftige paddenstoel."!
 
@@ -238,21 +238,21 @@ question:"Je rent naar het noorden want de storm komt naar je toe.
 Je blijft rennen totdat je bij een rand komt.
 Je kijkt omlaag en je ziet een ravijn.
 Je stopt met rennen, maar dan de storm duwt je in het ravijn"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/ravine_waterfall.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent gevallen in het ravijn."!
 
 screen:28@
 question:"Je gaat de grot in en daar steeds iets op een paard.
 Even later lig je op de grond met een gat in je buik."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_mountain.png"@
 opties;
 1:Ga verder,gotoDied,X,"Een Nazgûl heeft je gedood."!
 
 screen:29@
 question:"Je blijft op het pad en je ziet een Nazgûl.
 Hij kijkt jouw diep in je ogen."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_mountain.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent gevangen door een Nazgûl"!
 
@@ -261,13 +261,13 @@ question:"In de grot ontmoet je Arwen de elf.
 Zij vertelt dat ze een mysterieuze man had ontmoet.
 Hij was op zoek naar de heilige koffiebonen.
 Jullie besluiten samen die man op te zoeken."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/elf_mountain.png"@
 opties;
 1:Ga verder,goto19,O!
 
 screen:31@
 question:"Je volgt de hoefafdrukken naar een Nazgûl."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_swamp.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent gevangen door een Nazgûl."!
 
@@ -275,83 +275,83 @@ screen:32@
 question:"Terwijl je door het moeras loopt zit je benen ineens vast.
 Je probeert je benen los te maken, maar je zinkt steeds dieper.
 Je blijft zinken totdat je niet meer kan ademen."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/swamp.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent gestikt in een drijfmoeras."!
 
 screen:33@
 question:"Je loopt omhoog en ziet een Nazgûl.
 Je probeert te rennen, maar de Nazgûl is sneller"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_mountain.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:34@
 question:"Je wordt gevangen door een Nazgûl."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_swamp.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:35@
 question:"Het is diep in de nacht.
 Er zitten Nazgûl's achter je aan"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
-1:links,goto39,O?
-2:rechtdoor,goto38,X?
-3:rechts,goto37,X!
+1:Links,goto39,O?
+2:Rechtdoor,goto38,X?
+3:Rechts,goto37,X!
 
 screen:36@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:37@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:38@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_mountain.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:39@
 question:"Het is diep in de nacht.
 Er zitten meer Nazgûl's achter je aan"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
-1:links,goto40,X?
-2:rechtdoor,goto41,X?
-3:rechts,goto42,O!
+1:Links,goto40,X?
+2:Rechtdoor,goto41,X?
+3:Rechts,goto42,O!
 
 screen:40@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:41@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:42@
 question:"Je ziet al wat beter.
 Er komen steeds meer Nazgûl's achter je aan"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/horseman.png"@
 opties;
-1:links,goto43,X?
-2:rechtdoor,goto44,XO?
-3:rechts,goto46,O!
+1:Links,goto43,X?
+2:Rechtdoor,goto44,XO?
+3:Rechts,goto46,O!
 
 screen:43@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
@@ -359,43 +359,43 @@ screen:44@
 question:"Je wordt gevangen door een Nazgûl.
 Je komt erachter dat het geen normale Nazgûl is.
 Hij neemt je mee op de korte, gevaarlijke route."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/horseman.png"@
 opties;
 1:Ga verder,goto50,O!
 
 screen:45@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul1.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:46@
 question:"Je ziet het al licht worden.
 Er zitten zelfs nog meer Nazgûl's achter je aan"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
-1:links,goto45,X?
-2:rechtdoor,goto48,O?
-3:rechts,goto47,X!
+1:Links,goto45,X?
+2:Rechtdoor,goto48,O?
+3:Rechts,goto47,X!
 
 screen:47@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nuzgul_mountain.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
 screen:48@
 question:"Het is bijna zonsopgang.
 Er zitten negen Nazgûl's achter je aan"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
-1:links,goto52,O?
-2:rechtdoor,goto51,X?
-3:rechts,goto49,X!
+1:Links,goto52,O?
+2:Rechtdoor,goto51,X?
+3:Rechts,goto49,X!
 
 screen:49@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
@@ -406,13 +406,13 @@ Hij vertelt dat Nazgûl's niet tegen daglicht kunnen.
 'Daarom verstoppen we tot daglicht', zegt Jochem.
 Hij vertelde dat hij een nieuw huis had gekocht en op weg was daar naar toe.
 Jullie slapen tot daglicht."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/jochem.png"@
 opties;
 1:Ga verder,goto56,O!
 
 screen:51@
 question:"Je wordt gevangen door een Nazgûl"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/nazgu_chase.png"@
 opties;
 1:Ga verder,gotoDied,X,"gevangen door een Nazgûl"!
 
@@ -420,35 +420,35 @@ screen:52@
 question:"De zon komt op.
 Er zitten geen Nazgûl's achter je aan.
 Er zijn drie paden. Welke neem je?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains2.png"@
 opties;
-1:links,goto54,O?
-2:rechtdoor,goto55,X?
-3:rechts,goto53,O,CP!
+1:Links,goto54,O?
+2:Rechtdoor,goto55,X?
+3:Rechts,goto53,O,CP!
 
 screen:53@
 question:"Je komt een ander persoon tegen.
 Nu zien jullie met zijn drieen.
 Je krijgt te horen dat de mysterieuze man Jochem hier in de buurt is.
 Maar er zijn monsters om je heen. Welke kant ga je op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains2.png"@
 opties;
-1:links,goto57,X?
-2:rechtdoor,goto58,X?
-3:rechts,goto59,O!
+1:Links,goto57,X?
+2:Rechtdoor,goto58,X?
+3:Rechts,goto59,O!
 
 screen:54@
 question:""Je komt een ander persoon tegen. Nu zien jullie met zijn drieen.
 Je krijgt te horen dat de mysterieuze man Jochem hier in de buurt is.
 Er zijn monsters om je heen. Welke kant ga je op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains2.png"@
 opties;
-1:links,goto61,O?
-2:rechts,goto60,X!
+1:Links,goto61,O?
+2:Rechts,goto60,X!
 
 screen:55@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster_plains.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
@@ -457,62 +457,62 @@ question:"Je wordt wakker. Jochem heeft koffie gezet.
 Nadat je de beste koffie ooit hebt gedronken, gaan jullie verder.
 Hij vertelt dat hij een schat had gevonden en opnieuw verstopt in Rivendell.
 Hierdoor kan hij altijd meer koffie kopen."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/jochem.png"@
 opties;
-1:je gaat verder,goto65,O!
+1:Jullie gaan verder,goto65,O!
 
 screen:57@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:58@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:59@
 question:"Er zijn monsters om je heen. Welke kant ga je op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains2.png"@
 opties;
-1:links,goto64,O?
-2:rechtdoor,goto62,X?
-3:rechts,goto63,X!
+1:Links,goto64,O?
+2:Rechtdoor,goto62,X?
+3:Rechts,goto63,X!
 
 screen:60@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster2.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:61@
 question:"Er zijn monsters om je heen. Welke kant ga je op?."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains2.png"@
 opties;
-1:links,goto66,X?
-2:rechtdoor,goto67,X?
-3:rechts,goto72,O!
+1:Links,goto66,X?
+2:Rechtdoor,goto67,X?
+3:Rechts,goto72,O!
 
 screen:62@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:63@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequestl/monster1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:64@
 question:"Er zijn monsters om je heen. Welke kant ga je op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
-1:links,goto69,O?
-2:rechtdoor,goto74,X!
+1:Links,goto69,O?
+2:Rechtdoor,goto74,X!
 
 screen:65@
 question:"Jochem verteld dat het wachtwoord Heilige koffiebonen zijn.
@@ -520,71 +520,72 @@ En zegt dat hij alvast vooruit gaat naar zijn huis.
 Maar er zijn monsters om je heen.
 Je bent vergeten welke kant Jochem op ging, wat jammer nou.
 Welke kant ga op?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
-1:links,goto68,X?
-2:rechtdoor,goto75,O?
-3:rechts,goto70,X!
+1:Links,goto68,X?
+2:Rechtdoor,goto75,O?
+3:Rechts,goto70,X!
 
 screen:66@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster2.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:67@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster2.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:68@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster_plains.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:69@
 question:"Je komt voor een groot huis.
 Je hoort een diepe stem: Wat is het wachtwoord?"@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/mansion.png"@
 opties;
 1:Heilige koffiebonen!,goto75,O!
 
 screen:70@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster_plains.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:71@
-question:"Run from nazguls"@
-image:"adventures/goudenhal/screen1.png"@
+question:"Hier is een monster."@
+image:"adventures/geheimzinnigequest/monster_plains.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:72@
-question:"Run from nazguls"@
-image:"adventures/goudenhal/screen1.png"@
+question:"Er zijn monsters om je heen. Welke kant ga je op?"@
+image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
-1:links,goto71,X?
-2:rechtdoor,goto69,O?
-3:rechts,goto73,X!
+1:Links,goto71,X?
+2:Rechtdoor,goto69,O?
+3:Rechts,goto73,X!
 
 screen:73@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster2.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:74@
 question:"Hier is een monster."@
-image:"adventures/goudenhal/screen1.png"@
+image:"adventures/geheimzinnigequest/monster1.png"@
 opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:75@
-question:"Je hebt de geheime queeste voltooid en bent veilig in Jochem zijn huis!"@
-image:"adventures/goudenhal/screen1.png"@
+question:"Je hebt de geheime queeste voltooid en bent veilig in Jochem zijn huis!
+Jochem wil je helpen Sauron te verslaan. En je kreeg het recept voor de heilige koffie."@
+image:"adventures/geheimzinnigequest/holy_coffee.png"@
 opties;
 1:Ga verder,gotoWin,O,"Je hebt gewonnen"!

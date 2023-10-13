@@ -15,6 +15,29 @@ race_images = {
     "Human_Female": "images/human_female.png"
 }
 
+def get_selected_character_image(selected_index):
+    characters=[]
+    try:
+        with open("characters.txt", 'r') as file:
+            for line in file:
+                parts = line.strip().split(',')
+                character = {
+                    "name": parts[0],
+                    "race": parts[1],
+                    "sex": parts[2],
+                    "image": parts[3]
+                }
+                characters.append(character)
+    except FileNotFoundError:
+        pass
+
+    if 0 <= selected_index < len(characters):
+        return characters[selected_index]["image"]
+    else:
+        return None
+
+
+
 
 
 def get_selected_character_info(selected_index, characters_file_path):
@@ -129,7 +152,7 @@ class CharacterCreationScreen:
         print("Race:", selected_race)
 
         with open("documenten/characters.txt", "a") as file:
-            file.write(f"{name},{selected_race},male,images/human_male.png\n")
+            file.write(f"{name},{selected_race},male,{race_images[races[CharacterCreationScreen.current_race_index]]}\n")
 
         # Update the character image
         CharacterCreationScreen.update_character_image()
@@ -184,10 +207,10 @@ class CharacterCreationScreen:
         create_button.place(relx=0.5, rely=0.8, anchor="center")
 
         # Move the button to the top-right corner
-        end_button2 = Label(venster, image=voorbeeld_image2, text="Back to character selection", compound="bottom", bg="black", fg= "white")
+        end_button2 = Label(venster, image=voorbeeld_image2, text="Back to\ncharacter selection", compound="bottom", bg="black", fg= "white")
         end_button2.image = voorbeeld_image2
         end_button2.bind("<Button-1>", lambda click_event: goto_user_created_characters(venster))
-        end_button2.place(relx=0.95, rely=0.05, anchor="ne")  # Adjusted relx and rely
+        end_button2.place(relx=0.95, rely=0.08, anchor="ne")  # Adjusted relx and rely
 
 
 
@@ -240,20 +263,22 @@ def make_character_creation_screen(venster):
     show_existing_button.image = voorbeeld_image4
     show_existing_button.place(relx=0.65, rely=0.2, anchor="center")
 
-    original_image5 = Image.open(r"images/delete.png")
-    original_image5 = original_image5.resize((50, 50), Image.LANCZOS)
-    voorbeeld_image5 = ImageTk.PhotoImage(original_image5)
+
 
     original_image2 = Image.open(r"images/prohibit_sign.png")
     original_image2 = original_image2.resize((35, 35), Image.LANCZOS)
     voorbeeld_image2 = ImageTk.PhotoImage(original_image2)
 
-    end_button2 = Label(venster, image=voorbeeld_image2, text="Back to character selection", compound="bottom", bg="black", fg= "white")
+    end_button2 = Label(venster, image=voorbeeld_image2, text="Back to\n character selection", compound="top", bg="black", fg= "white")
     end_button2.image = voorbeeld_image2
     end_button2.bind("<Button-1>", lambda click_event: goto_character_creation(venster))
-    end_button2.place(relx=0.96, rely=0.96, anchor="center")
+    end_button2.place(relx=0.92, rely=0.95, anchor="center")
 
-    delete_button = Label(venster, text="Delete Character", image=voorbeeld_image5, compound="bottom")
-    delete_button.image = voorbeeld_image
+    delete_button_image_proto = Image.open(r"images/bin.png")
+    delete_button_image_proto = delete_button_image_proto.resize((50, 50), Image.LANCZOS)
+    delete_button_image = ImageTk.PhotoImage(delete_button_image_proto)
+
+    delete_button = Label(venster, text="Delete selected character", image=delete_button_image, compound="bottom", bg="#603000", fg="white")
+    delete_button.image = delete_button_image
     delete_button.bind("<Button-1>", lambda click_event: CharacterCreationScreen.delete_character(CharacterCreationScreen.character_dropdown))
-    delete_button.place(relx=0.65, rely=0.8, anchor="center")
+    delete_button.place(relx=0.65, rely=0.45, anchor="center")

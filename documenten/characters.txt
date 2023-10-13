@@ -5,3 +5,4 @@ Gimli,Dwarf,male,images/gimli.png
 Gandalf,Angelic creation,male,images/gandalf.png
 Boromir,Man,male,images/boromir.png
 Vincent,Human,male,images/vincent.png
+Lynn,Elf,female,images/lynn_cleanup.png

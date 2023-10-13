@@ -17,11 +17,11 @@ def start_adventure(venster, file_name, dict):
     checkpoints_got = 0
     character_dict = dict
     adventure = read_adventure(file_name)
-    print(adventure[0])
+    # print(adventure[0])
     amount_of_checkpoints = adventure.pop(0)
     first_screen = adventure[0]
     admin_mode = check_admin_mode()
-    print(f"admin: {admin_mode}")
+    # print(f"admin: {admin_mode}")
     generate_screen(venster, first_screen)
 
 
@@ -105,5 +105,5 @@ def take_action(root, code_string, death_message):
             if death_message == "CP":
                 checkpoints_got += 1
             action = int(action)
-            print(action)
+            # print(action)
             generate_screen(root, adventure[action])

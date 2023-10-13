@@ -20,7 +20,7 @@ def make_adventure_selection_screen(venster, dict):
     generate_background(venster)
     from home_button import make_home_button
     make_home_button(venster)
-    print(dict)
+    # print(dict)
 
     create_adventure_selection_image(venster, r"adventures/geheimzinnigequest/rivendell.png",
                                      "De geheimzinnige Queeste", 0.2, 0.475,
