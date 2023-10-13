@@ -26,7 +26,7 @@ screen:2@
 question:"Op de Vlakte zie je drie paden. Welke pad wil je op."@
 image:"adventures/geheimzinnigequest/plains1.png"@
 opties;
-1:Linker pad,goto9,O?
+1:Linker pad,goto9,O,CP?
 2:Rechter pad,goto8,X?
 3:Middelste pad,goto7,O,CP!
 
