@@ -3,7 +3,7 @@ checkpoints:2!
 
 screen:0@
 question:"In Rivendell hoor je dat er een mysteriuze man leeft in het moeras.
-Hij heeft informatie dat Sauron een schat verbergt.
+Hij heeft informatie dat over een schat.
 Je bent van plan verder met je avontuur te gaan op zoek naar deze man.
 Daarnaast wil je deze man vragen of hij jouw helpt met het verslaan van Sauron.
 Maar eerst moet je bij dit moeras komen.
@@ -584,7 +584,8 @@ opties;
 1:Ga verder,gotoDied,X,"Je bent opgegeten door het monster"!
 
 screen:75@
-question:"Je hebt de geheime queeste voltooid en bent veilig in Jochem zijn huis!"@
+question:"Je hebt de geheime queeste voltooid en bent veilig in Jochem zijn huis!
+Jochem wil je helpen Sauron te verslaan. En je kreeg het recept voor de heilige koffie."@
 image:"adventures/geheimzinnigequest/holy_coffee.png"@
 opties;
 1:Ga verder,gotoWin,O,"Je hebt gewonnen"!
